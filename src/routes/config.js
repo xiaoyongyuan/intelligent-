@@ -46,7 +46,7 @@ export default {
       funct: "basic",
       component: "Alarmlist"
     },
-    {
+  /*  {
       key: "/app/patrol",
       title: "巡更",
       identi: ["comp", "comptop", "patrol"],
@@ -105,7 +105,7 @@ export default {
           component: "RollcallTask"
         }
       ]
-    },
+    },*/
     //系统管理
     {
       key: "/app/settings",
