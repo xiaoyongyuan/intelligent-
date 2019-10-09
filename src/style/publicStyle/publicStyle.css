@@ -1,0 +1,199 @@
+/*加载*/
+.ant-spin-dot i{
+    background: #ffffff!important;
+}
+.ant-spin{
+    color: #ffffff!important;
+}
+.alarmDetails .ant-spin-dot i{
+    background: #000!important;
+}
+.alarmDetails .ant-spin{
+    color: #000!important;
+}
+/*表格*/
+.ant-table-thead > tr > th {
+    background: #394269!important;
+    color: #fff !important;
+}
+.ant-calendar-picker-icon {
+    color: #8592C6!important;
+}
+/*日历*/
+.ant-calendar-range-picker-separator {
+    color: #8592C6!important;
+}
+/*下拉框*/
+/*.ant-select-selection {
+    background-color: #fff!important;
+    border: 1px solid #3C466E!important;
+    color: #000!important;
+}*/
+.Alarmlist .ant-select-selection,.PatrolRecord .ant-select-selection,.RollcallRecord .ant-select-selection{
+    background: #3C466E;
+    border: 1px solid #3C466E;
+    color: #fff;
+}
+
+.ant-select-arrow {
+    color: #8592C6!important;
+}
+.ant-table-thead > tr.ant-table-row-hover > td, .ant-table-tbody > tr.ant-table-row-hover > td, .ant-table-thead > tr:hover > td, .ant-table-tbody > tr:hover > td {
+    /* 表格行的hover效果 */
+    background: #4F5574 !important;
+}
+/*分页*/
+.ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link {
+    border: 1px solid #495480!important;
+    background-color: #2B3355!important;
+    color: #ffffff!important;
+}
+.ant-pagination-item-active{
+    border: 1px solid #4286F5!important;
+    background: #4286F5;
+}
+.ant-pagination-item-active:hover{
+    border: 1px solid #4286F5!important;
+    background: #4286F5!important;
+}
+.ant-pagination-item {
+    border: 1px solid #495480;
+    background-color: #2B3355!important;
+}
+.ant-pagination-item a {
+    color: #ffffff!important;
+}
+/*查询 修改 新增*/
+.queryBtn{
+    background:#5063ee!important;
+    border: 1px solid #5063ee!important;
+    color:#ffffff!important;
+}
+.queryBtn:hover{
+    background: #4152cd!important;
+    border: 1px solid #4152cd!important;
+    color:#ffffff!important;
+}
+/*删除 不通过*/
+.deleteBtn{
+    background:#ED2F2F!important;
+    border: 1px solid #ED2F2F!important;
+    color:#ffffff!important;
+}
+.deleteBtn:hover{
+    background:#d01616!important;
+    border: 1px solid #d01616!important;
+    color:#ffffff!important;
+}
+/*通过*/
+.adoptBtn{
+    background:#5063ee!important;
+    border: 1px solid #5063ee!important;
+    color:#ffffff!important;
+}
+.adoptBtn:hover{
+    background:#4152cd!important;
+    border: 1px solid #4152cd!important;
+    color:#ffffff!important;
+}
+/*一键处理*/
+.processingBtn{
+    color: #5063ee!important;
+}
+
+/*弹层input颜色*/
+.ModelFormInput{
+    background: #fff!important;
+}
+/*弹窗*/
+.ant-modal-header {
+    border-radius: 4px 4px 0 0;
+    background: #fff;
+    color: #000000;
+    border-bottom: 1px solid #e8e8e8;
+    box-shadow: 0px 0px 0px rgba(255,32,32,0.6);
+}
+
+.ant-modal-footer{
+    margin-top: -18px!important;
+    padding-bottom: 22px!important;
+}
+/*表格无数据样式*/
+.ant-table-placeholder{
+    background: #2B3355!important;
+    border-top: 1px solid #4C5784;
+    border-bottom:1px solid #4C5784!important;
+    color:#fff!important;
+}
+.ant-table-bordered.ant-table-empty .ant-table-placeholder {
+    border-left: 1px solid #4C5784!important;
+    border-right: 1px solid #4C5784!important;
+}
+.ant-table-thead > tr > th {
+    /* 所有表格th的背景和颜色 */
+    background: #323A5D!important;
+    color: #fff !important;
+}
+.ant-table {
+    /* 所有表格的字体颜色 */
+    color: #fff!important;
+}
+.ant-pagination-item-ellipsis{
+    color:#fff !important;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: #272b42!important;   /* 菜单选中的颜色 */
+    color:#fff;
+}
+.ant-card-bordered {
+    border: 1px solid #4C5784!important;
+}
+.ant-card-head {
+    border-bottom: 1px solid #4C5784!important;
+}
+.ant-timeline-item-head {
+    background-color: #323A5D !important;
+}
+/*!*弹层字颜色*!*/
+.tc-label label{
+    color: #000!important;
+}
+.ant-btn + .ant-btn {
+    margin-left: 20px!important;
+}
+.warrper .ant-input,.Alarmlist .ant-input,.PatrolHostory .ant-input,.PatrolRecord .ant-input,
+.RollcallHostory .ant-input,.RollcallRecord .ant-input,.RollcallTask .ant-input{
+    background: #3C466E!important;
+    color: #ffffff!important;
+    border: 1px solid #3C466E!important;
+}
+/*查询框前字*/
+.Alarmlist .ant-form-item-label label,.PatrolHostory .ant-form-item-label label,
+.PatrolRecord .ant-form-item-label label,.RollcallRecord .ant-form-item-label label,
+.RollcallTask .ant-form-item-label label,.warrper .ant-form-item-label label{
+    color:#fff!important;
+}
+.ant-table-placeholder {
+    min-height: 200px !important;
+    padding-top: 100px;
+}
+.Settime{
+    padding: 20px
+}
+.Settime .ant-form-item-label label {
+    color: #fff !important;
+}
+.Settime .ant-table-tbody > tr > td {
+    border: 1px solid #4C5784!important;
+}
+.Settime .ant-time-picker-input {
+    color: #8a97cc!important;
+    background-color: #3c466e!important;
+    border: 0 !important;
+}
+.Settime .ant-time-picker-icon .ant-time-picker-clock-icon {
+    color: #fff !important;
+}
+.tc-label label{
+    color: #000!important;
+}

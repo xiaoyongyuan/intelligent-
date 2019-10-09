@@ -1,0 +1,25 @@
+/*
+    patrolRecord.js 巡更记录
+*/
+.operationBtn{
+    color: #429019!important;
+}
+.operationBtn:hover{
+    color: #ffffff!important;
+    background: #429019!important;
+    border:1px solid  #429019!important;
+}
+.ant-tag-blue{
+    display: none;
+}
+@media screen and (max-width: 1280px) {
+    .nopass {
+        margin: 10px 0 0 10px;
+    }
+    .ant-btn + .ant-btn {
+        margin-left: 0px !important;
+    }
+}
+.patrolTop{
+    margin: 20px;
+}

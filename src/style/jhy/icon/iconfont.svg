@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="erweima" unicode="&#58887;" d="M178.3 355.1v60.3H118v-60.3h60.3z m20-284.1h121.3V193.6H198.3V71z m343.1 545.2h-60.7v-60.1h60.7v60.1z m-221.7 81.1H198.3v-122.6h121.3V697.3z m362.4-423.4h-60.2v-60.1h181v60.1h-60v60.9h-60.7v-60.9zM541.4 778.2h-60.7V657h60.7V778.2z m-0.3-463.9h60.7v59.8h60.4v61.4h-60.7v-60.4h-60.4v-60.8z m201.8-201.5V173h-60.7v-60.1h60.7z m60.4 282.4h-60.7v-60.1h60.7v60.1zM420.1 797.8H97.7V476h322.4V797.8zM380.2 516H138.3V757.2h241.9V516z m463.1-160.8H904v58.9h-60.7v-58.9z m0-302.5h-40v59.8h-60.7v-59.8h-60.5v-61.4H904v59.2h0.1V173.6h-60.7v-120.9z m0 161.5H904v60.1h-60.7v-60.1z m-19.9 483.1H702v-122.6h121.3V697.3zM601.7 797.8V476h322.4V797.8H601.7zM883.6 516H641.7V757.2h241.9V516zM541.4 173.9h60.4v58.9h-60.4v81.4h-60.7v-321.4h60.4v-0.8h60.7v60.1h-60.4V173.9zM238.9 354.4h201.7v61H238.9v-61z m302.5 161.3h-61v-60.1h61v60.1zM601.5 53h60.7v60.1h-60.7V53zM97.6-28.1H420V293.7H97.6v-321.8z m40.7 281.2h241.9v-241.2H138.3V253.1z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="diannao" unicode="&#58939;" d="M125.5 514.2L65.2 577V760.5s0 64.1 62.8 64.1h763.9s64.1 0 62.8-64.1v-560.4s0-62.8-62.8-62.8h-260l2.5-130.7-194.8 193.5h452.3V760.5H125.5v-246.3z m0 0M244.9 401.2V662.5h522.7v-364.4h-426zM634.4 6.6h175.9s46.5-30.2 0-60.3H694.7l-60.3 60.3z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

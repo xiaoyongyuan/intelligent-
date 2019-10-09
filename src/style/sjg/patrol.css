@@ -1,0 +1,24 @@
+.PatrolPlan .ant-card-head-title{
+    color: red
+}
+.PatrolPlan .ant-card-head-title{
+    color: red
+}
+.PatrolPlan{
+    margin: 20px;
+    min-height: 600px;
+    background: #fff;
+}
+.PatrolPlan .card-center{
+    margin: 0 auto;
+}
+.patrol_detail_lable label{
+    color: #000!important;
+}
+.ant-input {
+    background: #fff!important;
+    border: 1px solid #d9d9d9!important;
+}
+.patrol_detail_lable .ant-form .ant-input{
+    color: #000;
+}

@@ -1,0 +1,728 @@
+@font-face {
+    font-family:chuangyi ;
+    src: url("../../yal/font/ZONGYISF.TTF");
+}
+@font-face {
+    font-family: dateFont;
+    src: url("../../yal/font/汉仪菱心体简.ttf");
+}
+@font-face {
+    font-family: alarmNumer;
+    src: url("../../yal/font/百度综艺简.ttf");
+}
+.today{
+    font-size: 18px;
+}
+.timeBig{
+    display: inline-block;
+    font-family: dateFont;
+    font-size: 17px;
+    margin-left: 4px;
+}
+.overView{
+    padding:0 10px;
+}
+.overView .pfixed{
+    width:100%;
+    position: fixed;
+    top: 80px;
+    left:30px;
+    display: none;
+}
+.overView .warrper{
+    padding: 10px;
+    height: 70%;
+}
+.overView .warrper .wcolum{
+    height: 100%;
+}
+.overView .lump, .overView .wappscol{
+    height: 100%;
+    background:url("../img/xiaotudikuang.png") no-repeat;
+    background-size:  100% 100%;
+}
+.lumpbott{
+    padding-top:10px;
+}
+.timely{
+    margin-bottom: 6px;
+}
+.overView .titleechart{
+    color: #fff;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+
+}
+.overView .titlename{
+    position: relative;
+    display: inline-block;
+    padding-left: 16px;
+    padding-top: 15px;
+    font-size:16px;
+}
+/*.titlename:before{
+    position: absolute;
+    left: 10px;
+    top: 18px;
+    content: '';
+    width:12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+}*/
+.wcolum .clunm{
+    height: 50%;
+}
+.overView .comp{
+    height: calc(100% - 60px);
+    width: 100%;
+    overflow: hidden;
+    /* border: 1px solid #fff; */
+}
+/*.compCount{
+    display: flex;
+    flex-direction: row;
+}*/
+.compCountVideo{
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    margin: 2% 1%;
+}
+.compCountVideo .compVideo{
+    margin: 1% 2%;
+    width: 40%;
+    height: 30%;
+    background: url("../../yal/img/video.png") no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.compCountVideo .compVideo video{
+    width: 91%;
+    height: 100%;
+    margin: 4% 5%;
+}
+.compCountVideo .compVideoRight{
+    margin-right: 15px;
+}
+.compCountVideo .compVideoLeft{
+    margin-left: 15px;
+}
+.righttop{
+    /* border: 1px solid red; */
+    height: 100% !important;
+    color: #fff;
+}
+
+.righttop .slick-dots{
+    display: none !important;
+}
+.redcolor{
+    width: 100%;
+    height:10%;
+}
+.Rotation_chart{
+    width: 100%;
+    height:106%;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items:center;/*垂直居中*/
+    margin: 12px auto 2px;
+    overflow: hidden;
+}
+@media screen and (min-width:900px) and (max-width:1700px){
+    .Rotation_chart>div:nth-of-type(1){
+        width: 68%;
+        height: auto;
+    }
+  
+}
+
+@media screen and (min-width:1700px) {
+    .Rotation_chart>div:nth-of-type(1){
+        width: 75%;
+        height:90%;
+        margin: 0 auto;
+       
+    }
+    .Rotation_chart>div:nth-of-type(2){
+        width: 75%;
+        height: 10%;
+    }
+}
+.Rotation_chart>div:nth-of-type(1) img{
+    width: 100%;
+    height: auto;
+}
+ .Rotation_chart>div:nth-of-type(2){
+    width: 75%;
+    height: 40px;
+    margin: 0 auto;
+    line-height:40px;
+    text-align: center;
+} 
+.equiptable{
+    width: 90%;
+    height: 100%;
+    margin: 16px auto 0;
+}
+
+.equiptable .equipment{
+    height: 45px;
+    color:#fff;
+    padding-bottom: 1em;
+    text-align: center;
+}
+.equiphead .lines{
+    width: 100%;
+    display: table;
+    height: 100%;
+    line-height: 2.5;
+    background: -webkit-linear-gradient(left, rgba(62,189,146,.1) ,rgba(62,189,146,1)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, rgba(62,189,146,.1) ,rgba(62,189,146,1)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, rgba(62,189,146,.1) ,rgba(62,189,146,1)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, rgba(62,189,146,.1) ,rgba(62,189,146,1)); /* 标准的语法（必须放在最后） */
+}
+.equiptable .gutter-row{
+    display: table-cell;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.equipbody .lines{
+    width: 100%;
+    display: table;
+    height: 100%;
+    line-height: 2.5;
+    background: -webkit-linear-gradient(left, rgba(62,189,146,.1) ,rgba(62,189,146,1)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, rgba(62,189,146,.1) ,rgba(62,189,146,1)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, rgba(62,189,146,.1) ,rgba(62,189,146,1)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, rgba(62,189,146,.1) ,rgba(62,189,146,1)); /* 标准的语法（必须放在最后） */
+}
+
+.wcolumMap{
+    position: relative;
+    height: 100%;
+    background:url("../img/mapbg.png") no-repeat;
+    background-size:  100% 100%;
+}
+.yundate{
+    font-size: 16px;
+    padding-left:35px;
+}
+.yundate b{
+    letter-spacing:2px;
+    font-size: 18px;
+    font-family: '黑体';
+}
+
+.message .heihgdabo{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.message .heihgdabo .messthis{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    background:#0483e2;
+    border-radius: 8px;
+}
+.equiptu{
+    margin-top: 8px;
+    text-align: center;
+
+}
+.overView .warrperbottom{
+    padding-left:10px;
+    padding-right: 10px;
+    height:calc(30% - 10px);
+}
+.warrperbottom .bottomheig{
+    height: 100%;
+    padding-right: 17px;
+}
+.maps{
+    height: calc(80% - 50px)
+}
+.overView .draw{
+    position: relative;
+    height: 20%;
+    width: 100%;
+    overflow: hidden;
+}
+.untreated{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+}
+
+@media screen and (min-width: 1700px) {
+    .untreated{
+        top:calc(25%);
+        font-size: 15px;
+        font-family: 黑体;
+        margin-top: -5px;
+    }
+}
+@media screen and (max-width: 1700px) and (min-width: 1080px) {
+    .untreated{
+        top:calc(25%);
+        font-size: 10px;
+        font-family: 黑体;
+        margin-top: -3px;
+    }
+}
+
+.untreated.alarmvalue{
+    top:calc(60%);
+    font-size: 24px;
+}
+.overView{
+    width: 100%;
+    overflow: hidden;
+    background: url("../img/beijingtu.png") no-repeat;
+    color: #fff;
+    background-size:  100% 100%;
+}
+.header__trigger{
+    float: left;
+}
+.titletop{
+    width:52%;
+    display: inline-block;
+    line-height: 63px;
+}
+.titletop .titlevalue{
+    font-size: 175%;
+    text-align: center;
+    line-height: 65px;
+    height: 65px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    font-family: chuangyi;
+    text-shadow: 0 0 10px #fff;
+    color:#fff;
+}
+.titletop .titlevalue:after,.titletop .titlevalue:before{
+    position: absolute;
+    height: 100%;
+    top: 8px;
+    content: '';
+    height: 50px;
+    width: calc(50% - 100px);
+    background-size:  100% 100%;
+}
+.titletop .titlevalue:after{
+    right:-30px;
+    background-image: url("../img/titler.png");
+    background-repeat: no-repeat;
+}
+.titletop .titlevalue:before{
+    left:-30px;
+    background-repeat: no-repeat;
+    background-image: url("../img/titlel.png");
+}
+.ant-layout p.sgxdword{
+    margin: 0;
+    font-size: 15px;
+    line-height: 2em;
+}
+.ant-layout p.sgxdword .sgxdnum{
+    font-size: 24px;
+    line-height: 1em;
+}
+.lines .gutter-row{
+    font-size: 14px;
+}
+
+.overView .echartmap{
+    padding:20px;
+}
+
+
+.overView .today{
+    display: inline-block;
+    float: right;
+    padding-right: 39px;
+    padding-top: 30px;
+}
+.draw .ant-carousel .slick-slide {
+    position: relative;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    background: #364d79;
+    overflow: hidden;
+}
+
+
+@media screen and (max-width: 1280px) {
+    .scollhidden-out{
+        width: 110%;
+        margin: 0 auto;
+        height: 90px !important;
+        /* border: 1px solid #ccc; */
+        overflow: scroll;
+    }
+    .draw .alarmcarousel{
+        position: relative;
+        width: 20%;
+        height: 30px;
+        margin: 0 auto;
+        bottom:-6px;
+    }
+
+}
+.bg_imgperson,.bg_imgfire,.bg_imgcars{
+    display: inline-block;
+    width: 30px;
+    height: auto;
+}
+.alerm_num{
+    display: inline-block;
+}
+@media screen  and (max-width: 1280px) {
+    .draw .alarmcarousel{
+        position: relative;
+        width: 40%;
+        margin: 0 auto;
+        bottom:-1px;
+    }
+    .draw .ant-carousel .slick-slide h3 {
+        background-repeat: no-repeat;
+        background-position: 5px 4px;
+        background-size: auto 22px;
+        color: #fff;
+        font-size: 20px;
+    }
+    .draw .ant-carousel .slick-slide .bg_imgperson {
+        background-image: url("../img/ren.png") !important;
+
+    }
+    .draw .ant-carousel .slick-slide .bg_imgfire {
+        background-image: url("../img/huo.png") !important;
+
+    }
+    .draw .ant-carousel .slick-slide .bg_imgcars {
+        background-image: url("../img/che.png") !important;
+    }
+}
+@media screen and (max-width: 1601px) and (min-width: 1280px) {
+    .scollhidden-out{
+        width: 110%;
+        margin: 0 auto;
+        height: 90px !important;
+        /* border: 1px solid #ccc; */
+        overflow: scroll;
+    }
+    .draw .alarmover{
+        position: absolute;
+        bottom: 13px;
+    }
+    .draw .alarmcarousel{
+        position: relative;
+        width: 28%;
+        margin: 0 auto;
+        bottom:-4px;
+    }
+    .draw .ant-carousel .slick-slide h3 {
+        background-repeat: no-repeat;
+        background-position: 15px 4px;
+        background-size: auto 22px;
+        color: #fff;
+        font-size: 20px;
+    }
+    .draw .ant-carousel .slick-slide .person {
+        background-image: url("../img/ren.png") !important;
+    }
+    .draw .ant-carousel .slick-slide .fire {
+        background-image: url("../img/huo.png") !important;
+    }
+    .draw .ant-carousel .slick-slide .cars {
+        background-image: url("../img/che.png") !important;
+    }
+}
+@media screen and (min-width: 1601px){
+    .scollhidden-out{
+        width: 110%;
+        margin: 0 auto;
+        height: 220px !important;
+        overflow: scroll;
+    }
+    .draw .alarmover{
+        position: absolute;
+        bottom: 14px;
+    }
+    .draw .alarmcarousel{
+        position: relative;
+        width: 28%;
+        margin: 0 auto;
+    }
+    .draw .ant-carousel .slick-slide h3 {
+        background-repeat: no-repeat;
+        background-position: 5px 4px;
+        background-size: auto 22px;
+        color: #fff;
+        font-size: 30px;
+        margin-left: 20px;
+        font-family: alarmNumer;
+        
+    }
+    .draw .ant-carousel .slick-slide .person {
+        background-image: url("../img/ren.png") !important;
+    }
+    .draw .ant-carousel .slick-slide .fire {
+        background-image: url("../img/huo.png") !important;
+    }
+    .draw .ant-carousel .slick-slide .cars {
+        background-image: url("../img/che.png") !important;
+    }
+}
+.draw .ant-carousel-vertical .slick-dots li button {
+    display: none !important;
+}
+.slick-slider{
+    height: 30px;
+    overflow: hidden;
+}
+
+.draw .ant-carousel .slick-slide {
+    background: transparent!important;
+}
+
+.scollhidden-out::-webkit-scrollbar {display:none}
+
+.scollhidden-inner{
+    width: 91%;
+    height: auto;
+}
+.xiaode{
+    width: 100%;
+    height: 20px;
+    border: 1px solid red;
+    margin-top: 2px;
+}
+.scollhidden{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.shipin{
+    position: relative;
+    background:url("../img/xiaotudikuang.png") no-repeat;
+    background-size:  100% 100%;
+}
+.shipin-context{
+    position: relative;
+    padding: 35px;
+}
+.shipin-context img{
+    padding-top: 30px;
+}
+.shipin-contextImg{
+    position: relative;
+    padding: 15px 30px 30px 30px;
+}
+.shipin-contextImg img{
+    width: 100%;
+    height: 100%;
+}
+.shipin-contextImg p{
+    display:inline-block;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+    color: red;
+    font-size: 16px;
+}
+.shipin-context img{
+   width: 100%;
+    height: 100%;
+}
+.shipin .shipin-close{
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    left: 550px;
+    background: red;
+}
+.shipin-context .equipmentModel{
+    color:#fff;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.video .ant-modal-content,.equipment .ant-modal-content{
+    background: rgba(0, 0, 0, 0)!important;
+}
+.video .ant-modal-close{
+    top: 53px!important;
+    right: 26px!important;
+    color: #FFFFFF!important;
+    background: url("../img/btnBack.png") no-repeat;
+    background-size: 100% 100%;
+}
+.video .ant-modal-close-x{
+    width: 48px!important;
+    height: 34px!important;
+}
+.video .anticon svg{
+    position: absolute;
+    bottom: 9px;
+    right: 11px;
+}
+.equipment .ant-modal-close{
+    top: 48px!important;
+    right: 26px!important;
+    color: #FFFFFF!important;
+    background: url("../img/btnBack.png") no-repeat;
+    background-size: 100% 100%;
+}
+.equipment .ant-modal-close-x{
+    width: 50px!important;
+    height: 32px!important;
+}
+.equipment .anticon svg{
+    position: absolute;
+    bottom: 9px;
+    right: 11px;
+}
+
+#ScollhiddenOut .scollhidden-inner {
+    width: 100% !important;
+    height: auto;
+}
+
+.overView .slick-list{
+        height: 100%;
+}
+.overView .slick-track,.overView .ant-carousel{
+    height: 100% !important;
+}
+
+
+.alarmover .ant-carousel .slick-slider .slick-list{
+    padding-top: 2px !important;  
+}
+/* 只看收藏 */
+.switch_lr{
+    color:#fff;
+}
+.switch_lr>div{
+   height: 40px;
+   line-height: 40px;
+}
+.policeNumber{
+    width: 100%;
+    height: 46%;
+    display: flex;
+    flex-direction: row;
+}
+.policeBox{
+    width: 90%;
+    height: 90%;
+    margin: 4%;
+    background: url("../../yal/img/police.png") no-repeat;
+    background-size: 100% 100%;
+}
+.policeTitle{
+    width: 100%;
+    height:30%;
+    margin: 3% 2%;
+}
+.person-police{
+    width: 15%;
+    height: 90%;
+    float: left;
+    background: url("../../yal/img/personPolice.png") no-repeat;
+    background-size: 100% 100%;
+}
+.car-police{
+    width: 15%;
+    height: 90%;
+    float: left;
+    background: url("../../yal/img/carpolice.png") no-repeat;
+    background-size: 100% 100%;
+}
+.call-police{
+    width: 14%;
+    height: 82%;
+    float: left;
+    background: url("../../yal/img/callPolice.png") no-repeat;
+    background-size: 100% 100%;
+}
+.patrol-police{
+    width: 16%;
+    height: 100%;
+    float: left;
+    background: url("../../yal/img/patrolPolice.png") no-repeat;
+    background-size: 100% 100%;
+}
+.police-font{
+    width: 60%;
+    height: 100%;
+    margin-left: 17%;
+}
+.policeBody{
+    width: 100%;
+}
+.policeSum{
+    font-size: 29px;
+    font-family: alarmNumer;
+    display: inline-block;
+    margin: 0 7%;
+    font-weight: bolder;
+}
+.personColor{
+    color: #FC3173;
+}
+.carColor{
+    color: #2BD682;
+}
+.patrolColor{
+    color: #CE4311;
+}
+.callColor{
+    color: #5E63ED;
+}
+.alarmImg{
+    width: 100%;
+}
+.imgEqu{
+    display: inline-block;
+    width: 34%;
+    float: left;
+}
+.picpath{
+    display: inline-block;
+    width: 40%;
+    height: 20%;
+    margin-top: -30px;
+}
+.picpath img{
+    width: 100%;
+    height: 100%;
+}
+.tol{
+   width:100%;
+   text-align:center;
+   font-family: alarmNumer;
+   font-size: 30px;
+   color:#fff;
+}
+.instantInfor{
+    width: 100%;
+    height: 100%;
+}
+.instant{
+   width: 40%;
+   height: 120px;
+   margin: 0 auto;
+}
+.instantInfor img{
+    width: 100%;
+    height: 100%;
+}

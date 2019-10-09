@@ -1,0 +1,1207 @@
+
+.equipmentCard {
+    padding: 0px 20px 0 20px;
+    padding-bottom: 30px;
+}
+
+.equipmentCard .ant-card-body {
+    background: #2B3355;
+}
+
+.equipmentCard .ant-card-actions {
+    background: #2B3355;
+}
+
+.equipmentCard .ant-card-bordered {
+    border: 1px solid #4C5784;
+}
+
+.equipmentCard .ant-card-actions > li:not(:last-child) {
+    border-right: 1px solid #4C5784;
+}
+
+.equipmentCard .ant-card-actions > li > span a {
+    color: #ffffff;
+}
+
+.equipmentCard .ant-card-actions > li > span a:hover {
+    color: #ccc;
+}
+
+.boxShow {
+    box-shadow: 0px 0px 30px rgba(34, 34, 34, 0.4);
+}
+
+.equipmentCard .ant-card-actions {
+    border-top: 1px solid #4C5784 !important;
+}
+
+.loadding {
+    width: 100%;
+    margin: 215px auto;
+}
+
+.home_top {
+    margin-bottom: 30px;
+}
+
+.shange {
+    width: 99%;
+    height: auto;
+    margin: 0 auto;
+    padding: 1%;
+    background: #2B3355;
+}
+
+.ant-table-thead > tr > th {
+    background: #2B3355 !important;
+    color: #ffffff;
+    border: 1px solid #4C5784 !important;
+}
+
+.ant-table-bordered .ant-table-tbody > tr > td {
+    border: 1px solid #4C5784 !important;
+}
+
+.ant-table {
+    color: #ffffff;
+}
+
+.search input {
+    width: 60%;
+}
+
+.download_btn {
+    margin-left: 3%;
+}
+
+.margin_top80 {
+    margin-top: 80px;
+}
+
+.margin_top50 {
+    margin-top: 50px;
+}
+
+.margin_bottom80 {
+    margin-bottom: 80px;
+}
+
+.margin_bottom40 {
+    margin-bottom: 40px;
+}
+
+.margin80 button {
+    width: 100%;
+}
+
+.white {
+    background: #fff;
+}
+
+.area {
+    width: 100%;
+    height: 200px;
+    background: #ccc;
+    margin-bottom: 20px;
+    margin-right: 40px;
+}
+
+.area_row {
+    position: relative;
+}
+
+.area_col {
+    position: absolute;
+    bottom: 26px;
+    left: 80%;
+}
+
+.area_text {
+    text-align: right;
+}
+
+.team_item {
+    width: 100%;
+    height: auto;
+    border: 1px solid #313653;
+    border-radius: 6px;
+}
+
+.item_f {
+    width: 100%;
+    height: 80px;
+    line-height: 2.2;
+    border-bottom: 1px #eee solid;
+    padding: 6px 20px;
+}
+
+.item_s {
+    width: 100%;
+    height: 80px;
+    line-height: 2.2;
+    padding: 6px 20px;
+}
+
+.tit {
+    padding: 0 20px;
+    color: #fff;
+    height: 45px;
+    line-height: 45px;
+}
+
+.tit button {
+    float: right;
+    color: #fff;
+    border: 0;
+    height: 30px;
+    line-height: 30px;
+}
+
+.tit span {
+    width: 40%;
+    height: 30px;
+    line-height: 30px;
+}
+
+.t_t {
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.del_con {
+    margin-top: 15px;
+    float: right;
+}
+
+.line_h {
+    margin: 20px 0;
+}
+
+.ant-modal-footer {
+    border-top: 0 !important;
+}
+
+/*//摄像头扫描部分*/
+.wap {
+    width: 100%;
+    margin: 0 auto;
+    background: #eee;
+    border: 3px solid #07FEFE;
+    border-radius: 10px;
+}
+
+.max {
+    position: relative;
+    margin-top: 10px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.saomiao {
+    width: 100%;
+    height: 30px;
+    /*margin-left:6% ;*/
+    /*display:none;*/
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+}
+
+.flip {
+    position: relative;
+    margin-top: 30px;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 0 5%;
+}
+
+.grid_img {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    margin-top: 10px;
+}
+
+.scanning {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    padding: 6px;
+
+
+}
+
+.max .scanning > img {
+    position: relative;
+    top: 0;
+    z-index: 1;
+    width: 94%;
+    height: auto;
+    max-height: 360px;
+}
+
+.sijiao {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+
+}
+
+.jiao1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 50px;
+    height: 50px;
+    background-image: url(img/jiao1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.jiao2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 50px;
+    height: 50px;
+    background-image: url(img/jiao2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.jiao3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 50px;
+    height: 50px;
+    background-image: url(img/jiao4.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.jiao4 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-image: url(img/jiao3.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#scanning_img {
+    color: #000;
+}
+
+/*摄像头管理防区设置*/
+.clearInfo {
+    margin: 50px 0 80px 0;
+}
+
+.clearInfo row col {
+    text-align: center;
+}
+
+/* //总览和设备部分 */
+
+.onLine {
+    width: 50px;
+    height: 50px;
+    padding-right: 0;
+    margin-right: 14px;
+    padding: 0 10px;
+    border-radius: 50%;
+    line-height: 50px;
+    color: #ffffff;
+    float: left;
+}
+
+.onLineBack {
+    background: #2a8e39;
+}
+
+.offLineBack {
+    background: #aaa;
+}
+
+.ant-card-body {
+    position: relative;
+}
+
+.bell {
+    min-width: 65px;
+    height: 34px;
+    color: red;
+    position: absolute;
+    right: 0;
+    top: 26px !important;
+    border: 1px solid red;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 17px;
+    padding: 4px 7px;
+    border-right: none;
+}
+.bell .equipNumnber{
+    display: inline-block;
+    width: 78%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    position: absolute;
+    right: -8px;
+    padding-right: 10px;
+}
+.bellIcon{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+.settingIcon{
+    position: relative;
+    left: 10px;
+    top: 9px;
+}
+.sheding{
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.actionsBbottom {
+    width: 100%;
+    height: 48px;
+    color: #ffffff;
+}
+
+.colCen {
+    line-height: 40px;
+    color: #ffffff;
+}
+.titcon p:nth-of-type(1) {
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+}
+
+.titcon p:nth-of-type(2) {
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 12px;
+    margin: 0;
+}
+
+.actionsBbottom p:nth-of-type(1) {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+}
+
+.actionsBbottom p:nth-of-type(2) {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 12px;
+    margin: 0;
+}
+
+.ant-card-actions li {
+    margin: 10px 0;
+}
+
+.paddRow {
+    position: relative;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+.cardPdd {
+    padding-left: 45px;
+    box-sizing: content-box;
+    margin-top: 20px;
+}
+
+.ant-card-body {
+    padding: 10px 10px !important;
+}
+
+.lg {
+    width: 100px;
+    margin-top: 30px;
+}
+
+.padding20 {
+    padding: 20px;
+}
+
+.padding20 .ant-table-tbody > tr > td {
+    border: 1px solid #4C5784 !important;
+}
+
+.padding20 .ant-radio-wrapper {
+    color: #fff;
+}
+
+/* 设备信息和摄像头信息页 */
+.coverflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.box-padding {
+    padding: 4px 0 30px 20px;
+    color: #fff;
+    background: #2B3253;
+}
+
+.box-padding > p {
+    color: #fff;
+}
+
+.t_r {
+    text-align: right
+}
+
+.t_l {
+    text-align: left;
+    position: relative;
+}
+
+.equ_row {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+.underline:hover{
+    text-decoration: underline;
+}
+.t_l input {
+    border: 0;
+    background: #F0F2F5;
+    height: 30px;
+    line-height: 30px;
+
+}
+
+.oncolor {
+    color: #54CD66;
+}
+
+.reecolor {
+    color: #f22727;
+}
+
+/* 巡更计划部分 */
+.patrol_item {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    box-shadow: #d6d4d4 0px 0px 4px 2px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.patrol_detail {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100px;
+}
+
+.patrol_detail > div {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+}
+
+.patrol_head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /*垂直居中*/
+    justify-content: center; /*水平居中*/
+    width: 20%;
+    height: 100px;
+}
+
+@media screen and (min-width: 1280px) {
+    .patrol_head > div {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /*垂直居中*/
+        justify-content: center; /*水平居中*/
+    }
+
+    .patrol_detail {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100px;
+    }
+
+    .patrol_query {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /*垂直居中*/
+        justify-content: center; /*水平居中*/
+        width: 14%;
+        height: 100px;
+
+    }
+
+    .padd_left {
+        padding-left: 6px;
+        color: #000;
+    }
+
+    .del {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /*垂直居中*/
+        justify-content: center; /*水平居中*/
+        width: 14%;
+        height: 100px;
+        padding: 0 2%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .patrol_head > div {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /*垂直居中*/
+        justify-content: center; /*水平居中*/
+    }
+
+    .patrol_detail {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        height: 100px;
+    }
+
+    .patrol_query {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /*垂直居中*/
+        justify-content: center; /*水平居中*/
+        width: 20%;
+        height: 100px;
+        padding: 0 5%;
+    }
+
+    .del {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /*垂直居中*/
+        justify-content: center; /*水平居中*/
+        width: 20%;
+        height: 100px;
+        padding: 0 2%;
+    }
+}
+
+.m_r {
+    margin: 20px 2%;
+}
+
+.card_width {
+    width: 90%
+}
+
+.bg1 {
+    background: #5DCB9A;
+}
+
+.bg2 {
+    background: #FB7575;
+}
+
+.bg3 {
+    background: #F7C35D;
+}
+
+.bg4 {
+    background: #99BB33;
+}
+
+.bg5 {
+    background: #93ABFA;
+}
+
+.bg6 {
+    background: #FDD000;
+}
+
+.m-r {
+    margin-left: 40px
+}
+
+/* 点名历史部分 */
+.timeline_ml {
+    margin-left: 60px;
+}
+
+.RollcallHostory .timeline_ml {
+    margin-left: 20px;
+}
+
+.PatrolHostory .timeline_ml {
+    margin-left: 20px;
+}
+
+.times {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #ccc;
+}
+
+.line_detail {
+    width: auto;
+    line-height: 30px;
+    /* margin-bottom: 30px; */
+}
+
+.alarm_img {
+    width: 20%;
+    height: auto;
+    display: inline-block;
+    margin: 20px 20px 20px 10px;
+}
+
+.mm_l {
+    padding: 0 0 0 30px;
+}
+
+/*返回到顶部 */
+.ant-back-top {
+    bottom: 100px;
+}
+
+.ant-back-top-inner {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    background-color: #1088e9;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+
+.RollcallHostory .backtop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.PatrolHostory .backtop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+@media screen and (max-width: 1281px) {
+    #scorll {
+        width: 100%;
+        height: 515px;
+        overflow: scroll;
+    }
+}
+
+@media screen and (max-width: 1701px) and (min-width: 1401px) {
+    #scorll {
+        width: 100%;
+        height: 700px;
+        overflow: scroll;
+    }
+
+}
+
+@media screen and (min-width: 1701px) {
+    #scorll {
+        width: 100%;
+        height: 890px;
+        overflow: scroll;
+    }
+}
+
+.spin {
+    width: 100%;
+    margin: 30px auto;
+    margin-top: 300px;
+}
+
+#scorll .ant-spin-nested-loading {
+    width: 96%;
+}
+
+.msch {
+    margin: 4px 0 0 20px;
+}
+
+.ant-timeline-item-pending .ant-timeline-item-head {
+    background: #F0F2F5;
+}
+
+.line_alerm {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; /*垂直居中*/
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*垂直居中*/
+    justify-content: center; /*水平居中*/
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+}
+
+.circle > div {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #323A5D;
+}
+
+.circlegreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*垂直居中*/
+    justify-content: center; /*水平居中*/
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: green;
+
+}
+
+.circlegreen > div {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #F0F2F5;
+}
+
+
+.textcenter {
+    height: 50px;
+    line-height: 50px;
+    color: #666;
+    text-align: center;
+}
+
+.RollcallHostory .ant-timeline-item-tail {
+    border-left: 2px solid #ccc7c7 !important;
+}
+
+.m_l {
+    margin-left: 6px;
+}
+
+.inlineb {
+    display: inline-block;
+}
+
+.xun_detail {
+    padding-left: 16px;
+}
+
+.patrolnone {
+    display: none;
+}
+
+.patrolblock {
+    display: inline-block;
+}
+
+.PatrolHostory .sear_mtop {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.PatrolHostory .Patrol_ml {
+    margin-left: 10PX;
+}
+
+.PatrolHostory .xun_detail {
+    display: inline;
+}
+
+.RollcallHostory .sear_mtop {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.RollcallHostory .Patrol_ml {
+    margin-left: 10PX;
+}
+
+.PatrolHostory .ant-timeline-item-tail {
+    border-left: 2px solid #ccc7c7 !important;
+}
+
+.PatrolHostory .backImg {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.RollcallHostory .backImg {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.row-query-rollcallhostory {
+    margin-top: 20px;
+}
+
+.row-query-patrolhostory {
+    margin-top: 20px;
+}
+
+
+.PatrolHostory .timeline_ml .anticon svg {
+    /* 加载中圈的颜色 */
+    display: inline-block;
+    color: red;
+}
+
+.RollcallHostory .timeline_ml .anticon svg {
+    /* 加载中圈的颜色 */
+    display: inline-block;
+    color: red;
+}
+
+.PatrolHostory .ant-timeline-item-pending .ant-timeline-item-head {
+    /* 加载中圈的外边的背景 */
+    background: #323A5D;
+}
+
+.PatrolHostory .ant-form-item-label label {
+    color: #fff !important;
+}
+
+.PatrolHostory .ant-timeline {
+    color: #fff;
+}
+
+.RollcallHostory .ant-timeline-item-pending .ant-timeline-item-head {
+    /* 加载中圈的外边的背景 */
+    background: #323A5D;
+}
+
+.RollcallHostory .ant-form-item-label label {
+    /* 所有的字体为白色 */
+    color: #fff !important;
+}
+
+.RollcallHostory .ant-timeline {
+    /* 所有的字体为白色 */
+    color: #fff;
+}
+
+.RollcallHostory a {
+    color: #fff;
+}
+
+.PatrolHostory a {
+    color: #fff;
+}
+
+.PatrolPlan {
+    background: #323A5D !important;
+}
+
+.redpic {
+    background-image: url(../imgs/hongse.png);
+    background-size: 100% 100%;
+    display: inline-block;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.yellowpic {
+    background-image: url(../imgs/huangse.png);
+    background-size: 100% 100%;
+    display: inline-block;
+    width: auto;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.greenpic {
+    background-image: url(../imgs/lvse.png);
+    background-size: 100% 100%;
+    display: inline-block;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.PatrolPlan .ant-card {
+    background: #2B3151;
+}
+
+/*  */
+
+.patrol_item {
+    border: 1px solid #4C5784;
+    box-shadow: 0px 0px 30px rgba(34, 34, 34, 0.4);
+}
+
+.RollcallTask .ant-card {
+    color: #fff;
+    background: #323A5D;
+    border-radius: 2px;
+    box-shadow: 0px 0px 30px rgba(34, 34, 34, 0.4);
+}
+
+.RollcallTask .ant-card-head-title {
+    color: #fff;
+}
+
+.arr {
+    background-image: url(../imgs/arr.png);
+    background-size: 100% 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 1px 10px;
+}
+
+.PatrolPlan .card-center {
+    margin: 0 !important;
+}
+
+.equipmentRight p {
+    width: 40%;
+    color: #ffffff;
+}
+
+.ercolor {
+    padding-bottom: 20px;
+}
+
+/*布防中*/
+.defenceEqui {
+    color: #54CD66;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 8px;
+}
+.defenceEqui:hover {
+    color: #43a952;
+}
+
+/*不在布防中*/
+.nodefence {
+    color: #AAAAAA;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 8px;
+}
+/*未设置*/
+.setup {
+    color: #5063EE;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 8px;
+}
+.setup:hover{
+    color: #3f54e8;
+}
+.backImg {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+}
+
+.gutter-example .ant-radio-disabled + span {
+    color: #000;
+}
+
+.gutter-example .ant-select-selection {
+    background-color: #fff !important;
+    color: rgba(0, 0, 0, 0.4) !important;
+    /*border: #d9d9d9!important;*/
+}
+
+.gutter-example .ant-input {
+    border: 1px solid #000 !important;
+}
+
+/* box-shadow: 0px 0px 30px rgba(34,34,34,0.4); */
+
+.gutter-example .ant-input {
+    border: 1px solid #000 !important;
+}
+
+.adopt-white {
+    background: rgb(50, 58, 93);
+}
+
+.adopt-white .ant-card {
+    background: rgb(50, 58, 93);
+}
+
+.adopt-white .ant-card {
+    color: #fff;
+}
+
+.gutter-example .adopt-white .ant-form-item-label label {
+    color: #fff !important;
+}
+
+.gutter-example .adopt-white .ant-form {
+    color: #fff;
+}
+
+.gutter-example .adopt-white .ant-btn-primary {
+    background-color: #5063ee;
+    width: 88px;
+}
+
+.gutter-example .adopt-white .login-form-button-chwj {
+    color: #5063ee;
+}
+
+.adoptlook-white {
+    background: rgb(50, 58, 93);
+}
+
+.adoptlook-white .ant-card {
+    background: rgb(50, 58, 93);
+}
+
+.gutter-example .adoptlook-white .ant-form {
+    color: #fff;
+}
+
+.gutter-example .adoptlook-white .ant-form-item-label label {
+    color: #fff !important;
+}
+
+.gutter-example .adoptlook-white .ant-input-disabled {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.paddL {
+    margin: 20px 20px 0 20px;
+}
+
+.paddL .ant-card-head-title, .paddL .ant-timeline {
+    color: #ffffff;
+}
+
+.paddL .ant-card {
+    background: #2B3355 !important;
+    color: #ffffff;
+}
+
+.paddL .ant-timeline-item-head {
+    border-color: #FFF;
+}
+
+.PatrolPlan .ant-card {
+    min-height: 500px;
+}
+
+.RollcallHostory a:hover {
+    color: #ccc;
+}
+
+.Universe .header .canvaszz { /*用来解决视频右键菜单，用于视频上面的遮罩层*/
+    width: 100%;
+    /* background-image: url(../imgs/in_top_bj.jpg); */
+    /* height:640px; */
+    position: absolute;
+    z-index: 10;
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.4;
+    -khtml-opacity: 0.4;
+    opacity: 0.4;
+}
+
+.overView .header {
+    padding: 0;
+    padding-right: 40px;
+    height: 0px !important;
+}
+
+.equiptable .slick-slider {
+    height: auto !important;
+    overflow: hidden;
+}
+
+.redcolor {
+    color: red;
+}
+.startTime .ant-select-selection{
+    width: 120px;
+    background: #3C466E;
+    display: inline-block;
+    border-radius: 4px;
+}
+.startTime .ant-select-selection__placeholder{
+    color: #74EAF6;
+}
+.startTime .ant-select-selection-selected-value{
+    color:#8097CC;
+}
+

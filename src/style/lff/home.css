@@ -1,0 +1,22 @@
+.Setarea .Setarea_cont {
+  margin: 20px;
+  padding: 20px;
+  background: #2b3355;
+  height: 100%;
+}
+
+.Setarea .photo {
+  position: relative;
+}
+
+.Setarea .optbtn {
+  position: absolute;
+  top: 235px;
+  left: 704px;
+}
+
+.areaexplain {
+  padding: 10px 0;
+  color: #fff;
+  line-height: 2em;
+}

@@ -1,0 +1,43 @@
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.setarea {
+  width: 100%;
+  overflow: hidden;
+  background: #2b3355;
+  margin: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+.topcont {
+  box-sizing: border-box;
+  height: 576px;
+}
+
+.cavwrap {
+  width: 704px;
+  height: 576px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.queryBtn {
+  width: 130px !important;
+}
+
+
+.optbtn {
+  float: right;
+  margin-right: 40%;
+  margin-top: 200px;
+}
+
+.areaexplain {
+  color: #fff;
+}

@@ -1,0 +1,237 @@
+.Datavisual{
+    padding:0 10px;
+}
+.Datavisual .pfixed{
+    width:100%;
+    position: fixed;
+    top: 80px;
+    left:30px;
+    display: none;
+}
+.Datavisual .warrper{
+    padding: 10px;
+    height: 70%;
+}
+.Datavisual .warrper .wcolum{
+    height: 100%;
+}
+.Datavisual .lump, .Datavisual .wappscol{
+    height: 100%;
+    background:url("../img/xiaotudikuang.png") no-repeat;
+    background-size:  100% 100%; 
+}
+.lumpbott{
+    padding-top:10px;
+}
+
+.Datavisual .titleechart{
+    color: #fff;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+
+}
+.Datavisual .titlename{
+    position: relative;
+    display: inline-block;
+    padding-left: 35px;
+    font-size:16px;
+}
+/*.titlename:before{
+    position: absolute;
+    left: 10px;
+    top: 18px;
+    content: '';
+    width:12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+}*/
+.wcolum .clunm{
+    height: 50%;
+}
+.Datavisual .comp{
+    height: calc(100% - 60px);
+    width: 100%;
+    overflow: hidden;
+}
+.equiptable{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto; 
+}
+
+.equiptable .equipment{
+    height: 15%;
+    color:#fff;
+    padding-bottom: 1em;
+    text-align: center; 
+}
+.equiphead .lines{ 
+    width: 100%;
+    display: table;
+    height: 76%;
+    line-height: 2.5;
+    margin-top: 12px;
+    background: -webkit-linear-gradient(left, rgba(10,104,228,.3) ,rgba(10,104,228,1)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, rgba(10,104,228,.3) ,rgba(10,104,228,1)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, rgba(10,104,228,.3) ,rgba(10,104,228,1)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, rgba(10,104,228,.3) ,rgba(10,104,228,1)); /* 标准的语法（必须放在最后） */
+}
+.equiptable .gutter-row{
+    display: table-cell;
+    vertical-align: middle;
+}
+.equipbody .lines{
+    width: 100%;
+    display: table;
+    height: 100%; 
+    line-height: 2.5;
+    background: -webkit-linear-gradient(left, rgba(10,104,228,.3) ,rgba(10,104,228,1)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, rgba(10,104,228,.3) ,rgba(10,104,228,1)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, rgba(10,104,228,.3) ,rgba(10,104,228,1)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, rgba(10,104,228,.3) ,rgba(10,104,228,1)); /* 标准的语法（必须放在最后） */
+}
+
+.wcolummap{
+    position: relative;
+    height: 100%;
+    background:url("../img/mapbg.png") no-repeat;
+    background-size:  100% 100%; 
+}
+.yundate{
+    font-size: 16px;    
+    padding-left:35px; 
+}
+.yundate b{
+    letter-spacing:2px;
+    font-size: 18px;    
+    font-family: '黑体';
+}
+.ant-row.message{
+}
+.message .heihgdabo{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.message .heihgdabo .messthis{
+    /*padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;*/
+    background:#0483e2;
+    border-radius: 8px;
+}
+.equiptu{
+    margin-top: 8px;
+    text-align: center;
+
+}
+.Datavisual .warrperbottom{
+    padding-left:10px;
+    padding-right: 10px; 
+    height:calc(30% - 10px);
+}
+.warrperbottom .bottomheig{
+    height: 100%;
+    padding-right: 17px;
+}
+.maps{
+    height: calc(80% - 50px)
+}
+.Datavisual .draw{
+    position: relative;
+    height: 20%;
+    width: 100%;  
+}
+.untreated{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+}
+.untreated.alarmtitle{
+    top:calc(25%);
+    font-size: 15px;
+}
+.untreated.alarmvalue{
+    top:calc(60%);
+    font-size: 24px;
+}
+.Datavisual{
+    width: 100%;
+    overflow: hidden;
+    background: url("../img/beijingtu.png") no-repeat;
+    color: #fff;
+    background-size:  100% 100%;
+}
+.titletop{
+    width:52%;
+    display: inline-block;
+    line-height: 63px;
+}
+.titletop .titlevalue{
+    font-size: 175%;
+    text-align: center;
+    line-height: 65px;
+    height: 65px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    font-family: chuangyi;
+    text-shadow: 0 0 10px #fff;
+    color:#fff;
+}
+.titletop .titlevalue:after,.titletop .titlevalue:before{
+    position: absolute;
+    height: 100%;
+    top: 8px;
+    content: '';
+    height: 50px;
+    width: calc(50% - 100px);
+    background-size:  100% 100%;
+}
+.titletop .titlevalue:after{
+    right:-30px;
+    background-image: url("../img/titler.png");
+    background-repeat: no-repeat;
+}
+.titletop .titlevalue:before{
+    left:-30px;
+    background-repeat: no-repeat;
+    background-image: url("../img/titlel.png");
+}
+.ant-layout p.sgxdword{
+    margin: 0;
+    font-size: 15px;
+    line-height: 2em;
+}
+.ant-layout p.sgxdword .sgxdnum{
+    font-size: 24px;
+    line-height: 1em;
+}
+.lines .gutter-row{
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.Datavisual .echartmap{
+    padding:20px;
+}
+
+
+.Datavisual .today{
+    display: inline-block;
+    float: right;
+    padding-right: 20px;
+
+}
+

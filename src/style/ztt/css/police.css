@@ -1,0 +1,415 @@
+/*
+    Alarmlist.js报警
+*/
+
+.Alarmlist .alarmitem {}
+
+.handle {
+    width: 100%;
+    height: 56px;
+    background: #C0C0C0;
+    color: #ffffff;
+    text-align: center;
+    line-height: 56px;
+    font-size: 14px;
+    margin-top: calc(100% - 28px);
+}
+
+.handle-right {
+    width: 90%;
+    height: 100%;
+    border-right: 1px dashed #E1E1E1;
+}
+
+.policeContext {
+    position: relative;
+    width: 100%;
+    height: 100px !important;
+    border: 1px solid #CBCBCB;
+    margin-top: 23px;
+    background: #ffffff;
+}
+
+.line-police {
+    margin: 8px 0px;
+    padding-left: 16px;
+}
+
+.policeName {
+    color: #277FD0;
+    font-weight: bolder;
+}
+
+.camera {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #141415;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 20px);
+    bottom: -20px;
+    cursor: pointer;
+}
+
+.policeIcon {
+    position: relative;
+}
+
+.backImg {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+}
+
+.backImg img {
+    width: 12%;
+    height: 150px;
+}
+
+.colorgreen {
+    color: #5DCB9A;
+}
+
+.colorred {
+    color: #FB7575;
+}
+
+.colorblue {
+    color: #2C39B1;
+}
+
+.colortheme {
+    color: #313653;
+}
+
+.typeOrange {
+    border: 1px solid #4c5784;
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.typegreen {
+    border: 1px solid #4c5784;
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.typered {
+    border: 1px solid #4c5784;
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.typeblue {
+    border: 1px solid #4c5784;
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+.typetheme {
+    border: 1px solid #313653;
+}
+
+.iconColor1 {
+    color: #FB7575;
+}
+
+.iconColor2 {
+    color: #5DCB9A;
+}
+
+.iconColor3 {
+    color: #C0C0C0;
+}
+
+/*省略号*/
+.overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.pageSize {
+    width: 100%;
+    text-align: center;
+    margin: 25px auto;
+}
+
+/*设备详情*/
+.alarmflex {
+    display: flex;
+    width: 100%;
+}
+
+.flexleft {
+    width: 606px;
+}
+
+.flexleft .mergeImage {
+    margin-top: 10px;
+}
+
+.flexleft .mergeImage .mergeItem {
+    width: 65px;
+    overflow-x: auto;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.flexright {
+    padding-left: 10px;
+}
+
+@media screen and (max-width: 1280px) {
+    .lr {
+        margin: 20px 0 0 76px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .lr {
+        margin: 3px 0 0 0;
+    }
+}
+
+.mt {
+    margin: 3px 0 0 0;
+}
+
+.word-row {
+    font-family: MicrosoftYaHei;
+}
+
+.fontstyle {
+    font-size: 13px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 !important;
+}
+
+.fontstyletime {
+    font-size: 12px !important;
+}
+
+@media screen and (min-width: 1600px) {
+    .pliceImgyal {
+        width: 100%;
+        height: 123px;
+        background: #ffffff;
+        /* box-shadow: 0 0 10px #ffffff;*/
+        cursor: pointer;
+    }
+
+    .pliceImgyal img {
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .pliceImgyal {
+        width: 100%;
+        height: 123px;
+        background: #ffffff;
+        /* box-shadow: 0 0 10px #ffffff;*/
+        cursor: pointer;
+    }
+
+    .pliceImgyal img {
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+}
+
+.sure-row {
+    font-size: 13px;
+    cursor: pointer;
+    /* margin-top: 8px; */
+}
+
+.sure-col-l {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #4c5784;
+    border-right: 1px solid #4c5784;
+    line-height: 77px;
+}
+
+.sure-col-c {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #4c5784;
+    border-right: 1px solid #4c5784;
+}
+
+.sure-col-r {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #4c5784;
+}
+
+.circle-sure {
+    width: 10px;
+    height: 10px;
+    background-color: #54CD66;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: relative;
+    top: 38%;
+    left: 30%;
+    float: left;
+}
+
+.word-sure {
+    color: #54CD66;
+    position: relative;
+    left: 34%;
+    top: -30%;
+}
+
+.circle-xj {
+    width: 10px;
+    height: 10px;
+    background-color: #f22727;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: relative;
+    top: 38%;
+    left: 30%;
+    float: left;
+}
+
+.word-xj {
+    color: #f22727;
+    position: relative;
+    left: 35%;
+    top: 28%;
+}
+
+.circle-hl {
+    width: 10px;
+    height: 10px;
+    background-color: #00b5d0;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: relative;
+    top: 38%;
+    left: 30%;
+    float: left;
+}
+
+.word-hl {
+    color: #00b5d0;
+    position: relative;
+    left: 35%;
+    top: 28%;
+}
+
+.triangle-topright-green {
+    width: 0;
+    height: 0;
+    border-color: transparent white;
+    border-width: 0px 60px 60px 0px;
+    border-style: solid;
+    position: absolute;
+    right: 0;
+}
+
+.trianglegreen {
+    border-color: transparent #2a8e39 !important;
+}
+
+.trianglered {
+    border-color: transparent #f22727 !important;
+}
+
+.triangleblue {
+    border-color: transparent #00b5d0 !important;
+}
+
+.triangleOrange {
+    border-color: transparent #d99e00 !important;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid #131313;
+    border-bottom: 15px solid transparent;
+    position: absolute;
+    right: 0;
+}
+
+.r_flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 123px;
+}
+
+.time-col {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.listmargintop {
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 25px rgba(34, 34, 34, 0.4);
+}
+
+.xuanzhuan {
+    position: absolute;
+    color: #000;
+    right: -57px;
+    display: inline-block;
+    top: 16px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    color: white;
+    font-size: 12px;
+}
+
+.loadding {
+    width: 100%;
+    margin: 25px auto;
+}
+
+.row-alarmlist-detail {
+    color: #fefefe;
+}
+
+.flexright button:focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.flexright button:hover {
+    outline: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.typeUnknown {
+    width: 140%;
+    display: inline-block;
+}

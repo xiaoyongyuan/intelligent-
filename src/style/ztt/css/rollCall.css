@@ -1,0 +1,140 @@
+/*
+    RollcallRecord.js 点名记录
+*/
+.rollcalllist{
+    background: #2B3355;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 30px rgba(34,34,34,0.4);
+}
+
+.ercolor{
+    background: #2B3253;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding-top: 10px
+}
+.rollRow{
+    margin-left: 8%;
+}
+@media screen and (min-width: 1900px){
+    .rollCall{
+        display: flex;
+        flex-direction:row;
+        margin: 12px 0!important;
+        color: #ffffff;
+    }
+    .rollRow{
+        margin-left: 8%;
+    }
+}
+.rollCall{
+    display: flex;
+    flex-direction:row;
+    color: #ffffff;
+}
+.fontColor{
+    color:#429019;
+}
+.fontColor1{
+    color:#FB7575;
+}
+/*省略号*/
+.overflow{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/*
+    RollcallRecordModel.js 点名记录详情
+*/
+.rollcallModel{
+    margin: 3% 0;
+}
+.rollcallModelTitle{
+    display: flex;
+    justify-content: center;
+}
+.fontSizeModel{
+    font-size: 1.3vmax;
+}
+/*
+RollcallTask.js 点名任务
+*/
+.cardContext{
+    position: relative;
+}
+.cardContext .titles{
+    display: flex;
+    padding:3px 13px;
+    background: rgba(51,56,80,.9);
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top:4px;
+    left: -5px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: white;
+
+}
+/*点名对象页*/
+.RollcallTask .flexbox{
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+}
+.RollcallTask .cardflex{
+    
+}
+.cardContext canvas{
+    background-size:100% 100%;
+    width: 270px;
+    height: 221px;
+}
+.RollcallTask .scan{
+    display: inline-block;
+    position: relative;
+}
+.RollcallTask .scangif{
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index:3;
+    width:270px;
+    height: 221px;
+}
+.RollcallTask .scanno{
+    display: none;
+}
+.RollcallTask .ant-spin-blur{
+    opacity:1;
+    
+}
+.zwsj{
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+.RollcallTask .setrollcalltask select{
+    background-color: #fff!important;
+}
+.gutter-example .ant-radio-disabled + span{
+    color: #fff;
+}
+.ant-radio-wrapper{
+    color: #fff!important;
+}
+.gutter-example .adoptlook-white .ant-btn-primary{
+    background-color: #5063ee!important;
+}
+.gutter-example .adoptlook-white .adoptBtn-fh{
+    color: #5063ee!important;
+}
+.RollcallTask .ant-select-selection {
+    background-color: #fff!important;
+    color: #000!important;
+}
+.setrollcalltask .ant-form-item-label label{
+    color: #000!important;
+}

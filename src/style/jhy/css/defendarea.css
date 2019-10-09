@@ -1,0 +1,74 @@
+.upBtn,
+.downBtn,
+.upLeftBtn,
+.upRightBtn,
+.downLeftBtn,
+.downRightBtn,
+.centerLeftBtn,
+.centerRightBtn {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  z-index: 10;
+}
+
+.centerContext {
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  cursor: move;
+  left: 10px;
+  top: 10px;
+  position: absolute;
+}
+
+.upBtn {
+  height: 5px;
+  width: calc(100% - 10px);
+  top: 0;
+  cursor: n-resize;
+}
+
+.downBtn {
+  height: 5px;
+  width: calc(100% - 10px);
+  bottom: 0;
+  cursor: s-resize;
+}
+
+.upLeftBtn {
+  top: 0;
+  left: 0;
+  cursor: nw-resize;
+}
+
+.upRightBtn {
+  top: 0;
+  right: 0;
+  cursor: ne-resize;
+}
+
+.downLeftBtn {
+  bottom: 0;
+  left: 0;
+  cursor: sw-resize;
+}
+
+.downRightBtn {
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+
+.centerLeftBtn {
+  width: 5px;
+  height: calc(100% - 10px);
+  left: 0;
+  cursor: w-resize;
+}
+
+.centerRightBtn {
+  width: 5px;
+  height: calc(100% - 10px);
+  right: 0;
+  cursor: e-resize;
+}
