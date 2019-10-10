@@ -1,5 +1,5 @@
 /*加载*/
-.ant-spin-dot i{
+/*.ant-spin-dot i{
     background: #ffffff!important;
 }
 .ant-spin{
@@ -10,40 +10,43 @@
 }
 .alarmDetails .ant-spin{
     color: #000!important;
-}
+}*/
 /*表格*/
-.ant-table-thead > tr > th {
+/*.ant-table-thead > tr > th {
     background: #394269!important;
     color: #fff !important;
 }
 .ant-calendar-picker-icon {
     color: #8592C6!important;
-}
+}*/
 /*日历*/
-.ant-calendar-range-picker-separator {
-    color: #8592C6!important;
-}
+/*.ant-calendar-range-picker-separator {
+    background: #F5F5FA!important;
+    color: #454D71!important;
+}*/
 /*下拉框*/
 /*.ant-select-selection {
     background-color: #fff!important;
     border: 1px solid #3C466E!important;
     color: #000!important;
 }*/
+/*
 .Alarmlist .ant-select-selection,.PatrolRecord .ant-select-selection,.RollcallRecord .ant-select-selection{
     background: #3C466E;
     border: 1px solid #3C466E;
     color: #fff;
 }
+*/
 
-.ant-select-arrow {
+/*.ant-select-arrow {
     color: #8592C6!important;
 }
 .ant-table-thead > tr.ant-table-row-hover > td, .ant-table-tbody > tr.ant-table-row-hover > td, .ant-table-thead > tr:hover > td, .ant-table-tbody > tr:hover > td {
-    /* 表格行的hover效果 */
+    !* 表格行的hover效果 *!
     background: #4F5574 !important;
-}
+}*/
 /*分页*/
-.ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link {
+/*.ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link {
     border: 1px solid #495480!important;
     background-color: #2B3355!important;
     color: #ffffff!important;
@@ -62,7 +65,7 @@
 }
 .ant-pagination-item a {
     color: #ffffff!important;
-}
+}*/
 /*查询 修改 新增*/
 .queryBtn{
     background:#5063ee!important;
@@ -119,7 +122,7 @@
     padding-bottom: 22px!important;
 }
 /*表格无数据样式*/
-.ant-table-placeholder{
+/*.ant-table-placeholder{
     background: #2B3355!important;
     border-top: 1px solid #4C5784;
     border-bottom:1px solid #4C5784!important;
@@ -128,21 +131,21 @@
 .ant-table-bordered.ant-table-empty .ant-table-placeholder {
     border-left: 1px solid #4C5784!important;
     border-right: 1px solid #4C5784!important;
-}
-.ant-table-thead > tr > th {
-    /* 所有表格th的背景和颜色 */
+}*/
+/*.ant-table-thead > tr > th {
+    !* 所有表格th的背景和颜色 *!
     background: #323A5D!important;
     color: #fff !important;
 }
 .ant-table {
-    /* 所有表格的字体颜色 */
+    !* 所有表格的字体颜色 *!
     color: #fff!important;
-}
+}*/
 .ant-pagination-item-ellipsis{
     color:#fff !important;
 }
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
-    background-color: #272b42!important;   /* 菜单选中的颜色 */
+    background-color: #1E73FF!important;   /* 菜单选中的颜色 */
     color:#fff;
 }
 .ant-card-bordered {
@@ -163,16 +166,16 @@
 }
 .warrper .ant-input,.Alarmlist .ant-input,.PatrolHostory .ant-input,.PatrolRecord .ant-input,
 .RollcallHostory .ant-input,.RollcallRecord .ant-input,.RollcallTask .ant-input{
-    background: #3C466E!important;
-    color: #ffffff!important;
-    border: 1px solid #3C466E!important;
+    background: #F5F5FA!important;
+    color: #454D71!important;
+    border: none;
 }
 /*查询框前字*/
-.Alarmlist .ant-form-item-label label,.PatrolHostory .ant-form-item-label label,
+/*.Alarmlist .ant-form-item-label label,.PatrolHostory .ant-form-item-label label,
 .PatrolRecord .ant-form-item-label label,.RollcallRecord .ant-form-item-label label,
 .RollcallTask .ant-form-item-label label,.warrper .ant-form-item-label label{
     color:#fff!important;
-}
+}*/
 .ant-table-placeholder {
     min-height: 200px !important;
     padding-top: 100px;
@@ -180,20 +183,20 @@
 .Settime{
     padding: 20px
 }
-.Settime .ant-form-item-label label {
+/*.Settime .ant-form-item-label label {
     color: #fff !important;
 }
 .Settime .ant-table-tbody > tr > td {
     border: 1px solid #4C5784!important;
-}
-.Settime .ant-time-picker-input {
+}*/
+/*.Settime .ant-time-picker-input {
     color: #8a97cc!important;
     background-color: #3c466e!important;
     border: 0 !important;
 }
 .Settime .ant-time-picker-icon .ant-time-picker-clock-icon {
     color: #fff !important;
-}
+}*/
 .tc-label label{
     color: #000!important;
 }

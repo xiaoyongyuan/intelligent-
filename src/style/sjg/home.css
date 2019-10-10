@@ -4,29 +4,33 @@
     padding-bottom: 30px;
 }
 
-.equipmentCard .ant-card-body {
+/*.equipmentCard .ant-card-body {
     background: #2B3355;
-}
+}*/
 
+/*
 .equipmentCard .ant-card-actions {
     background: #2B3355;
 }
+*/
 
-.equipmentCard .ant-card-bordered {
+/*.equipmentCard .ant-card-bordered {
     border: 1px solid #4C5784;
-}
+}*/
 
+/*
 .equipmentCard .ant-card-actions > li:not(:last-child) {
     border-right: 1px solid #4C5784;
 }
+*/
 
-.equipmentCard .ant-card-actions > li > span a {
+/*.equipmentCard .ant-card-actions > li > span a {
     color: #ffffff;
 }
 
 .equipmentCard .ant-card-actions > li > span a:hover {
     color: #ccc;
-}
+}*/
 
 .boxShow {
     box-shadow: 0px 0px 30px rgba(34, 34, 34, 0.4);
@@ -50,22 +54,24 @@
     height: auto;
     margin: 0 auto;
     padding: 1%;
-    background: #2B3355;
+    /*background: #2B3355;*/
 }
 
 .ant-table-thead > tr > th {
-    background: #2B3355 !important;
-    color: #ffffff;
-    border: 1px solid #4C5784 !important;
+    background: #D2E3FF !important;
+    color: #313A62;
+    /*border: 1px solid #4C5784 !important;*/
 }
 
 .ant-table-bordered .ant-table-tbody > tr > td {
-    border: 1px solid #4C5784 !important;
+    /*border: 1px solid #4C5784 !important;*/
 }
 
+/*
 .ant-table {
     color: #ffffff;
 }
+*/
 
 .search input {
     width: 60%;
@@ -413,14 +419,14 @@
 }
 
 .actionsBbottom p:nth-of-type(1) {
-    color: #ffffff;
+    /*color: #ffffff;*/
     font-weight: 600;
     font-size: 16px;
     margin: 0;
 }
 
 .actionsBbottom p:nth-of-type(2) {
-    color: #ffffff;
+    /*color: #ffffff;*/
     font-weight: 300;
     font-size: 12px;
     margin: 0;
@@ -455,13 +461,13 @@
     padding: 20px;
 }
 
-.padding20 .ant-table-tbody > tr > td {
+/*.padding20 .ant-table-tbody > tr > td {
     border: 1px solid #4C5784 !important;
-}
+}*/
 
-.padding20 .ant-radio-wrapper {
+/*.padding20 .ant-radio-wrapper {
     color: #fff;
-}
+}*/
 
 /* 设备信息和摄像头信息页 */
 .coverflow {
@@ -1029,10 +1035,10 @@
     margin: 0 !important;
 }
 
-.equipmentRight p {
+/*.equipmentRight p {
     width: 40%;
     color: #ffffff;
-}
+}*/
 
 .ercolor {
     padding-bottom: 20px;
@@ -1145,13 +1151,13 @@
     margin: 20px 20px 0 20px;
 }
 
-.paddL .ant-card-head-title, .paddL .ant-timeline {
+/*.paddL .ant-card-head-title, .paddL .ant-timeline {
     color: #ffffff;
-}
+}*/
 
 .paddL .ant-card {
-    background: #2B3355 !important;
-    color: #ffffff;
+    /*background: #2B3355 !important;*/
+    /*color: #ffffff;*/
 }
 
 .paddL .ant-timeline-item-head {
@@ -1194,13 +1200,13 @@
 }
 .startTime .ant-select-selection{
     width: 120px;
-    background: #3C466E;
+    /*background: #3C466E;*/
     display: inline-block;
     border-radius: 4px;
 }
-.startTime .ant-select-selection__placeholder{
+/*.startTime .ant-select-selection__placeholder{
     color: #74EAF6;
-}
+}*/
 .startTime .ant-select-selection-selected-value{
     color:#8097CC;
 }

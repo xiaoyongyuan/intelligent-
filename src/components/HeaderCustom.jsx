@@ -45,8 +45,8 @@ class HeaderCustom extends Component {
         if(!_user){
             this.props.history.push('/login');
         }else{
-            
-            
+
+
             //this.goEasyinit('17792542304')
 
             this.setState({
@@ -74,7 +74,7 @@ class HeaderCustom extends Component {
         if(nextState.alarmmax && nextProps.auth.alarmmax != nextState.alarmmax){
             this.openNotification()
         }
-        return true;  
+        return true;
     }
     screenFull = () => { //全屏切换
         screenfull.toggle();
@@ -95,11 +95,11 @@ class HeaderCustom extends Component {
                 if(res.success){
                     _this.setState({
                         complist:res.data
-                    }); 
+                    });
                 }
-             }) 
+             })
         }
-        
+
         this.setState({
             sitchshow: true,
         });
@@ -124,15 +124,15 @@ class HeaderCustom extends Component {
         if(this.state.activecode!='onself'&& this.state.complist){
             data={
                 activecomp:this.state.complist[this.state.activecode].passivename,
-                activecompanycode:this.state.complist[this.state.activecode].passivecode,  
+                activecompanycode:this.state.complist[this.state.activecode].passivecode,
             }
             activecomp=data.activecomp;
 
-            
+
         }else if(this.state.activecode='onself'){
             data={
                 activecomp:'',
-                activecompanycode:'',  
+                activecompanycode:'',
             }
             activecomp=auth.data.cname;
         }
@@ -166,7 +166,7 @@ class HeaderCustom extends Component {
                 window.location.reload();
             });
         }
-        
+
     }
     deleteOk = () =>{//确认退出
         const { clearAuth } = this.props;
@@ -214,9 +214,9 @@ class HeaderCustom extends Component {
 
 
         const { responsive, path, auth } = this.props;
-        const _this=this;        
+        const _this=this;
         return (
-            <div style={{background:'#313653'}}>
+            <div>
             <Modal
                 title="消息提醒"
                 visible={this.state.visible}
@@ -225,12 +225,12 @@ class HeaderCustom extends Component {
                 okText="确认"
                 cancelText="取消"
             />
-            <Header className="custom-theme header">
-                <div className="titletop">
+            <Header className="custom-theme header" style={{background:"#fff"}}>
+               {/* <div className="titletop">
                     <div className="titlevalue">
                         {this.props.user.cname}
                     </div>
-                </div>
+                </div>*/}
 
                 <div style={{width:"15%",float:"left"}} className="leftIcon">
                     {
@@ -249,15 +249,15 @@ class HeaderCustom extends Component {
                 </div>
                 <div style={{width:"28%",float:"right"}}>
                     {/*当前查看公司*/}
-                    <div style={{ lineHeight: '63px', float: 'right',color:'#fff' }}>当前单位：{auth&&auth.active&&auth.active.activecomp?auth.active.activecomp:this.props.user.cname}</div>
+                    <div style={{ lineHeight: '63px', float: 'right' }}>当前单位：{auth&&auth.active&&auth.active.activecomp?auth.active.activecomp:this.props.user.cname}</div>
                     <Menu
                         mode="horizontal"
                         style={{ lineHeight: '63px', float: 'right' }}
                         onClick={this.menuClick}
                     >
-                        <Menu.Item style={{borderBottom:'2px solid #31365'}} key="full" onClick={this.screenFull} >
+                       {/* <Menu.Item style={{borderBottom:'2px solid #31365'}} key="full" onClick={this.screenFull} >
                             <Icon type="arrows-alt" onClick={this.screenFull} />
-                        </Menu.Item>
+                        </Menu.Item>*/}
                         <SubMenu style={{borderBottom:'2px solid #31365'}} title={<span className="avatar"><img src={this.props.user.utype==='1'?icon_user:icon_admin} alt="头像" /> </span>}>
                             <MenuItemGroup title="用户中心" style={{background:"rgba(255,255,255,0.5)"}}>
                                 <Menu.Item key="setting:1">你好 - {this.props.user.realname}</Menu.Item>

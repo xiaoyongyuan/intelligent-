@@ -85,7 +85,7 @@ RollcallTask.js 点名任务
     flex-wrap:wrap;
 }
 .RollcallTask .cardflex{
-    
+
 }
 .cardContext canvas{
     background-size:100% 100%;
@@ -109,7 +109,7 @@ RollcallTask.js 点名任务
 }
 .RollcallTask .ant-spin-blur{
     opacity:1;
-    
+
 }
 .zwsj{
     margin-top: 50px;
@@ -122,9 +122,9 @@ RollcallTask.js 点名任务
 .gutter-example .ant-radio-disabled + span{
     color: #fff;
 }
-.ant-radio-wrapper{
+/*.ant-radio-wrapper{
     color: #fff!important;
-}
+}*/
 .gutter-example .adoptlook-white .ant-btn-primary{
     background-color: #5063ee!important;
 }

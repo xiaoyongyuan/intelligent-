@@ -38,7 +38,7 @@ class SiderCustom extends Component {
         };
     };
     state = {
-        logourl:this.props.collapsed?logofont:logoicon,
+        logourl:this.props.collapsed?logofont:"logoicon",
         collapsed: false,
         mode: 'inline',
         openKey: '',
@@ -79,7 +79,7 @@ class SiderCustom extends Component {
             if(user.activecount) identify='comptop';
             else identify='comp'
         }
-        
+
         return (
             <Sider
                 trigger={null}
@@ -87,8 +87,20 @@ class SiderCustom extends Component {
                 collapsed={this.props.collapsed}
                 style={{ overflowY: 'auto' }}
             >
-                <div>
-                    <img src={this.props.collapsed?logoicon:logofont} alt="" />
+                <div
+                    style={{
+                        color: "#fff",
+                        lineHeight: "65px",
+                        fontSize: "18px",
+                        textAlign: "center"
+                    }}
+                >
+                    {/* <img src={this.props.collapsed?logoicon:logofont} alt="nodata" /> */}
+                    {this.props.collapsed ? (
+                        <img src={logoicon} alt="nodata" />
+                    ) : (
+                        "AI安全感知预警中心"
+                    )}
                 </div>
                 <SiderMenu
                     identify={identify}

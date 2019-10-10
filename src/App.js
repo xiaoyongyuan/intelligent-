@@ -25,7 +25,7 @@ class App extends Component {
         }else{
             this.props.history.push('/login');
         }
-        
+
         // receiveData({a: 213}, 'auth');
         // fetchData({funcName: 'admin', stateName: 'auth'});
         this.getClientWidth();
@@ -53,14 +53,14 @@ class App extends Component {
                 {!responsive.data.isMobile && <SiderCustom collapsed={this.state.collapsed} user={auth} />}
                 <Layout style={{flexDirection: 'column'}}>
                     <HeaderCustom toggle={this.toggle} collapsed={this.state.collapsed} user={auth.data || {}} />
-                    <Content style={{ overflow: 'initial', flex: '1 1 0',background:"#323A5D"}}>
+                    <Content style={{ overflow: 'initial', flex: '1 1 0',background:"#F1F1FA"}}>
                         <Routes auth={auth} />
                     </Content>
                     {/*<Footer style={{ textAlign: 'center' }}>
-                                        西安傲科云 ©{new Date().getFullYear()} 
+                                        西安傲科云 ©{new Date().getFullYear()}
                                         </Footer>*/}
                 </Layout>
-                
+
             </Layout>
         );
     }

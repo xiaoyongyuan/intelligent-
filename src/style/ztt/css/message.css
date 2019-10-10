@@ -2,38 +2,38 @@
     width: 90%;
     padding: 20px 20px;
 }
-.Messages .ant-tabs-tab,.ant-tabs-tabpane{
+/*.Messages .ant-tabs-tab,.ant-tabs-tabpane{
     color: #fff;
-}
+}*/
 .Messages .ant-tabs-tab:hover{
     color: #5E98F7!important;
 }
 .Messages .messages-top{
-   border: 1px solid #3d4569;
+   /*border: 1px solid #3d4569;*/
    border-radius: 4px;
 }
 .Messages .ant-tabs-bar {
-    border-bottom: 1px solid #686e8a;
+    /*border-bottom: 1px solid #686e8a;*/
 }
-.Messages .ant-tabs-nav-scroll{
+/*.Messages .ant-tabs-nav-scroll{
     background-color: #424d7b;
-}
-.Messages .ant-collapse > .ant-collapse-item{
+}*/
+/*.Messages .ant-collapse > .ant-collapse-item{
     border-bottom: 1px solid #3d4569;
 }
 .Messages .ant-collapse > .ant-collapse-item > .ant-collapse-header{
     background: #323A5D;
     color: #fff!important;
-}
-.Messages .ant-collapse-content {
+}*/
+/*.Messages .ant-collapse-content {
     color: #f7f4f4;
     background-color: #323A5D;
     border-top: 1px solid #323A5D;
-}
-.Messages .ant-collapse{
+}*/
+/*.Messages .ant-collapse{
     border:none;
     background: #323A5D;
-}
+}*/
 .Messages .messTime{
     display: flex;
 }
