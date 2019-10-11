@@ -254,19 +254,19 @@ class Messages extends Component {
                                            className="Panel_cla"
                                            header={
                                                <div className="messTime">
-                                                   <div className="messAll fl">
+                                                   <div className="messAll">
                                                        <Badge dot style={{display:v.status===1?"none":"block"}}>
                                                            <div className="mesICon"><img src={this.hanldImgIcon(v.atype)} alt="" /></div>
                                                        </Badge>
                                                        <div className="messFont">
                                                            <span>{this.messAtype(v.atype)}</span>
-                                                           <span className="font">{v.atime}</span>
-                                                           {/* <span>{v.memo}</span> */}
+                                                           {/* <span className="font">{v.atime}</span> */}
+                                                           <span>{v.memo}</span>
                                                        </div>
                                                    </div>
                                                    {/* {v.memo} */}
-                                                   {/* <div className="messData">{v.atime}</div> */}
-                                                   <div className="messData_mid rg">{v.memo}</div>
+                                                   <div className="messData">{v.atime}</div>
+                                                   {/* <div className="messData_mid rg">{v.memo}</div> */}
                                                </div>}
                                                   key={v.code}
                                            >
@@ -283,7 +283,9 @@ class Messages extends Component {
                            <Spin size="large" spinning={this.state.loading}>
                                <Collapse onChange={this.callbackCollapse} accordion>
                                    {this.state.listsMess.map((v)=>(
-                                       <Panel header={
+                                       <Panel 
+                                           className="Panel_cla"
+                                       header={
                                            <div className="messTime">
                                                <div className="messAll">
                                                    <Badge dot style={{display:v.status===1?"none":"block"}}>
@@ -311,7 +313,9 @@ class Messages extends Component {
                            <Spin size="large" spinning={this.state.loading}>
                                <Collapse onChange={this.callbackCollapse} accordion>
                                    {this.state.listsMess.map((v)=>(
-                                       <Panel header={
+                                       <Panel 
+                                           className="Panel_cla"
+                                       header={
                                            <div className="messTime">
                                                <div className="messAll">
                                                    <Badge dot style={{display:v.status===1?"none":"block"}}>
@@ -339,7 +343,9 @@ class Messages extends Component {
                            <Spin size="large" spinning={this.state.loading}>
                                <Collapse onChange={this.callbackCollapse} accordion>
                                    {this.state.listsMess.map((v)=>(
-                                       <Panel header={
+                                       <Panel 
+                                           className="Panel_cla"
+                                       header={
                                            <div className="messTime">
                                                <div className="messAll">
                                                    <Badge dot style={{display:v.status===1?"none":"block"}}>
@@ -367,7 +373,9 @@ class Messages extends Component {
                            <Spin size="large" spinning={this.state.loading}>
                                <Collapse onChange={this.callbackCollapse} accordion>
                                    {this.state.listsMess.map((v)=>(
-                                       <Panel header={
+                                       <Panel 
+                                           className="Panel_cla"
+                                       header={
                                            <div className="messTime">
                                                <div className="messAll">
                                                    <Badge dot style={{display:v.status===1?"none":"block"}}>
