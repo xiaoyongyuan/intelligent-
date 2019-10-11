@@ -1,0 +1,47 @@
+.ant-tabs-nav .ant-tabs-tab {
+    width: 160px;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+    /* padding: 0; */
+    padding: 12px 0;
+    background: url(../img/message/noactiv_ta.png) no-repeat !important;
+    background-size: cover;
+}
+
+.ant-tabs-ink-bar{
+  width: 0 !important;
+}
+.ant-tabs-nav .ant-tabs-tab-active {
+    /* background-image: url(../img/message/activ_ta.png) !important; */
+    background: url(../img/message/activ_ta.png) no-repeat  !important;
+    background-size: 100%;
+    /* background-color: #000 !important; */
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+.fl{
+  float: left;
+}
+.rg{
+  float: right;
+}
+.messData_mid{
+  line-height: 100%;
+  margin-right: 20px;
+}
+
+
+.ant-tabs-bar {
+    margin: 0;
+}

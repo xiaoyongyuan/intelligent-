@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import { Tabs,Collapse, Spin,Badge,Modal,Pagination } from 'antd';
+import { Tabs, Collapse, Spin, Badge, Modal, Pagination, Icon} from 'antd';
 import "../../style/ztt/css/message.css";
+import "../../style/cby/css/message1.css";
 import replay_move from "../../style/ztt/img/message/replay_move.png";
 import colck from "../../style/cby/img/message/colck.png";
 import rep from "../../style/cby/img/message/rep.png";
+import activ_ta from "../../style/cby/img/message/activ_ta.png";
+import noactiv_ta from "../../style/cby/img/message/noactiv_ta.png";
 import ot from "../../style/ztt/img/message/ot.png";
 import move_time from "../../style/ztt/img/message/move_time.png";
 import user_move from "../../style/ztt/img/message/user_move.png";
@@ -223,27 +226,47 @@ class Messages extends Component {
             <div className="nodatas" style={{display:this.state.listsMess.length?"none":"block"}}><img src={nodata} /></div>
         )
     };
+    zhedixiaog = () =>{
+
+    }
+
     render() {
+
+
+        const customPanelStyle = {
+            background: '#f7f7f7',
+            border: 0,
+        };
         return (
            <div className="Messages">
-                <div className="messages-top  card-container">
-                    <Tabs defaultActiveKey="1" onChange={this.callbackTab} type="card">
-                       <TabPane tab="全部" key="1">
+                <div className="messages-top">
+                    <Tabs defaultActiveKey="1" onChange={this.callbackTab}>
+                        <TabPane tab="全部" key="1" >
                            <Spin size="large" spinning={this.state.loading}>
-                               <Collapse onChange={this.callbackCollapse} accordion>
+                                <Collapse 
+                                onChange={this.callbackCollapse} 
+                                accordion 
+ 
+                                    >
                                    {this.state.listsMess.map((v,i)=>(
-                                           <Panel header={
+                                           <Panel 
+                                           showArrow = {false}
+                                           style={customPanelStyle}
+                                           header={
                                                <div className="messTime">
-                                                   <div className="messAll">
+                                                   <div className="messAll fl">
                                                        <Badge dot style={{display:v.status===1?"none":"block"}}>
                                                            <div className="mesICon"><img src={this.hanldImgIcon(v.atype)} alt="" /></div>
                                                        </Badge>
                                                        <div className="messFont">
                                                            <span>{this.messAtype(v.atype)}</span>
-                                                           <span>{v.memo}</span>
+                                                           <span className="font">{v.atime}</span>
+                                                           {/* <span>{v.memo}</span> */}
                                                        </div>
                                                    </div>
-                                                   <div className="messData">{v.atime}</div>
+                                                   {/* {v.memo} */}
+                                                   {/* <div className="messData">{v.atime}</div> */}
+                                                   <div className="messData_mid rg">{v.memo}</div>
                                                </div>}
                                                   key={v.code}
                                            >

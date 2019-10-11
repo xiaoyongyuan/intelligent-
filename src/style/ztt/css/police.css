@@ -1,7 +1,9 @@
 /*
     Alarmlist.js报警
 */
-
+.Alarmlist{
+    padding: 0 50px;
+}
 .Alarmlist .alarmitem {}
 
 .handle {
