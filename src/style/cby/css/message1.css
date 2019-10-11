@@ -45,3 +45,24 @@
 .ant-tabs-bar {
     margin: 0;
 }
+.Panel_cla{
+  border: none;
+  border-bottom:none !important ;
+}
+.Panel_cla div{
+  border: none;
+  border-bottom:none !important ;
+}
+.Panel_cla:nth-child(2n){
+  background: #F5F5FA;
+}
+.Panel_cla:nth-child(2n-1){
+  background: #FFFFFF;
+}
+.ant-collapse {
+    border: none !important;
+    border-bottom:none !important ;
+}
+/* .ant-tabs-tabpane{
+
+} */

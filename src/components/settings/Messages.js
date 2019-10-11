@@ -251,7 +251,7 @@ class Messages extends Component {
                                    {this.state.listsMess.map((v,i)=>(
                                            <Panel 
                                            showArrow = {false}
-                                           style={customPanelStyle}
+                                           className="Panel_cla"
                                            header={
                                                <div className="messTime">
                                                    <div className="messAll fl">
