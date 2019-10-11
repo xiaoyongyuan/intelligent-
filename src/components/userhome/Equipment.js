@@ -76,11 +76,11 @@ class Equipment extends React.Component{
 
     statework=(i)=>{ //布防转换
         if(this.state.camera[i].work===2){
-            return (<span className="defenceEqui"><Icon type="clock-circle" className="settingIcon" /> 布防中</span>)
+            return (<span className="defenceEqui"><span className="zdefense"/><span className="zdefense1">布防</span></span>)
         }else if(this.state.camera[i].work===1){
-            return (<span className="nodefence coverflow" title="不在布防中"><Icon type="clock-circle" className="settingIcon" /> 不在布防中</span>)
+            return (<span className="nodefence coverflow"><span className="zWithdrawal"/><span className="zWithdrawal1">撤防</span></span>)
         }else{
-            return (<span className="setup"><Icon type="clock-circle" className="settingIcon" /> 未设置</span>)
+            return (<span className="nodefence"><span className="zWithdrawal"/>撤防</span>)
         }
     }
     field=(i)=>{ //布防区域的个数
@@ -111,11 +111,11 @@ class Equipment extends React.Component{
         let lasttime= this.state.camera[i].lasttime;
 
         if (!this.momenttime(lasttime) && !this.momenttime(hearttime)) {
-          return(<div className="onLine offLineBack">离线</div>)
-        }else return(<div className="onLine onLineBack">在线</div>)
+          return(<div className="zoffLine"></div>)
+        }else return(<div className="zonline"></div>)
 
       }else{
-        return(<div className="onLine offLineBack">离线</div>)
+        return(<div className="zoffLine"></div>)
       }
 
    }
@@ -136,20 +136,18 @@ class Equipment extends React.Component{
                                     <Col key={i} xxl={{ span: 4}} xl={{ span:6}} lg={{ span: 6}} md={{span:6}} sm={{span:6}} xs={{span:6}} className="cardPdd ">
                                         <a href={"#/app/live/index?id="+el.eid} style={{display:this.state.liveIcon?"block":"none"}}><Icon type="play-circle" style={{color:"#fff",fontSize:"35px",position:" absolute",left:"60%",top:"30%",zIndex:10}} /></a>
                                         <Card className="boxShow"
-                                              cover={<img alt="example" src={this.state.camera[i].picpath?this.state.camera[i].picpath:nopic} width="100%" height="140px" />}
+                                              cover={<img alt="example" src={this.state.camera[i].picpath?this.state.camera[i].picpath:nopic} width="100%" height="120px" />}
                                               actions={
                                                   this.state.utype==='1' || this.state.activecompcode
                                                       ?[
                                                           <div className="actionsBbottom">
-                                                              <p>{this.field(i)}条
-                                                              </p>
-                                                              <p>布防区域 </p>
+                                                              {this.statework(i)}
                                                           </div>,
                                                           <div className="actionsBbottom colCen ">
                                                               {this.statework(i)}
                                                           </div>,
                                                           <div className="colCen actionsBbottom ">
-                                                              <Icon type="setting" className="settingIcon"/><span className="sheding">设定</span>
+                                                              <span className="sheding"><span className="zsetup"/><span className="zsetup1">设定</span></span>
                                                           </div>
                                                       ]
                                                       :[
@@ -157,27 +155,36 @@ class Equipment extends React.Component{
                                                               {this.statework(i)}
                                                           </a>,
                                                           <a href={"#/app/userhome/Userdeveice?id="+el.code} className="colCen actionsBbottom ">
-                                                             <Icon type="setting" className="settingIcon" /><span className="sheding">设定</span>
+                                                             <span className="sheding"><span className="zsetup"/><span className="zsetup1">设定</span></span>
                                                           </a>
                                                       ]}
                                         >
-                                            <Row className="paddRow">
-                                                <Col xxl={{ span:24}} lg={{span:24}} >
-                                                    <div className="equipmentNumber">
-                                                        {/*<div >{this.isonline(i)}</div>*/}
-                                                        <div className="equipmentRight ">
-                                                            <p className="coverflow" title={el.name}>{el.name}</p>
-                                                            <p className="coverflow" title={el.eid}>{el.eid}</p>
-                                                        </div>
+                                            <Row className="zpaddRow">
+                                                <Col span={12}>
+                                                    <div className="equipmentRight ">
+                                                        <p className="coverflow" title={el.name}>{el.name}</p>
+                                                        <p className="coverflow" title={el.eid}>{el.eid}</p>
                                                     </div>
-
+                                                </Col>
+                                                <Col span={12}>
+                                                    <a href={"#/app/userhome/Alarmlist?id="+el.code+"&type=0"}>
+                                                        <span>{this.isonline(i)}</span>
+                                                    </a>
                                                 </Col>
                                             </Row>
-                                            <div className="bell">
-                                                <a href={"#/app/userhome/Alarmlist?id="+el.code+"&type=0"} style={{color:'#f00'}}>
-                                                    <Icon type="bell" className="bellIcon" /><span className="equipNumnber" title={this.state.camera[i].alarm}>{this.state.camera[i].alarm}</span>
-                                                </a>
+                                            <div className="zfiled">
+                                                <div className="zfileNumer">
+                                                    <span>防区数量：<span className="zfilec">{this.field(i)}</span></span>
+                                                </div>
+                                                <div className="zeditIcon">
+                                                    <a href={"#/app/companyhome/setarea?id="+el.code}>
+                                                        <span className="zeidt"/>
+                                                    </a>
+                                                </div>
                                             </div>
+                                            <Row className="zalarm zfiled">
+                                                <Col spam={24}>报警数次：<span className="zNumber">{this.state.camera[i].alarm}</span></Col>
+                                            </Row>
                                         </Card>
                                     </Col>
                                 )
