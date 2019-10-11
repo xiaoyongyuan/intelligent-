@@ -1246,14 +1246,14 @@
 }
 .zfiled .zfileNumer .zfilec{
     color:#1E73FF;
-    font-weight: 500;
+    font-weight: 600;
 }
 .zfiled .zeditIcon{
     width: 15%;
 }
 .zalarm .zNumber{
     color: #FF7D46;
-    font-weight: 500;
+    font-weight: 600;
 }
 .zfiled  .zeidt{
     display: inline-block;
@@ -1351,7 +1351,7 @@ border-radius:4px;
 .home_tole p span:nth-child(1){
     display: inline-block;
     text-align: right;
-    width: 160px;  
+    width: 160px;
     color:#0E1C43;
     opacity:0.7;
 }

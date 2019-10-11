@@ -166,7 +166,7 @@ class Equipment extends React.Component{
                                                 <Col span={12}>
                                                     <div className="equipmentRight ">
                                                         <p className="coverflow" title={el.name}>{el.name}</p>
-                                                        <p className="coverflow" title={el.eid}>{el.eid}</p>
+                                                        <p className="coverflow fontAr" title={el.eid}>{el.eid}</p>
                                                     </div>
                                                 </Col>
                                                 <Col span={12}>
@@ -177,7 +177,7 @@ class Equipment extends React.Component{
                                             </Row>
                                             <div className="zfiled">
                                                 <div className="zfileNumer">
-                                                    <span>防区数量：<span className="zfilec">{this.field(i)}</span></span>
+                                                    <span>防区数量：<span className="zfilec fontAr">{this.field(i)}</span></span>
                                                 </div>
                                                 <div className="zeditIcon">
                                                     <a href={"#/app/companyhome/setarea?id="+el.code}>
@@ -186,7 +186,7 @@ class Equipment extends React.Component{
                                                 </div>
                                             </div>
                                             <Row className="zalarm zfiled">
-                                                <Col spam={24}>报警数次：<span className="zNumber">{this.state.camera[i].alarm}</span></Col>
+                                                <Col spam={24}>报警数次：<span className="zNumber fontAr">{this.state.camera[i].alarm}</span></Col>
                                             </Row>
                                         </Card>
                                     </Col>
