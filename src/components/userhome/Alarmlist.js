@@ -348,7 +348,7 @@ class Alarmlist extends React.Component {
             <div className="Alarmlist">
                 {/* <LocaleProvider locale={zh_CN}> */}
             <div className="Ala_list_tit_sc">
-              <Row style={{ marginTop: "40px", backgroundColor:"#fff",padding:"40px 100px 40px 60px"  }}>
+              <Row style={{ marginTop: "40px", backgroundColor:"#fff",padding:"25px 15px"  }}>
                         <Form onSubmit={this.handleSubmit} layout="inline" className="formIndex">
                   {/* <Col xl={11} xxl={8} span={11}> */}
                             <Col span={10}>

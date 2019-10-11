@@ -231,19 +231,11 @@ class Messages extends Component {
     }
 
     render() {
-        let ddfffff = "right"
-        const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
+
 
         const customPanelStyle = {
             background: '#f7f7f7',
-            borderRadius: 4,
-            marginBottom: 24,
             border: 0,
-            overflow: 'hidden',
         };
         return (
            <div className="Messages">
@@ -259,21 +251,22 @@ class Messages extends Component {
                                    {this.state.listsMess.map((v,i)=>(
                                            <Panel 
                                            showArrow = {false}
+                                           style={customPanelStyle}
                                            header={
                                                <div className="messTime">
-                                                   <div className="messAll">
+                                                   <div className="messAll fl">
                                                        <Badge dot style={{display:v.status===1?"none":"block"}}>
                                                            <div className="mesICon"><img src={this.hanldImgIcon(v.atype)} alt="" /></div>
                                                        </Badge>
                                                        <div className="messFont">
                                                            <span>{this.messAtype(v.atype)}</span>
-                                                           <span>{v.atime}</span>
+                                                           <span className="font">{v.atime}</span>
                                                            {/* <span>{v.memo}</span> */}
                                                        </div>
                                                    </div>
                                                    {/* {v.memo} */}
                                                    {/* <div className="messData">{v.atime}</div> */}
-                                                   <div className="messData">{v.memo}</div>
+                                                   <div className="messData_mid rg">{v.memo}</div>
                                                </div>}
                                                   key={v.code}
                                            >

@@ -18,3 +18,30 @@
     background-size: 100%;
     /* background-color: #000 !important; */
 }
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+.fl{
+  float: left;
+}
+.rg{
+  float: right;
+}
+.messData_mid{
+  line-height: 100%;
+  margin-right: 20px;
+}
+
+
+.ant-tabs-bar {
+    margin: 0;
+}
