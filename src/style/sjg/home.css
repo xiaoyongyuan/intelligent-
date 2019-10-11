@@ -37,7 +37,7 @@
 }
 
 .equipmentCard .ant-card-actions {
-    border-top: 1px solid #4C5784 !important;
+    border-top: 1px solid #F5F5FA !important;
 }
 
 .loadding {
@@ -339,11 +339,11 @@
 }
 
 .onLineBack {
-    background: #2a8e39;
+    background: #1E73FF;
 }
 
 .offLineBack {
-    background: #aaa;
+    background:#313A62;
 }
 
 .ant-card-body {
@@ -353,11 +353,9 @@
 .bell {
     min-width: 65px;
     height: 34px;
-    color: red;
     position: absolute;
     right: 0;
     top: 26px !important;
-    border: 1px solid red;
     border-top-left-radius: 17px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -365,7 +363,7 @@
     padding: 4px 7px;
     border-right: none;
 }
-.bell .equipNumnber{
+/*.bell .equipNumnber{
     display: inline-block;
     width: 78%;
     overflow: hidden;
@@ -374,6 +372,24 @@
     position: absolute;
     right: -8px;
     padding-right: 10px;
+}*/
+.zoffLine{
+    width: 64px;
+    height: 29px;
+    background: url("../../../src/style/ztt/img/offline.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: -10px;
+    top:11px;
+}
+.zonline{
+    width: 64px;
+    height: 29px;
+    background: url("../../../src/style/ztt/img/online.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: -10px;
+    top:11px;
 }
 .bellIcon{
     position: absolute;
@@ -389,19 +405,22 @@
     display: inline-block;
     margin-top: 10px;
     margin-left: 5px;
+    display: flex;
+    align-items: center;
 }
 .actionsBbottom {
     width: 100%;
-    height: 48px;
-    color: #ffffff;
+    color: #313A62;
 }
-
+.actionsBbottom p span{
+    color:#1E73FF ;
+}
 .colCen {
-    line-height: 40px;
+    /*line-height: 40px;*/
     color: #ffffff;
 }
 .titcon p:nth-of-type(1) {
-    height: 30px;
+    /*height: 30px;*/
     line-height: 30px;
     color: #ffffff;
     font-weight: 600;
@@ -417,18 +436,10 @@
     font-size: 12px;
     margin: 0;
 }
-
-.actionsBbottom p:nth-of-type(1) {
-    /*color: #ffffff;*/
-    font-weight: 600;
-    font-size: 16px;
-    margin: 0;
+.actionsBbottom .sheding,.settingIcon{
+    color: #0E1C43;
 }
-
-.actionsBbottom p:nth-of-type(2) {
-    /*color: #ffffff;*/
-    font-weight: 300;
-    font-size: 12px;
+.actionsBbottom p:nth-of-type(1) {
     margin: 0;
 }
 
@@ -441,7 +452,9 @@
     padding-top: 5px;
     box-sizing: border-box;
 }
-
+.zpaddRow{
+    border-bottom: 1px solid #F5F5FA;
+}
 .cardPdd {
     padding-left: 45px;
     box-sizing: content-box;
@@ -449,7 +462,7 @@
 }
 
 .ant-card-body {
-    padding: 10px 10px !important;
+    padding: 0px 10px !important;
 }
 
 .lg {
@@ -478,8 +491,7 @@
 
 .box-padding {
     padding: 4px 0 30px 20px;
-    color: #fff;
-    background: #2B3253;
+    background: #fff;
 }
 
 .box-padding > p {
@@ -1035,10 +1047,11 @@
     margin: 0 !important;
 }
 
-/*.equipmentRight p {
-    width: 40%;
-    color: #ffffff;
-}*/
+.equipmentRight p {
+    color: #313A62;
+    font-size: 15px;
+    margin: 4px 0!important;
+}
 
 .ercolor {
     padding-bottom: 20px;
@@ -1046,32 +1059,30 @@
 
 /*布防中*/
 .defenceEqui {
-    color: #54CD66;
+    color: #1E73FF;
     display: inline-block;
     margin-top: 10px;
     margin-left: 8px;
+    display: flex;
+    align-items: center;
 }
 .defenceEqui:hover {
-    color: #43a952;
+    /*color: #43a952;*/
 }
 
 /*不在布防中*/
 .nodefence {
-    color: #AAAAAA;
+    color: #0E1C43;
     display: inline-block;
     margin-top: 10px;
     margin-left: 8px;
+    display: flex;
+    align-items: center;
 }
-/*未设置*/
-.setup {
-    color: #5063EE;
-    display: inline-block;
-    margin-top: 10px;
-    margin-left: 8px;
-}
-.setup:hover{
+
+/*.setup:hover{
     color: #3f54e8;
-}
+}*/
 .backImg {
     width: 100%;
     height: 120px;
@@ -1210,6 +1221,64 @@
 }*/
 .startTime .ant-select-selection-selected-value{
     color:#8097CC;
+}
+.zfiled{
+    padding: 8px 0;
+    display: flex;
+}
+.zfiled .zfileNumer{
+    width: 85%;
+}
+.zfiled .zfileNumer .zfilec{
+    color:#1E73FF;
+    font-weight: 500;
+}
+.zfiled .zeditIcon{
+    width: 15%;
+}
+.zalarm .zNumber{
+    color: #FF7D46;
+    font-weight: 500;
+}
+.zfiled  .zeidt{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../../../src/style/ztt/img/edit.png") no-repeat;
+    background-size: 100% 100%;
+}
+.zdefense{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url("../../../src/style/ztt/img/defencse.png") no-repeat;
+    background-size: 100% 100%;
+}
+.zWithdrawal{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url("../../../src/style/ztt/img/withdrawal.png") no-repeat;
+    background-size: 100% 100%;
+}
+.zdefense1,.zWithdrawal1,.zsetup1{
+    padding-left: 10px;
+}
+.zsetup{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url("../../../src/style/ztt/img/setup.png") no-repeat;
+    background-size: 100% 100%;
+}
+/*布防时间*/
+.zsettimeTitle{
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 18px 10px;
+}
+.setbtn{
+    margin: 0 10px;
 }
 
 

@@ -68,26 +68,27 @@
 }*/
 /*查询 修改 新增*/
 .queryBtn{
-    background:#5063ee!important;
-    border: 1px solid #5063ee!important;
+    background:#1E73FF!important;
+    border: 1px solid #1E73FF!important;
     color:#ffffff!important;
 }
 .queryBtn:hover{
-    background: #4152cd!important;
-    border: 1px solid #4152cd!important;
+    background: #1E73FF!important;
+    border: 1px solid #1E73FF!important;
     color:#ffffff!important;
 }
 /*删除 不通过*/
 .deleteBtn{
-    background:#ED2F2F!important;
-    border: 1px solid #ED2F2F!important;
+    background:#FF7D46!important;
+    border: 1px solid #FF7D46!important;
     color:#ffffff!important;
+    border-radius: 4px;
 }
-.deleteBtn:hover{
+/*.deleteBtn:hover{
     background:#d01616!important;
     border: 1px solid #d01616!important;
     color:#ffffff!important;
-}
+}*/
 /*通过*/
 .adoptBtn{
     background:#5063ee!important;
@@ -121,6 +122,19 @@
     margin-top: -18px!important;
     padding-bottom: 22px!important;
 }
+/*表格*/
+.ant-table-wrapper{
+    background-color: #fff;
+}
+.ant-table-tbody > tr > td{
+    border: none!important;
+}
+.ant-table-tbody > tr:nth-child(odd){
+    background-color: #fff;
+}
+.ant-table-tbody > tr:nth-child(even){
+    background-color: #F5F5FA;
+}
 /*表格无数据样式*/
 /*.ant-table-placeholder{
     background: #2B3355!important;
@@ -148,12 +162,12 @@
     background-color: #1E73FF!important;   /* 菜单选中的颜色 */
     color:#fff;
 }
-.ant-card-bordered {
+/*.ant-card-bordered {
     border: 1px solid #4C5784!important;
 }
 .ant-card-head {
     border-bottom: 1px solid #4C5784!important;
-}
+}*/
 .ant-timeline-item-head {
     background-color: #323A5D !important;
 }

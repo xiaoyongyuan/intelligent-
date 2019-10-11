@@ -114,13 +114,13 @@ export default {
       icon: "bars",
       funct: "basic",
       subs: [
-        {
+       /* {
           key: "/app/settings/employeelist",
           identi: ["comp", "comptop", "user"],
           title: "用户管理",
           funct: "basic",
           component: "Employeelist"
-        },
+        },*/
        /* {
           key: "/app/settings/objShow",
           identi: ["comp", "comptop", "user"],

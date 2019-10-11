@@ -60,7 +60,7 @@ class Setarea extends Component {
                     list:list,
                     deleteshow: false,
                 })
-                message.success('删除成功'); 
+                message.success('删除成功');
             }
         })
     };
@@ -84,12 +84,12 @@ class Setarea extends Component {
                     list:list
                 },()=>{
                     if(stype===1){
-                        message.success('开启成功'); 
+                        message.success('开启成功');
                     }else{
-                        message.success('关闭成功'); 
+                        message.success('关闭成功');
                     }
                 })
-                
+
             }
         })
     };
@@ -118,7 +118,7 @@ class Setarea extends Component {
                         });
                         message.success('新增成功');
                     }
-                    
+
                 })
               }else{
                 message.warning('开始时间不能大于结束时间');
@@ -126,7 +126,7 @@ class Setarea extends Component {
             }
             this.props.form.resetFields();
         })
-  
+
     }
     render() {
         const format = 'HH';
@@ -182,16 +182,15 @@ class Setarea extends Component {
                 key: 'code',
                 render: (text, record,index) => (
                     <span>
-                        <Button className="queryBtn" onClick={() => {this.switch(text,index);}}>{record.cwstatus?'关闭':'开启'}</Button>
-                        <Button className="deleteBtn" onClick={()=>_this.showModaldelete(text,index,record)} >删除</Button>
+                        <Button className="queryBtn setbtn" onClick={() => {this.switch(text,index);}}>{record.cwstatus?'关闭':'开启'}</Button>
+                        <Button className="deleteBtn setbtn" onClick={()=>_this.showModaldelete(text,index,record)} >删除</Button>
                     </span>
                 ),
             }];
         return (
             <LocaleProvider locale={zh_CN}>
             <div className="padding20 Settime">
-                {/* <BreadcrumbCustom first="场景" second="布防时间" /> */}
-                <Row style={{marginBottom:'20px'}}>
+                <Row className="zsettimeTitle">
                     <Col span={24}>
                         <Form layout="inline" onSubmit={this.add}>
                             <FormItem label="开始时间">
