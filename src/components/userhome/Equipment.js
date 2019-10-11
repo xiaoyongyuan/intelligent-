@@ -17,7 +17,7 @@ class Equipment extends React.Component{
             nodatapic:true,
         };
       }
-    componentDidMount() {        
+    componentDidMount() {
         post({url:'/api/camera/get_camerainfolist',data:{passivecode:this.state.activecompcode}},(res)=>{ //获取团队列表
             if(res){
                 if(res.camera.length===0){
@@ -59,7 +59,7 @@ class Equipment extends React.Component{
                 })
             }
         })
-        
+
     }
     shouldComponentUpdate=(nextProps,nextState)=>{
         if(nextProps.auth.active.activecompanycode != nextState.activecompcode){
@@ -69,12 +69,12 @@ class Equipment extends React.Component{
                 camera:[]
             },()=>{
                 this.componentDidMount()
-            }) 
+            })
         }
-        return true;  
+        return true;
     }
- 
-    statework=(i)=>{ //布防转换     
+
+    statework=(i)=>{ //布防转换
         if(this.state.camera[i].work===2){
             return (<span className="defenceEqui"><Icon type="clock-circle" className="settingIcon" /> 布防中</span>)
         }else if(this.state.camera[i].work===1){
@@ -83,13 +83,13 @@ class Equipment extends React.Component{
             return (<span className="setup"><Icon type="clock-circle" className="settingIcon" /> 未设置</span>)
         }
     }
-    field=(i)=>{ //布防区域的个数 
+    field=(i)=>{ //布防区域的个数
         var jsonData;
         if(this.state.camera[i].field ===""){
              jsonData=0;
         }else{
              jsonData= JSON.parse(this.state.camera[i].field)
-        }    
+        }
         var count = 0;
         for(var j in jsonData){
             count++;
@@ -116,7 +116,7 @@ class Equipment extends React.Component{
 
       }else{
         return(<div className="onLine offLineBack">离线</div>)
-      }    
+      }
 
    }
 
@@ -153,11 +153,6 @@ class Equipment extends React.Component{
                                                           </div>
                                                       ]
                                                       :[
-                                                          <a href={"#/app/companyhome/setarea?id="+el.code} className="actionsBbottom">
-                                                              <p> {this.field(i)}条
-                                                              </p>
-                                                              <p>布防区域 </p>
-                                                          </a>,
                                                           <a href={"#/app/companyhome/settime?id="+el.code} className="actionsBbottom colCen">
                                                               {this.statework(i)}
                                                           </a>,
@@ -169,7 +164,7 @@ class Equipment extends React.Component{
                                             <Row className="paddRow">
                                                 <Col xxl={{ span:24}} lg={{span:24}} >
                                                     <div className="equipmentNumber">
-                                                        <div >{this.isonline(i)}</div>
+                                                        {/*<div >{this.isonline(i)}</div>*/}
                                                         <div className="equipmentRight ">
                                                             <p className="coverflow" title={el.name}>{el.name}</p>
                                                             <p className="coverflow" title={el.eid}>{el.eid}</p>
@@ -195,7 +190,7 @@ class Equipment extends React.Component{
     }
 }
 
-const mapStateToProps = state => { 
+const mapStateToProps = state => {
     const { auth } = state.httpData;
     return {auth};
 };

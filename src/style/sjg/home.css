@@ -37,7 +37,7 @@
 }
 
 .equipmentCard .ant-card-actions {
-    border-top: 1px solid #4C5784 !important;
+    border-top: 1px solid #F5F5FA !important;
 }
 
 .loadding {
@@ -449,7 +449,7 @@
 }
 
 .ant-card-body {
-    padding: 10px 10px !important;
+    padding: 0px 10px !important;
 }
 
 .lg {
@@ -478,8 +478,7 @@
 
 .box-padding {
     padding: 4px 0 30px 20px;
-    color: #fff;
-    background: #2B3253;
+    background: #fff;
 }
 
 .box-padding > p {
@@ -1035,10 +1034,10 @@
     margin: 0 !important;
 }
 
-/*.equipmentRight p {
-    width: 40%;
-    color: #ffffff;
-}*/
+.equipmentRight p {
+  font-weight: bolder;
+  color: #313A62;
+}
 
 .ercolor {
     padding-bottom: 20px;

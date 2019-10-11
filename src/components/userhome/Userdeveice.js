@@ -24,11 +24,11 @@ class Userdeveice extends React.Component{
 
         };
     }
-    componentDidMount() {             
+    componentDidMount() {
         //取数据
         this.requestdata()
     }
-    requestdata=(params) => {//取数据  
+    requestdata=(params) => {//取数据
         post({url:"/api/camera/getone",data:{code:this.props.query.id}}, (res)=>{
             if(res.success){
                 this.setState({
@@ -36,10 +36,10 @@ class Userdeveice extends React.Component{
                     changelat:res.data.lat,
                     lng:res.data.lng,
                     lat:res.data.lat,
-                    data:res.data, 
-                    edata:res.edata, 
+                    data:res.data,
+                    edata:res.edata,
                     login:res.login,
-                    heartdata:res.heartdata, 
+                    heartdata:res.heartdata,
                     workingtime:res.workingtime,
                     ipvalue:res.edata.cameraip,
                     portvalue:res.edata.cameraportno,
@@ -59,7 +59,7 @@ class Userdeveice extends React.Component{
         this.setState({
             portvalue:e.target.value,
         });
-    } 
+    }
     onChangeuser=(e)=> {//user  input 修改
         this.setState({
             camerauser:e.target.value,
@@ -85,30 +85,30 @@ class Userdeveice extends React.Component{
             return;
         }
     }
- 
-    field=()=>{ //布防区域的个数 
+
+    field=()=>{ //布防区域的个数
         var jsonData;
         if(this.state.data.field ===""){
              jsonData=0;
         }else{
              jsonData= this.state.data.field
-        }  
+        }
         var count = 0;
         for(var j in jsonData){
           count++;
         }
          return count;
     }
-    status=()=>{ //报警类型 
+    status=()=>{ //报警类型
         if(this.state.heartdata.status==="stop"){
             return "停止运行"
         }else if(this.state.heartdata.status==="run"){
             return "运行中";
         }else{
             return "摄像头未连接";
-        }          
+        }
      }
-     atype=()=>{ //报警类型 
+     atype=()=>{ //报警类型
         switch(this.state.data.atype){
             case 1:
              return "入侵报警";
@@ -123,10 +123,10 @@ class Userdeveice extends React.Component{
 
         }
         if(this.state.data.atype===1){
-            return 
-        }         
+            return
+        }
     }
-    isonline=()=>{ //当前状态 
+    isonline=()=>{ //当前状态
         let time= this.state.heartdata.time;// 取到时间
         let yijingtime=new Date(time); //取到时间转换
         let timq=yijingtime.getTime(yijingtime) // 取到时间戳
@@ -137,7 +137,7 @@ class Userdeveice extends React.Component{
                 return "离线";
             }else{
                 return(<span className="oncolor">在线</span>)
-            }    
+            }
         }
     }
     tempbg=()=>{ //设备温度
@@ -147,18 +147,18 @@ class Userdeveice extends React.Component{
             return 'reecolor';
         }
     }
-    isheart=()=>{ //是否1分钟内心跳 
+    isheart=()=>{ //是否1分钟内心跳
         if(this.state.heartdata.time){
             let time= this.state.heartdata.time.toString();// 取到时间
             let yijingtime=new Date(time); //取到时间转换
             let timq=yijingtime.getTime(yijingtime) // 取到时间戳
             let myDate=new Date();// 当前时间
-            let timc=myDate.getTime(myDate) // 当前时间戳     
+            let timc=myDate.getTime(myDate) // 当前时间戳
             if(timc-timq>60000){
-                return 'reecolor';            
+                return 'reecolor';
             }else{
                 return 'oncolor';
-            }      
+            }
         }else{
             return 'reecolor';
         }
@@ -225,16 +225,16 @@ class Userdeveice extends React.Component{
             addreditSwitch:false,
             addrdetail:''
         })
-        
+
     }
     onRef = (ref) => {
       this.child = ref
     }
     render(){
         const _this=this;
-        return(     
-            <div style={{backgroundColor:"#323A5D",padding:"20px"}}>
-                <div className="box-padding"> 
+        return(
+            <div style={{padding:"20px"}}>
+                <div className="box-padding">
                     <p> <Icon type="bars" /> 设备信息</p>
                     <Row className="equ_row">
                         <Col span={3} className="t_r">
@@ -265,7 +265,7 @@ class Userdeveice extends React.Component{
                            坐标：
                         </Col>
                         <Col span={8} className="t_l">
-                         {this.state.lng} , {this.state.lat} <span onClick={this.locationedit} style={{color:'#5063ee',cursor:'pointer'}}>  修改</span>          
+                         {this.state.lng} , {this.state.lat} <span onClick={this.locationedit} style={{color:'#5063ee',cursor:'pointer'}}>  修改</span>
                         </Col>
                     </Row>
                     <Row className="equ_row">
@@ -293,7 +293,7 @@ class Userdeveice extends React.Component{
                         <Col span={21} className="t_l">
                         <a style={{color:"#fff"}} href={"#/app/companyhome/settime?id="+_this.props.query.id} className="underline">
                         {this.state.workingtime.length}段
-                         </a>                     
+                         </a>
                         </Col>
                     </Row>
                     <Row className="equ_row">
@@ -302,7 +302,7 @@ class Userdeveice extends React.Component{
                         </Col>
                         <Col span={21} className="t_l">
                         <span className={this.isheart()}>{this.state.heartdata.time}</span>
-                        
+
                         </Col>
                     </Row>
                     <Row className="equ_row">
@@ -310,16 +310,16 @@ class Userdeveice extends React.Component{
                            设备温度：
                         </Col>
                         <Col span={21} className="t_l">
-                           <span className={this.tempbg()}> {this.state.heartdata.temp}℃ </span> 
+                           <span className={this.tempbg()}> {this.state.heartdata.temp}℃ </span>
                         </Col>
                     </Row>
-                    <p><Icon type="video-camera" /> 摄像头信息</p>                    
+                    <p><Icon type="video-camera" /> 摄像头信息</p>
                     <Row className="equ_row">
                         <Col span={3} className="t_r">
                            设备状态：
                         </Col>
                         <Col span={21} className="t_l">
-                           {this.status()}         
+                           {this.status()}
                         </Col>
                     </Row>
                     <Row className="equ_row">
@@ -353,7 +353,7 @@ class Userdeveice extends React.Component{
                         <Col span={21} className="t_l">
                               <input className="padd_left" type="text" value={this.state.camerauser} id="ip"
                               onChange={(event)=>this.onChangeuser(event)}
-                              /> 
+                              />
                         </Col>
                     </Row>
                     <Row className="equ_row">
@@ -364,7 +364,7 @@ class Userdeveice extends React.Component{
                             <input className="padd_left" type="text" value={this.state.camerapasswd}
                              onChange={(e)=>this.onChangepwd(e)}
                              id="port"
-                            />      
+                            />
                         </Col>
                     </Row>
                     <Row className="equ_row">
@@ -374,7 +374,7 @@ class Userdeveice extends React.Component{
                         <Col span={21} className="t_l">
                               <input className="padd_left" type="text"value={this.state.ipvalue} id="ip"
                               onChange={(e)=>this.onChangeip(e)}
-                              /> 
+                              />
                         </Col>
                     </Row>
                     <Row className="equ_row">
@@ -384,10 +384,10 @@ class Userdeveice extends React.Component{
                         <Col span={21} className="t_l">
                             <input className="padd_left" type="text"value={this.state.portvalue} id="port"
                              onChange={(e)=>this.onChangeport(e)}
-                            />      
+                            />
                         </Col>
                     </Row>
-                    <Row className="equ_row">    
+                    <Row className="equ_row">
                         <Col span={21} offset={3} className="t_l">
                         <Button className="queryBtn lg" onClick={this.updata}> 提交 </Button>
                         </Col>
@@ -415,9 +415,9 @@ class Userdeveice extends React.Component{
                     cancelText="取消"
                 >
                     <Row>
-                        <label>区域：</label><CascaderModule onRef={this.onRef} style={{width:'100%'}} /> 
+                        <label>区域：</label><CascaderModule onRef={this.onRef} style={{width:'100%'}} />
                         <label>详细地址：</label><Input onChange={(e)=>this.changeCoord(e,'addrdetail')} />
-                        
+
                     </Row>
                 </Modal>
             </div>

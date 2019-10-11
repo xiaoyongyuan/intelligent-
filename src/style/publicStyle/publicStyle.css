@@ -148,9 +148,9 @@
     background-color: #1E73FF!important;   /* 菜单选中的颜色 */
     color:#fff;
 }
-.ant-card-bordered {
+/*.ant-card-bordered {
     border: 1px solid #4C5784!important;
-}
+}*/
 .ant-card-head {
     border-bottom: 1px solid #4C5784!important;
 }

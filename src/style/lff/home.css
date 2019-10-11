@@ -1,7 +1,7 @@
 .Setarea .Setarea_cont {
   margin: 20px;
   padding: 20px;
-  background: #2b3355;
+  background: #fff;
   height: 100%;
 }
 
@@ -17,6 +17,6 @@
 
 .areaexplain {
   padding: 10px 0;
-  color: #fff;
+  /*color: #fff;*/
   line-height: 2em;
 }
