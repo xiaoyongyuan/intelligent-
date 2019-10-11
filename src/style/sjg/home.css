@@ -1149,6 +1149,7 @@
 
 .paddL {
     margin: 20px 20px 0 20px;
+    font-size: 20px;
 }
 
 /*.paddL .ant-card-head-title, .paddL .ant-timeline {
@@ -1211,3 +1212,128 @@
     color:#8097CC;
 }
 
+
+/* 新增 */
+
+
+
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+.div_box_a{
+    padding: 10px 33px 0 26px;
+    font-family:Microsoft YaHei;
+}
+.hom_chil{
+background-color: #fff;
+box-shadow:0px 2px 20px rgba(30, 115, 255, 0.1);
+border-radius:4px;
+}
+.home_tole{
+    padding: 2px ;
+} 
+.home_tole h5{
+    text-align: center;
+    font-size: 24px;
+    color: #0E1C43;
+    padding: 20px 0;
+
+}
+.home_tole h5::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    left: 5%;
+    background-color: #1E73FF;
+    top: 75px;
+}
+/* 134 65 */
+.home_tole p{
+    padding-left: 50px;
+}
+.home_tole p span:nth-child(1){
+    display: inline-block;
+    text-align: right;
+    width: 160px;
+    font-size:20px;
+    font-weight:400;
+    color:#56607B;
+    opacity:0.7;
+}
+.home_tole p span:nth-child(2) {
+    display: inline-block;
+    margin-left: 65px;
+    font-size:20px;
+    font-weight:400;
+    color:0e1c43;
+    opacity:1;
+}
+
+/* .home_tori{
+    margin-left: 20px;
+} */
+.home_tori {
+    padding: 1px;
+}
+
+.list_hom{
+    padding: 14px 45px;
+    /* background-color: red; */
+    font-size: 20px;
+    color: #0E1C43; 
+}
+.list_hom:nth-child(even){
+    background-color: #F5F5FA;
+}
+.list_hom span{
+    display: inline-block;
+}
+.list_hom span:nth-child(1) {
+    float: left;
+    margin-left: 20px;
+}
+.list_hom span:nth-child(2) {
+    float: left;
+    margin-left: 20px;
+}
+.list_hom span:nth-child(3) {
+    float: right;
+    margin-right: 20px;
+}
+
+.span_xx{
+    position: relative
+}
+.span_xx::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 24px;
+    background-color: #1E73FF;
+    left: -20px;
+    top: 2px
+}
+@media screen and (max-width: 1400px) {
+    .div_box_a{
+        padding: 0;
+    }
+    .home_tole p{
+        padding-left: 10px;
+    }
+    .home_tole p span:nth-child(2) {
+        margin-left: 10px;
+    }
+
+}

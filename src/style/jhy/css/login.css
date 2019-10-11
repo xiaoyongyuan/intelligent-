@@ -139,12 +139,11 @@ img {
 }
 
 .turntitle {
-
   left: 23%;
   top: 37%;
   position: absolute;
   font-size: 36px;
-  color: #fff;
+  color: #313A62;
 }
 
 .turntitle p {
@@ -172,7 +171,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background: #063e4d;
+  background: #fff;
   position: relative;
   left: 50%;
 }
@@ -186,7 +185,7 @@ img {
 }
 
 .login-title {
-  color: #fff;
+  color: #313A62;
   font-size: 28px;
   border-bottom: 2px solid rgba(38, 169, 190, 0.8);
   padding: 72px 0 43px;
@@ -198,7 +197,7 @@ img {
   align-items: center;
   position: absolute;
   top: 30px;
-  left: 36px;
+  right:  36px;
   width: 60px;
   height: 60px;
 }
@@ -239,8 +238,8 @@ img {
 }
 
 .freshcode {
-  background: #1c7588 !important;
-  color: #fff !important;
+  background: #fff !important;
+  color: #313A62 !important;
   border: 0 !important;
   padding: 4px;
 }
@@ -250,7 +249,7 @@ img {
 }
 
 .lgwrapper {
-  width: 60%;
+  width: 80%;
   height: 75%;
   box-sizing: border-box;
   margin: 30px 0;
@@ -259,51 +258,67 @@ img {
 
 
 .lgbutton {
-  background: #1c7588 !important;
-  color: #fff !important;
+  background: #fff !important;
+  color: #313A62 !important;
   border: 1px solid #2ecde3 !important;
   font-size: 20px !important;
 }
 
 .lgform .ant-input-affix-wrapper .ant-input:not(:first-child) {
   height: 50px !important;
-  color: #9df5ff !important;
+  color: #313A62 !important;
   padding-left: 44px;
   font-size: 18px;
-  border: 1px solid #2ecde3 !important;
-  background: #2a738d !important;
+  /* border: 3px solid red !important; */
+  /* border-bottom: 1px solid #c0c3cf !important; */
+  border:none !important;
+  background: #fff !important;
 }
 
-/* input {
+
+ .ant-input-affix-wrapper .ant-input:focus {
+  border: none;
+  border-bottom: 1px solid white !important;
+  box-shadow: none;
+} 
+
+/* usersInput ant-input-affix-wrapper */
+
+ .ant-input-affix-wrapper {
+  border-bottom: 1px solid #c0c3cf ;
+} 
+
+
+ /* input {
   outline: none
 }
 
 input:focus {
   outline: none;
-} */
+}  */
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   /* WebKit browsers */
-  color: #9df5ff !important;
+  color: #313A62 !important;
 }
 
 input:-moz-placeholder,
 textarea:-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: #9df5ff !important;
+  color: #313A62 !important;
 }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: #9df5ff !important;
+  color: #313A62 !important;
 }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   /* Internet Explorer 10+ */
-  color: #9df5ff !important;
+  color: #313A62 !important;
 }
 
 
@@ -348,11 +363,21 @@ textarea:-ms-input-placeholder {
   font-size: 12px;
   color: #fff;
 }
+/* 
+.ant-input-affix-wrapper .ant-input:not(:first-child) {
+  border: none !important;
+}
+.ant-input-affix-wrapper .ant-input:not(:first-child):focus {
+  border: none;
+  border-bottom: 1px solid white !important;
+  box-shadow: none;
+}  */
+
 
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
-  -webkit-text-fill-color: #ededed !important;
+  -webkit-text-fill-color: #313A62 !important;
   -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
   background-color: transparent;
   background-image: none;

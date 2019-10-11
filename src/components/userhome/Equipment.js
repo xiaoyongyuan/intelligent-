@@ -133,8 +133,13 @@ class Equipment extends React.Component{
                             {
                                 this.state.camera.map((el,i)=>{
                                 return(
-                                    <Col key={i} xxl={{ span: 4}} xl={{ span:6}} lg={{ span: 6}} md={{span:6}} sm={{span:6}} xs={{span:6}} className="cardPdd ">
-                                        <a href={"#/app/live/index?id="+el.eid} style={{display:this.state.liveIcon?"block":"none"}}><Icon type="play-circle" style={{color:"#fff",fontSize:"35px",position:" absolute",left:"60%",top:"30%",zIndex:10}} /></a>
+                                    <Col key={i} xxl={{ span: 4 }} xl={{ span: 6 }}
+                                        lg={{ span: 6 }} md={{ span: 6 }}
+                                        sm={{ span: 6 }} xs={{ span: 6 }}
+                                        className="cardPdd ">
+                                        <a href={"#/app/live/index?id=" + el.eid}
+                                            style={{ display: this.state.liveIcon ? "block" : "none" }}>
+                                            <Icon type="play-circle" style={{ color: "#fff", fontSize: "35px", position: " absolute", left: "60%", top: "30%", zIndex: 10 }} /></a>
                                         <Card className="boxShow"
                                               cover={<img alt="example" src={this.state.camera[i].picpath?this.state.camera[i].picpath:nopic} width="100%" height="140px" />}
                                               actions={

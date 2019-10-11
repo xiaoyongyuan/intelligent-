@@ -145,17 +145,18 @@ class Login extends React.Component {
         className="loginnew"
         style={{
             background:"#313653"
+          // background: "#fff"
         }}
       >
         <div className="topbar">
           <div className="logo">
             <img src={logopic} alt="" />
-            系统
+            系统tttttt
           </div>
         </div>
         <div className="logcont ">
           <div className="wrapper clearfix">
-            <div className="acrossturn clearfix">
+            {/* <div className="acrossturn clearfix">
               <div className="layerpic3">
                 <img src={layerpic3} />
               </div>
@@ -169,17 +170,18 @@ class Login extends React.Component {
                 <p>智能视频</p>
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;联网预警</p>
               </div>
-            </div>
-            <div className="snapline">
+            </div> */}
+            {/* <div className="snapline">
               <img src={snapline} />
-            </div>
+            </div> */}
             <div
-              style={{
-                background: `url('${formborder}')  no-repeat center/100% 100%`
-              }}
+              // style={{
+              //   background: `url('${formborder}')  no-repeat center/100% 100%`
+              // }}
               className="loginform clearfix"
             >
               <div className="login-top">
+                {/* //用户登录 */}
                 <div className="login-title">{this.state.loginTitle}</div>
                 <div
                   className={
@@ -188,7 +190,7 @@ class Login extends React.Component {
                   }
                   onClick={this.handlerImg}
                 />
-              </div>
+              </div>  
               <div className="qrcode">
                 <div
                   className="codewrap"
@@ -273,6 +275,8 @@ class Login extends React.Component {
                             style={{ color: "#5cadb9", fontSize: 26 }}
                           />
                         }
+                        min="6" 
+                        max="15"
                         type="password"
                         className="usersInput"
                         placeholder="请输入密码"
