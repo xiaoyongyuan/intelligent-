@@ -32,6 +32,19 @@ const goEasy = new GoEasy({
         console.log("与GoEasy连接失败，错误编码："+error.code+"错误信息："+error.content);
     }
 });
+const HeartSvg = () => (
+    <svg  x="0px" y="0px" width="20px" height="20px" viewBox="0 0 31 31" enable-background="new 0 0 31 31">
+        <image id="image0" width="31" height="31" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfBAMAAADtgAsKAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+        AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAFVBMVEX///8wOGAxOmIwOWEv
+        OGAuM1////972BC+AAAABnRSTlMAlvzKSSENuou6AAAAAWJLR0QAiAUdSAAAAAd0SU1FB+MKCxca
+        Jrr8lv8AAAC3SURBVCjPvZFBDsMgDASNWt8rpD4gJHyAJPeoSu8I+v+3dA12UuUB9SGyV0OWxeTn
+        ed5IitGNmUIIA/Uq6DOlEB4qsAoGNEQEnNPyTRjSqrMLLxG2aoiPDGEhVsRhKplwB0V8hFHrOiKA
+        VRXnEo+Z+InP/QT+VeLIP7ZukoutpyAp6Kahs6VoiXBuVaCHrnigbDGBcIIQvcWsY+1rMD9O/dWn
+        6xouBLZ1/MNWaUhvP/u+qy26N30BREMj/YmQUPIAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMTAt
+        MTFUMTU6MjY6MzgrMDg6MDA1PYYTAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTEwLTExVDE1OjI2
+        OjM4KzA4OjAwRGA+rwAAAABJRU5ErkJggg==" />
+</svg>
+);
 class HeaderCustom extends Component {
     state = {
         user: {},
@@ -209,10 +222,7 @@ class HeaderCustom extends Component {
         });
     };
     render() {
-
-
-
-
+        const HeartIcon = props => <Icon component={HeartSvg} {...props} />;
         const { responsive, path, auth } = this.props;
         const _this=this;
         return (
@@ -231,7 +241,6 @@ class HeaderCustom extends Component {
                         {this.props.user.cname}
                     </div>
                 </div>*/}
-
                 <div style={{width:"15%",float:"left"}} className="leftIcon">
                     {
                         responsive.data.isMobile ? (
@@ -247,17 +256,28 @@ class HeaderCustom extends Component {
                         )
                     }
                 </div>
-                <div style={{width:"28%",float:"right"}}>
+                <div className="zheader-title">
+                    <HeartIcon onClick={this.screenFull} className="ztitle zicon" />
+                    <div className="ztitleUser ztitle">
+                        <span className="zuser zpadd"/>
+                        <span className="zpadd ztitleFont">{auth&&auth.active&&auth.active.activecomp?auth.active.activecomp:this.props.user.cname}</span>
+                    </div>
+                    <div className="zback" onClick={this.showModaldelete}>
+                        <span className="zbackout"/>
+                        <span className="zbackfont">退出登录</span>
+                    </div>
                     {/*当前查看公司*/}
-                    <div style={{ lineHeight: '63px', float: 'right' }}>当前单位：{auth&&auth.active&&auth.active.activecomp?auth.active.activecomp:this.props.user.cname}</div>
+                   {/* <div style={{ lineHeight: '63px', float: 'right' }}>{auth&&auth.active&&auth.active.activecomp?auth.active.activecomp:this.props.user.cname}
+                        <span className="zbackout"/>退出登录
+                    </div>
                     <Menu
                         mode="horizontal"
                         style={{ lineHeight: '63px', float: 'right' }}
                         onClick={this.menuClick}
                     >
-                       {/* <Menu.Item style={{borderBottom:'2px solid #31365'}} key="full" onClick={this.screenFull} >
-                            <Icon type="arrows-alt" onClick={this.screenFull} />
-                        </Menu.Item>*/}
+                        <Menu.Item key="full" >
+                            <HeartIcon onClick={this.screenFull} />
+                        </Menu.Item>
                         <SubMenu style={{borderBottom:'2px solid #31365'}} title={<span className="avatar"><img src={this.props.user.utype==='1'?icon_user:icon_admin} alt="头像" /> </span>}>
                             <MenuItemGroup title="用户中心" style={{background:"rgba(255,255,255,0.5)"}}>
                                 <Menu.Item key="setting:1">你好 - {this.props.user.realname}</Menu.Item>
@@ -265,10 +285,10 @@ class HeaderCustom extends Component {
                                     ?<Menu.Item key="setting:2" onClick={this.sitchcomp}>{auth.active&&auth.active.activecomp?auth.active.activecomp:this.props.user.cname} <Icon type="sync" /></Menu.Item>
                                     :''
                                 }
-                                <Menu.Item key="logoutto" onClick={this.showModaldelete}><span>退出登录</span></Menu.Item>
+                                <Menu.Item key="logoutto" onClick={this.showModaldelete}><span></span></Menu.Item>
                             </MenuItemGroup>
                         </SubMenu>
-                    </Menu>
+                    </Menu>*/}
                 </div>
             </Header>
 

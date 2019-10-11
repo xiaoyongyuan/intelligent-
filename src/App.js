@@ -49,7 +49,7 @@ class App extends Component {
     render() {
         const { auth, responsive } = this.props;
         return (
-            <Layout>
+            <Layout style={{fontWeight:"Microsoft Yahei"}}>
                 {!responsive.data.isMobile && <SiderCustom collapsed={this.state.collapsed} user={auth} />}
                 <Layout style={{flexDirection: 'column'}}>
                     <HeaderCustom toggle={this.toggle} collapsed={this.state.collapsed} user={auth.data || {}} />
