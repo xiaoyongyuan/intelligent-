@@ -7,15 +7,15 @@
   line-height: 50px;
   margin-top: 10px;
 }
-.ant-layout p {
+/*.ant-layout p {
     margin: 0 !important ;
-}
+}*/
 
 .al_chang_p{
   color:#313A62 ;
   font-size: 12px;
   line-height: 22px;
-  font-weight: normal; 
+  font-weight: normal;
 }
 
 .al_chang_p span{
