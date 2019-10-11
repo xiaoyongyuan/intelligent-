@@ -78,7 +78,7 @@ class Equipment extends React.Component{
         if(this.state.camera[i].work===2){
             return (<span className="defenceEqui"><span className="zdefense"/><span className="zdefense1">布防</span></span>)
         }else if(this.state.camera[i].work===1){
-            return (<span className="nodefence coverflow"><span className="zWithdrawal"/><span className="zWithdrawal1">撤防</span></span>)
+            return (<span className="nodefence"><span className="zWithdrawal"/><span className="zWithdrawal1">撤防</span></span>)
         }else{
             return (<span className="nodefence"><span className="zWithdrawal"/>撤防</span>)
         }
@@ -133,7 +133,7 @@ class Equipment extends React.Component{
                             {
                                 this.state.camera.map((el,i)=>{
                                 return(
-                                    <Col key={i} xxl={{ span: 4 }} xl={{ span: 6 }}
+                                    <Col key={i} xxl={{ span: 5 }} xl={{ span: 6 }}
                                         lg={{ span: 6 }} md={{ span: 6 }}
                                         sm={{ span: 6 }} xs={{ span: 6 }}
                                         className="cardPdd ">
@@ -141,7 +141,7 @@ class Equipment extends React.Component{
                                             style={{ display: this.state.liveIcon ? "block" : "none" }}>
                                             <Icon type="play-circle" style={{ color: "#fff", fontSize: "35px", position: " absolute", left: "60%", top: "30%", zIndex: 10 }} /></a>
                                         <Card className="boxShow"
-                                              cover={<img alt="example" src={this.state.camera[i].picpath?this.state.camera[i].picpath:nopic} width="100%" height="120px" />}
+                                              cover={<img alt="example" src={this.state.camera[i].picpath?this.state.camera[i].picpath:nopic} width="100%" height="196px" />}
                                               actions={
                                                   this.state.utype==='1' || this.state.activecompcode
                                                       ?[

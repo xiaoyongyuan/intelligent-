@@ -22,6 +22,9 @@
 .overView{
     padding:0 10px;
 }
+.header{
+    position: relative;
+}
 .overView .pfixed{
     width:100%;
     position: fixed;
@@ -729,3 +732,44 @@
 .leftIcon .header__trigger{
     color: #1E7DFF;
 }
+/*头部右边*/
+.ztitle{
+    padding: 0 20px;
+}
+.zheader-title{
+    position: absolute;
+    right: 60px;
+    display: flex;
+    align-items: center;
+}
+.ztitleUser,.zback{
+    display: flex;
+    align-items: center;
+}
+.ztitleUser .zuser{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url("../../../style/ztt/img/titleuser.png") no-repeat;
+    background-size: 100% 100%;
+}
+.ztitleUser .zpadd{
+    padding: 0 10px;
+}
+.ztitleUser .ztitleFont{
+    font-size: 15px;
+}
+.zback,.zicon{
+    cursor: pointer;
+}
+.zback .zbackout{
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+    background: url("../../../style/ztt/img/backout.png") no-repeat;
+    background-size: 100% 100%;
+}
+.zback .zbackfont{
+    padding: 0 5px;
+}
+

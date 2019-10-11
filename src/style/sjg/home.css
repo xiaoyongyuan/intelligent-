@@ -487,6 +487,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-weight: 550;
+    font-size: 15px;
 }
 
 .box-padding {
@@ -1309,7 +1311,7 @@ border-radius:4px;
 }
 .home_tole{
     padding: 2px ;
-} 
+}
 .home_tole h5{
     text-align: center;
     font-size: 24px;
@@ -1360,7 +1362,7 @@ border-radius:4px;
     padding: 14px 45px;
     /* background-color: red; */
     font-size: 20px;
-    color: #0E1C43; 
+    color: #0E1C43;
 }
 .list_hom:nth-child(even){
     background-color: #F5F5FA;
