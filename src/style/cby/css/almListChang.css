@@ -1,0 +1,59 @@
+.al_chang_box h5{
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid #F5F5FA;
+  font-size: 16px;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 10px;
+}
+.ant-layout p {
+    margin: 0 !important ;
+}
+
+.al_chang_p{
+  color:#313A62 ;
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: normal; 
+}
+
+.al_chang_p span{
+  display: block;
+  float: left;
+}
+
+.al_chang_p span:nth-child(1){
+  width: 64px;
+  text-align:justify-all ;
+}
+
+.al_chang_p span:nth-child(2){
+  text-align:left ;
+  margin-left: 10px;
+}
+.al_chang_p span b{
+  font-weight: normal;
+}
+.ant-card-bordered {
+    border: none!important;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+.fl{
+  float: left;
+}
+.rg{
+  float: right;
+}
+/* justify */

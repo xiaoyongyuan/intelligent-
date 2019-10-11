@@ -91,39 +91,73 @@ class Userhome extends React.Component{
             successBg:{ background:'#96FF66'},
         }
         return(       
-            <div>
+            <div className="div_box_a">
                  <Row>
                     <div className="paddL">
-                      <Card className=""
-                            title={this.state.data.cname} style={styleObj.topMar} extra={this.state.alarmdata.length===5?<a href="#/app/userhome/Alarmlist">更多报警</a>:''}                        
-                      >
+                      {/* <Card className=""
+                            title={this.state.data.cname}
+                            style={styleObj.topMar}
+                            extra={this.state.alarmdata.length === 5 ? <a href="#/app/userhome/Alarmlist">更多报警</a> : ''}                        
+                      > */}
                             <Row>
-                                <Col span={12}>                             
-                                   <p>云服务到期日期: <span>{this.state.data.cloudvaliddate?this.state.data.cloudvaliddate:'无期限'}</span></p>
-                                   <p>设备总数: <span>{this.state.camera.length?this.state.camera.length:0}个</span></p>
-                                   <p>所属团队: <span>{this.state.data.pname?this.state.data.pname:"未绑定"}</span></p>
-                                   <p>用户数: <span> {this.state.usercount?this.state.usercount:0}</span></p>
-                                   <p>管理员: <span>{this.state.data.adminname?this.state.data.adminname:"********"}</span></p>
+                                < Col span = {
+                                    9
+                                }
+                                className = "home_tole hom_chil" >
+                                  <h5>{this.state.data.cname}</h5>
+                                   <p> <span> 云服务到期日期:</span> <span>{this.state.data.cloudvaliddate?this.state.data.cloudvaliddate:'无期限'}</span></p>
+                                   <p> <span> 设备总数: </span> <span>{this.state.camera.length?this.state.camera.length:0}个</span > </p>
+                                   <p> <span> 所属团队: </span> <span>{this.state.data.pname?this.state.data.pname:"未绑定"}</span > </p>
+                                   <p> <span> 用户数: </span> <span> {this.state.usercount?this.state.usercount:0}</span > </p>
+                                   <p> <span> 管理员: </span> <span>{this.state.data.adminname?this.state.data.adminname:"********"}</span > </p>
                                 </Col>
-                                <Col span={12}>
-                                    <Timeline>
+                                
+                    < Col span={14}
+                      offset={1}
+                      className = "home_tori hom_chil" >
+
+                       {
+                         this.state.alarmdata.map((item,j)=>{
+                                return (
+                                  <div className="list_hom clearfix">
+                                    <span className="span_xx">{this.state.alarmdata[j].name}</span>
+                                    <span>{this.atype(j)}</span>
+                                    <span>{this.state.alarmdata[j].atime}</span>
+                                    
+                                    {/* <span>16:58:35 {this.state.alarmdata[j].atime}</span> */}
+                                  </div>
+                                )
+                            })
+                       }         
+                        {/* <div className="list_hom clearfix">
+                          <span className="span_xx">测试</span>
+                          <span>入侵报警</span>
+                          <span>2019-10-10</span>
+                          <span>16:58:35</span>
+                        </div>
+
+             
+                      <Timeline>
                                             {
                                                 this.state.alarmdata.map((item,j)=>{
                                                     return (
                                                         <Timeline.Item key={j}>
                                                         <span> {this.state.alarmdata[j].name}  </span>
                                                         <span> {this.atype(j)} </span> 
-                                                        {/* {this.state.alarmdata[j].atype}  */}
+                                                         {this.state.alarmdata[j].atype}  
                                                         <span>{this.state.alarmdata[j].atime}</span>   
                                                     </Timeline.Item>
                                                     )
                                                 })
                                             } 
 
-                                    </Timeline>
+                      </Timeline> */}
+                      
+
+
                                 </Col>
                             </Row>
-                        </Card>
+                        {/* </Card> */}
                     </div>
                 </Row>
                 <Row className="paddRow"> 
