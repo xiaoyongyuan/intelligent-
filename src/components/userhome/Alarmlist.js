@@ -348,7 +348,7 @@ class Alarmlist extends React.Component {
             <div className="Alarmlist">
                 {/* <LocaleProvider locale={zh_CN}> */}
             <div className="Ala_list_tit_sc">
-              <Row style={{ marginTop: "20px", marginLeft: "20px", backgroundColor:"#fff",padding:"40px 100px 40px 60px"  }}>
+              <Row style={{ marginTop: "40px", backgroundColor:"#fff",padding:"40px 100px 40px 60px"  }}>
                         <Form onSubmit={this.handleSubmit} layout="inline" className="formIndex">
                   {/* <Col xl={11} xxl={8} span={11}> */}
                             <Col span={10}>
@@ -404,7 +404,7 @@ class Alarmlist extends React.Component {
                         <Col style={{ width: "100%", textAlign: "center" }}><div className="backImg"><img src={nodata} alt="" /></div></Col>
                     </Row>}
 
-            <Row style={{ marginLeft: "10px", marginTop: "20px", display: this.state.type === 0 ? "none" : "block", }} gutter={20}>
+            <Row style={{ marginTop: "20px", display: this.state.type === 0 ? "none" : "block", }} gutter={20}>
                     {
                 // <Row>
                         this.state.policeList.map((v, i) => (
@@ -421,8 +421,8 @@ class Alarmlist extends React.Component {
                                 <p className="al_chang_p clearfix" title={v.name}><span>设备名称：</span><span>{v.name}</span> </p>
                                 <p className="al_chang_p clearfix"><span>入侵类型：</span><span>{v.alarmtype}</span> </p>
                                 <p className="al_chang_p clearfix"><span className="clearfix"> <b className="fl">时</b><b className="rg">间：</b>  </span><span>{v.atime}</span> </p>
-                                <p className="al_chang_p clearfix" style={{ display: v.atype == 12 ? "none" : "block" }}><span>报警对象：</span> <span>{v.tags === "" ? "无" : v.tags}</span></p>
-                                <h5 style={{ color:"#FF7D46"}}>警情</h5>
+                                <p className="al_chang_p clearfix" style={{ visibility: v.atype == 12 ? "hidden" : "visible" }}><span>报警对象：</span> <span>{v.tags === "" ? "无" : v.tags}</span></p>
+                                <h5 style={{ color: "#FF7D46" }}>{this.handleState(v.status)}</h5>
                               </div>
                             </Card>,
                                                           

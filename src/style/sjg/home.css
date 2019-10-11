@@ -1330,23 +1330,21 @@ border-radius:4px;
 /* 134 65 */
 .home_tole p{
     padding-left: 50px;
+    font-size:18px;
+    font-weight:400;
 }
 .home_tole p span:nth-child(1){
     display: inline-block;
     text-align: right;
-    width: 160px;
-    font-size:20px;
-    font-weight:400;
-    color:#56607B;
+    width: 160px;  
+    color:#0E1C43;
     opacity:0.7;
 }
 .home_tole p span:nth-child(2) {
     display: inline-block;
     margin-left: 65px;
     font-size:20px;
-    font-weight:400;
-    color:0e1c43;
-    opacity:1;
+    color:#0E1C43;
 }
 
 /* .home_tori{
