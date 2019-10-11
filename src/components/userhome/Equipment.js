@@ -133,15 +133,13 @@ class Equipment extends React.Component{
                             {
                                 this.state.camera.map((el,i)=>{
                                 return(
-                                    <Col key={i} xxl={{ span: 5 }} xl={{ span: 6 }}
-                                        lg={{ span: 6 }} md={{ span: 6 }}
-                                        sm={{ span: 6 }} xs={{ span: 6 }}
+                                    <Col key={i} xxl={{ span: 5 }} xl={{ span: 8 }}
                                         className="cardPdd ">
                                         <a href={"#/app/live/index?id=" + el.eid}
                                             style={{ display: this.state.liveIcon ? "block" : "none" }}>
                                             <Icon type="play-circle" style={{ color: "#fff", fontSize: "35px", position: " absolute", left: "60%", top: "30%", zIndex: 10 }} /></a>
                                         <Card className="boxShow"
-                                              cover={<img alt="example" src={this.state.camera[i].picpath?this.state.camera[i].picpath:nopic} width="100%" height="196px" />}
+                                              cover={<img alt="example" src={this.state.camera[i].picpath?this.state.camera[i].picpath:nopic}  />}
                                               actions={
                                                   this.state.utype==='1' || this.state.activecompcode
                                                       ?[
@@ -168,7 +166,7 @@ class Equipment extends React.Component{
                                                 <Col span={12}>
                                                     <div className="equipmentRight ">
                                                         <p className="coverflow" title={el.name}>{el.name}</p>
-                                                        <p className="coverflow" title={el.eid}>{el.eid}</p>
+                                                        <p className="coverflow fontAr" title={el.eid}>{el.eid}</p>
                                                     </div>
                                                 </Col>
                                                 <Col span={12}>
@@ -179,7 +177,7 @@ class Equipment extends React.Component{
                                             </Row>
                                             <div className="zfiled">
                                                 <div className="zfileNumer">
-                                                    <span>防区数量：<span className="zfilec">{this.field(i)}</span></span>
+                                                    <span>防区数量：<span className="zfilec fontAr">{this.field(i)}</span></span>
                                                 </div>
                                                 <div className="zeditIcon">
                                                     <a href={"#/app/companyhome/setarea?id="+el.code}>
@@ -188,7 +186,7 @@ class Equipment extends React.Component{
                                                 </div>
                                             </div>
                                             <Row className="zalarm zfiled">
-                                                <Col spam={24}>报警数次：<span className="zNumber">{this.state.camera[i].alarm}</span></Col>
+                                                <Col spam={24}>报警数次：<span className="zNumber fontAr">{this.state.camera[i].alarm}</span></Col>
                                             </Row>
                                         </Card>
                                     </Col>

@@ -277,7 +277,10 @@ class Setarea extends Component {
                     </Col>
                 </Row>
 
-                <Table columns={columns} dataSource={this.state.list} />
+                <Table columns={columns}
+                       dataSource={this.state.list}
+                       pagination={{hideOnSinglePage:true}}
+                />
                 <Modal title="提示信息" visible={this.state.deleteshow} onOk={this.deleteOk}
                        onCancel={this.deleteCancel} okText="确认" cancelText="取消"
                 >
