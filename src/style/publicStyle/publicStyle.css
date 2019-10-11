@@ -159,9 +159,9 @@
     !* 所有表格的字体颜色 *!
     color: #fff!important;
 }*/
-.ant-pagination-item-ellipsis{
+/*.ant-pagination-item-ellipsis{
     color:#fff !important;
-}
+}*/
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
     background-color: #1E73FF!important;   /* 菜单选中的颜色 */
     color:#fff;
