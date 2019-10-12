@@ -184,7 +184,7 @@ class Login extends React.Component {
         <div className="topbar">
           <div className="logo">
             {/* <img src={logopic} alt="" /> */}
-            傲智AI视频警戒系统
+            傲智 <span className="fontAr">AI</span> 视频警戒系统
           </div>
         </div>
         <div className="logcont ">

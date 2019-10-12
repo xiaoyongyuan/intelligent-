@@ -348,10 +348,10 @@ class Alarmlist extends React.Component {
             <div className="Alarmlist">
                 {/* <LocaleProvider locale={zh_CN}> */}
             <div className="Ala_list_tit_sc">
-              <Row style={{ marginTop: "40px", backgroundColor:"#fff",padding:"25px 15px"  }}>
+                    <div className="clearfix" style={{ marginTop: "40px", backgroundColor: "#fff", padding: "25px 15px" }}>
+              {/* <Row style={{ marginTop: "40px", backgroundColor:"#fff",padding:"25px 15px"  }}> */}
                         <Form onSubmit={this.handleSubmit} layout="inline" className="formIndex">
-                  {/* <Col xl={11} xxl={8} span={11}> */}
-                            <Col span={10}>
+                                <div className="fl">
                                 <Form.Item label="日期" >
                                     {getFieldDecorator('date')(
                                         <RangePicker
@@ -363,9 +363,8 @@ class Alarmlist extends React.Component {
                                         />
                                     )}
                                 </Form.Item>
-                            </Col>
-                  {/* <Col xl={5} xxl={4} offset={2}> */}
-                  <Col span={5}> 
+                                </div>
+                            <div className="fl sbml">
                                 <Form.Item label="设备" >
                                     {getFieldDecorator('cid', {
                                         initialValue: "",
@@ -380,7 +379,7 @@ class Alarmlist extends React.Component {
                                         </Select>
                                     )}
                                 </Form.Item>
-                            </Col>
+                            </div>
                             {/* <Col xl={4} xxl={3} className="switch_lr">
                                 <Form.Item label="只看收藏" >
                                     {getFieldDecorator('ifdanger')(
@@ -388,14 +387,15 @@ class Alarmlist extends React.Component {
                                     )}
                                 </Form.Item>
                             </Col> */}
-                  <Col xl={2} xxl={2} lg={6} push={7} className="mt">
+                        <div className="mt rg">
                                 <Button type="primary" htmlType="submit" className="queryBtn">查询</Button>
-                            </Col>
+                        </div>
                             {/* <Col xl={2} xxl={2} lg={6} className="lr">
                                 <Button onClick={this.handleProcessing} className="processingBtn" disabled={this.state.activecompcode ? true : false}>一键处理</Button>
                             </Col> */}
                         </Form>
-                    </Row>
+                    </div>
+                    {/* </Row> */}
             </div>
                 {/* </LocaleProvider> */}
                 <Spin size="large" spinning={this.state.loadding} tip="加载中..." className="loadding" />
