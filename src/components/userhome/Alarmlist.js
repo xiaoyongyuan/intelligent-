@@ -364,7 +364,7 @@ class Alarmlist extends React.Component {
                                     )}
                                 </Form.Item>
                                 </div>
-                            <div className="fl sbml">
+                            <div className="fl sbmlto">
                                 <Form.Item label="设备" >
                                     {getFieldDecorator('cid', {
                                         initialValue: "",
@@ -387,7 +387,7 @@ class Alarmlist extends React.Component {
                                     )}
                                 </Form.Item>
                             </Col> */}
-                        <div className="mt rg">
+                            <div className="mt rg sbmlthre">
                                 <Button type="primary" htmlType="submit" className="queryBtn">查询</Button>
                         </div>
                             {/* <Col xl={2} xxl={2} lg={6} className="lr">

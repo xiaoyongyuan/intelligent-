@@ -38,8 +38,11 @@
 .ant-card-bordered {
     border: none!important;
 }
-.sbml{
+.sbmlto{
   margin-left: 100px;
+}
+.sbmlthre{
+  margin-right: 100px;
 }
 
 .clearfix:after {

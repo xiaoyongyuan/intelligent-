@@ -1340,6 +1340,7 @@ border-radius:4px;
     height: 1px;
     left: 5%;
     background-color: #1E73FF;
+    opacity: .3;
     top: 64px;
 }
 .home_tole p:last-child{
