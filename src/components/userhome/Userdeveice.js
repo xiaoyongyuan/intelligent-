@@ -1,5 +1,5 @@
-import React from 'react';
-import {Form, Row, Col, Button,Icon, message, Modal, Input} from 'antd';
+import React, {Fragment} from 'react';
+import {Form, Row, Col,Card, Button,Icon, message, Modal, Input} from 'antd';
 import '../../style/sjg/home.css';
 import {post} from "../../axios/tools";
 import CascaderModule from '../common/CascaderModule';
@@ -142,9 +142,9 @@ class Userdeveice extends React.Component{
     }
     tempbg=()=>{ //设备温度
         if(this.state.heartdata.temp<55){
-            return 'oncolor';
+            return 'oncolor fontAr';
         }else{
-            return 'reecolor';
+            return 'reecolor fontAr';
         }
     }
     isheart=()=>{ //是否1分钟内心跳
@@ -155,9 +155,9 @@ class Userdeveice extends React.Component{
             let myDate=new Date();// 当前时间
             let timc=myDate.getTime(myDate) // 当前时间戳
             if(timc-timq>60000){
-                return 'reecolor';
+                return 'reecolor fontAr';
             }else{
-                return 'oncolor';
+                return 'oncolor fontAr';
             }
         }else{
             return 'reecolor';
@@ -233,181 +233,223 @@ class Userdeveice extends React.Component{
     render(){
         const _this=this;
         return(
-            <div style={{padding:"20px"}}>
-                <div className="box-padding">
-                    <p> <Icon type="bars" /> 设备信息</p>
+            <div className="userdeveice">
+                <div className="equim">
+                    <div className="equim1">
+                        <div className="zcard">
+                            <div className="zCard-title">
+                                <span>设备信息</span>
+                                <span className="zline"/>
+                            </div>
+                            <div className="zcardBody">
+                                <Row className="equ_row">
+                                    <Col span={6} className="t_r">
+                                        设备：
+                                    </Col>
+                                    <Col span={12} offset={1} className="t_l">
+                                        {this.state.data.eid}
+                                    </Col>
+                                </Row>
+                                <Row className="equ_row">
+                                    <Col span={6} className="t_r">
+                                        报警类型：
+                                    </Col>
+                                    <Col span={12} offset={1} className="t_l">
+                                        {this.atype()}
+                                    </Col>
+                                </Row>
+                                <Row className="equ_row">
+                                    <Col span={6} className="t_r">
+                                        所在位置：
+                                    </Col>
+                                    <Col span={10} offset={1} className="t_l">
+                                        {this.state.data.location}
+                                    </Col>
+                                    <Col span={2} offset={2}>
+                                        <span onClick={()=>this.setstateComm('addreditSwitch')} style={{color:'#5063ee',cursor:'pointer'}} className="zuserdevice"/>
+                                    </Col>
+                                </Row>
+                                <Row className="equ_row ">
+                                    <Col span={6} className="t_r">
+                                        坐标：
+                                    </Col>
+                                    <Col span={6} offset={1} className="t_l fontAr">
+                                        经度：{this.state.lng}&nbsp;&nbsp;,纬度：{this.state.lat}
+                                    </Col>
+                                    <Col span={2} offset={1}>
+                                        <span onClick={this.locationedit} style={{color:'#5063ee',cursor:'pointer'}} className="zuserdevice" />
+                                    </Col>
+                                </Row>
+                                <Row className="equ_row">
+                                    <Col span={6} className="t_r">
+                                        最后报警时间：
+                                    </Col>
+                                    <Col span={12} offset={1} className="t_l fontAr">
+                                        {this.state.data.atime}
+                                    </Col>
+                                </Row>
+                                <Row className="equ_row">
+                                    <Col span={6} className="t_r">
+                                        防区设置：
+                                    </Col>
+                                    <Col span={12} offset={1} className="t_l">
+                                        <a  href={"#/app/companyhome/setarea?id="+_this.props.query.id} className="underline fontAr">
+                                            {this.field()}个
+                                        </a>
+                                    </Col>
+                                </Row>
+                                <Row className="equ_row">
+                                    <Col span={6} className="t_r">
+                                        设防时间：
+                                    </Col>
+                                    <Col span={12} offset={1} className="t_l">
+                                        <a href={"#/app/companyhome/settime?id="+_this.props.query.id} className="underline fontAr">
+                                            {this.state.workingtime.length}段
+                                        </a>
+                                    </Col>
+                                </Row>
+                                <Row className="equ_row">
+                                    <Col span={6} className="t_r">
+                                        上次心跳：
+                                    </Col>
+                                    <Col span={12} offset={1} className="t_l ">
+                                        <span className="reecolor">{this.state.heartdata.time}</span>
+                                    </Col>
+                                </Row>
+                                <Row className="equ_row">
+                                    <Col span={6} className="t_r">
+                                        设备温度：
+                                    </Col>
+                                    <Col span={12} offset={1} className="t_l">
+                                        <span className="oncolor"> {this.state.heartdata.temp}℃ </span>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </div>
+                        <div className="zcard1">
+                            <div className="zCard-title">
+                                <span>摄像头信息</span>
+                                <span className="zline"/>
+                            </div>
+                            <div className="zcardBody">
+                                <Row className="equ_row">
+                                    <Col span={6} className="t_r">
+                                        设备状态：
+                                    </Col>
+                                    <Col span={12} offset={1} className="t_l">
+                                        {this.status()}
+                                    </Col>
+                                </Row>
+                                <Row className="equ_row">
+                                    <Col span={6} className="t_r">
+                                        设备软件版本：
+                                    </Col>
+                                    <Col span={12} offset={1} className="t_l fontAr">
+                                        {this.state.login.version?this.state.login.version:'**'}
+                                    </Col>
+                                </Row>
+                                <Row className="equ_row">
+                                    <Col span={6} className="t_r fontAr">
+                                        设备硬件版本：
+                                    </Col>
+                                    <Col span={12} offset={1} className="t_l">
+                                        {this.state.login.version?this.state.login.version:'**'}
+                                    </Col>
+                                </Row>
+                                <Row className="equ_row">
+                                    <Col span={6} className="t_r">
+                                        当前状态：
+                                    </Col>
+                                    <Col span={12} offset={1} className="t_l">
+                                        {this.isonline()}
+                                    </Col>
+                                </Row>
+                                <Row className="equ_row">
+                                    <Col span={6} className="t_r">
+                                        用户名：
+                                    </Col>
+                                    <Col span={12} offset={1} className="t_l">
+                                        <input className="padd_left fontAr" type="text" value={this.state.camerauser} id="ip"
+                                               onChange={(event)=>this.onChangeuser(event)}
+                                        />
+                                    </Col>
+                                </Row>
+                                <Row className="equ_row">
+                                    <Col span={6} className="t_r">
+                                        密码：
+                                    </Col>
+                                    <Col span={12} offset={1} className="t_l">
+                                        <input className="padd_left fontAr" type="text" value={this.state.camerapasswd}
+                                               onChange={(e)=>this.onChangepwd(e)}
+                                               id="port"
+                                        />
+                                    </Col>
+                                </Row>
+                                <Row className="equ_row">
+                                    <Col span={6} className="t_r">
+                                        设备IP：
+                                    </Col>
+                                    <Col span={12} offset={1} className="t_l">
+                                        <input className="padd_left fontAr" type="text"value={this.state.ipvalue} id="ip"
+                                               onChange={(e)=>this.onChangeip(e)}
+                                        />
+                                    </Col>
+                                </Row>
+                                <Row className="equ_row">
+                                    <Col span={6} className="t_r">
+                                        设备端口：
+                                    </Col>
+                                    <Col span={12} offset={1} className="t_l">
+                                        <input className="padd_left fontAr" type="text"value={this.state.portvalue} id="port"
+                                               onChange={(e)=>this.onChangeport(e)}
+                                        />
+                                    </Col>
+                                </Row>
+                            </div>
+                        </div>
+                    </div>
                     <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                        设备：
-                        </Col>
-                        <Col span={21} className="t_l">
-                          {this.state.data.eid}
-                        </Col>
-                    </Row>
-                    <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                           报警类型：
-                        </Col>
-                        <Col span={21} className="t_l">
-                            {this.atype()}
-                        </Col>
-                    </Row>
-                    <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                           所在位置：
-                        </Col>
-                        <Col span={21} className="t_l">
-                        {this.state.data.location}   <span onClick={()=>this.setstateComm('addreditSwitch')} style={{color:'#5063ee',cursor:'pointer'}}>编辑</span>
-                        </Col>
-                    </Row>
-                    <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                           坐标：
-                        </Col>
-                        <Col span={8} className="t_l">
-                         {this.state.lng} , {this.state.lat} <span onClick={this.locationedit} style={{color:'#5063ee',cursor:'pointer'}}>  修改</span>
-                        </Col>
-                    </Row>
-                    <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                           最后报警时间：
-                        </Col>
-                        <Col span={21} className="t_l">
-                        {this.state.data.atime}
-                        </Col>
-                    </Row>
-                    <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                        防区设置：
-                        </Col>
-                        <Col span={21} className="t_l">
-                             <a style={{color:"#fff"}} href={"#/app/companyhome/setarea?id="+_this.props.query.id} className="underline">
-                              {this.field()}个
-                             </a>
-                        </Col>
-                    </Row>
-                    <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                           设防时间：
-                        </Col>
-                        <Col span={21} className="t_l">
-                        <a style={{color:"#fff"}} href={"#/app/companyhome/settime?id="+_this.props.query.id} className="underline">
-                        {this.state.workingtime.length}段
-                         </a>
-                        </Col>
-                    </Row>
-                    <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                           上次心跳：
-                        </Col>
-                        <Col span={21} className="t_l">
-                        <span className={this.isheart()}>{this.state.heartdata.time}</span>
-
-                        </Col>
-                    </Row>
-                    <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                           设备温度：
-                        </Col>
-                        <Col span={21} className="t_l">
-                           <span className={this.tempbg()}> {this.state.heartdata.temp}℃ </span>
-                        </Col>
-                    </Row>
-                    <p><Icon type="video-camera" /> 摄像头信息</p>
-                    <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                           设备状态：
-                        </Col>
-                        <Col span={21} className="t_l">
-                           {this.status()}
-                        </Col>
-                    </Row>
-                    <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                           设备软件版本：
-                        </Col>
-                        <Col span={21} className="t_l">
-                           {this.state.login.version?this.state.login.version:'**'}
-                        </Col>
-                    </Row>
-                    <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                          设备硬件版本：
-                        </Col>
-                        <Col span={21} className="t_l">
-                        {this.state.login.version?this.state.login.version:'**'}
-                        </Col>
-                    </Row>
-                    <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                           当前状态：
-                        </Col>
-                        <Col span={21} className="t_l">
-                           {this.isonline()}
-                        </Col>
-                    </Row>
-                    <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                            用户名：
-                        </Col>
-                        <Col span={21} className="t_l">
-                              <input className="padd_left" type="text" value={this.state.camerauser} id="ip"
-                              onChange={(event)=>this.onChangeuser(event)}
-                              />
-                        </Col>
-                    </Row>
-                    <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                           密码：
-                        </Col>
-                        <Col span={21} className="t_l">
-                            <input className="padd_left" type="text" value={this.state.camerapasswd}
-                             onChange={(e)=>this.onChangepwd(e)}
-                             id="port"
-                            />
-                        </Col>
-                    </Row>
-                    <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                           设备IP：
-                        </Col>
-                        <Col span={21} className="t_l">
-                              <input className="padd_left" type="text"value={this.state.ipvalue} id="ip"
-                              onChange={(e)=>this.onChangeip(e)}
-                              />
-                        </Col>
-                    </Row>
-                    <Row className="equ_row">
-                        <Col span={3} className="t_r">
-                           设备端口：
-                        </Col>
-                        <Col span={21} className="t_l">
-                            <input className="padd_left" type="text"value={this.state.portvalue} id="port"
-                             onChange={(e)=>this.onChangeport(e)}
-                            />
-                        </Col>
-                    </Row>
-                    <Row className="equ_row">
-                        <Col span={21} offset={3} className="t_l">
-                        <Button className="queryBtn lg" onClick={this.updata}> 提交 </Button>
+                        <Col span={3} offset={20} className="t_l">
+                            <Button className="queryBtn lg" onClick={this.updata}> 提交 </Button>
                         </Col>
                     </Row>
                 </div>
                 <Modal
-                    title='修改'
+                    title={[
+                        <div className="zuserdeModel">
+                            <span className="zModelBlock"/>
+                            <span className="zmodelFont">修改</span>
+                        </div>
+                    ]}
                     visible={this.state.visible}
                     onOk={this.modalOk}
                     onCancel={this.handleCancel}
                     okText="确认"
                     cancelText="取消"
                 >
-                    <Row>
-                       <label>经度：</label><Input defaultValue={this.state.changelng} onChange={(e)=>this.changeCoord(e,'changelng')} />
-                       <label>纬度：</label><Input defaultValue={this.state.changelat} onChange={(e)=>this.changeCoord(e,'changelat')} />
-                    </Row>
+                    <Fragment>
+                        <Row style={{marginTop:"20px"}}>
+                            <Col span={3}><label>经度：</label></Col>
+                            <Col span={12}>
+                                <Input defaultValue={this.state.changelng} onChange={(e)=>this.changeCoord(e,'changelng')} />
+                            </Col>
+                        </Row>
+                        <Row style={{margin:"20px 0"}}>
+                            <Col span={3}><label>纬度：</label></Col>
+                            <Col span={12}>
+                                <Input defaultValue={this.state.changelat} onChange={(e)=>this.changeCoord(e,'changelat')} />
+                            </Col>
+                        </Row>
+                    </Fragment>
+
                 </Modal>
                 <Modal
-                    title='编辑当前位置'
+                    title={[
+                        <div className="zuserdeModel">
+                            <span className="zModelBlock"/>
+                            <span className="zmodelFont">编辑当前位置</span>
+                        </div>
+                    ]}
                     visible={this.state.addreditSwitch}
                     onOk={this.addreditOk}
                     onCancel={this.addreditCancel}
@@ -415,9 +457,8 @@ class Userdeveice extends React.Component{
                     cancelText="取消"
                 >
                     <Row>
-                        <label>区域：</label><CascaderModule onRef={this.onRef} style={{width:'100%'}} />
-                        <label>详细地址：</label><Input onChange={(e)=>this.changeCoord(e,'addrdetail')} />
-
+                        <CascaderModule onRef={this.onRef} style={{width:'100%'}}/>
+                       <Input placeholder="请输入详细地址" className="zmoadlinput" onChange={(e)=>this.changeCoord(e,'addrdetail')} />
                     </Row>
                 </Modal>
             </div>

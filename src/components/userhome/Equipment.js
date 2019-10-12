@@ -180,7 +180,7 @@ class Equipment extends React.Component{
                                                     <span>防区数量：<span className="zfilec fontAr">{this.field(i)}</span></span>
                                                 </div>
                                                 <div className="zeditIcon">
-                                                    <a href={"#/app/companyhome/setarea?id="+el.code}>
+                                                    <a href={"#/app/companyhome/setarea?id="+el.code+"&eid="+el.eid}>
                                                         <span className="zeidt"/>
                                                     </a>
                                                 </div>
