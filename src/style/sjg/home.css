@@ -1,4 +1,6 @@
-
+.userdeveice{
+    padding: 30px;
+}
 .equipmentCard {
     padding: 0px 20px 0 20px;
     padding-bottom: 30px;
@@ -526,28 +528,22 @@
     position: relative;
     height: 40px;
     line-height: 40px;
+    color:#313A62 ;
 }
 
 .underline {
     text-decoration: underline;
+    color: #313A62;
 }
 .underline:hover{
     text-decoration: underline;
 }
-.t_l input {
-    border: 0;
-    background: #F0F2F5;
-    height: 30px;
-    line-height: 30px;
-
-}
-
 .oncolor {
-    color: #54CD66;
+    color: #FF7D46;
 }
 
 .reecolor {
-    color: #f22727;
+    color: #1F74FF;
 }
 
 /* 巡更计划部分 */
@@ -616,8 +612,12 @@
     }
 
     .padd_left {
+        width: 303px;
+        height: 36px;
         padding-left: 6px;
-        color: #000;
+        color:rgba(49,58,98,1);
+        border-radius: 4px;
+        outline: none;
     }
 
     .del {
@@ -1419,3 +1419,81 @@ border-radius:4px;
     }
 
 }
+.equim{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow:0px 2px 20px rgba(30,115,255,0.1);
+    padding-bottom: 20px;
+}
+.equim1{
+    width: 100%;
+    display: flex;
+}
+.zcard{
+    width: 42%;
+    box-shadow:0px 2px 20px rgba(30,115,255,0.1);
+}
+.zcard1{
+    width: 57%;
+    margin-left: 1%;
+    box-shadow:0px 2px 20px rgba(30,115,255,0.1);
+}
+.zCard-title{
+    position: relative;
+    height: 90px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 20px;
+    line-height: 90px;
+}
+.zCard-title .zline{
+    display: inline-block;
+    width: 90%;
+    height: 1px;
+    border-bottom: 1px solid rgba(30, 115, 255, 0.3);
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+}
+.zcardBody{
+    font-size: 16px;
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    height: 415px;
+}
+.zuserdevice{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../../../src/style/ztt/img/userdevice.png") no-repeat;
+    background-size: 100% 100%;
+}
+.zuserdeModel{
+    display: flex;
+    align-content: center;
+}
+.zModelBlock{
+    display: inline-block;
+    width: 6px;
+    height: 20px;
+    background: rgba(30, 115, 255, 1);
+}
+.zmodelFont{
+    margin-left: 8px;
+}
+.zmoadlinput{
+    margin-top: 20px!important;
+    height: 80px!important;
+    border-radius: 4px !important;
+    outline: none;
+}
+.zmoadlinput::-webkit-input-placeholder{
+    position:relative;
+    top:-26px;
+    left: 0;
+}
+
+

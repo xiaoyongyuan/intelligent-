@@ -224,6 +224,7 @@ class HeaderCustom extends Component {
     render() {
         const HeartIcon = props => <Icon component={HeartSvg} {...props} />;
         const { responsive, path, auth } = this.props;
+        console.log(auth,"auth")
         const _this=this;
         return (
             <div>
@@ -236,12 +237,7 @@ class HeaderCustom extends Component {
                 cancelText="取消"
             />
             <Header className="custom-theme header" style={{background:"#fff"}}>
-               {/* <div className="titletop">
-                    <div className="titlevalue">
-                        {this.props.user.cname}
-                    </div>
-                </div>*/}
-                <div style={{width:"15%",float:"left"}} className="leftIcon">
+                <div  className="leftIcon">
                     {
                         responsive.data.isMobile ? (
                             <Popover content={<SiderCustom path={path} popoverHide={this.popoverHide} />} trigger="click" placement="bottomLeft" visible={this.state.visible} onVisibleChange={this.handleVisibleChange}>
@@ -255,12 +251,18 @@ class HeaderCustom extends Component {
                             />
                         )
                     }
+                  <span className="zaccount">
+                        <span className="zaccountFront" />
+                        <span className="acountFont"> {auth&&auth.active&&auth.active.activecomp?auth.active.activecomp:this.props.user.cname}</span>
+                 </span>
                 </div>
                 <div className="zheader-title">
                     <HeartIcon onClick={this.screenFull} className="ztitle zicon" />
                     <div className="ztitleUser ztitle">
                         <span className="zuser zpadd"/>
-                        <span className="zpadd ztitleFont">{auth&&auth.active&&auth.active.activecomp?auth.active.activecomp:this.props.user.cname}</span>
+                        <span className="zpadd ztitleFont">
+                            {auth&&auth.data&&auth.data.account?auth.data.account:"无"}
+                            </span>
                     </div>
                     <div className="zback" onClick={this.showModaldelete}>
                         <span className="zbackout"/>

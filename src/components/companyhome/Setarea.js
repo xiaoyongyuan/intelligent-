@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Row, Col,Button,Modal } from 'antd';
+import {message,Button,Modal } from 'antd';
 import '../../style/lff/home.css';
 import {post} from "../../axios/tools";
 const blue='#5063ee';
 const red='#ED2F2F';
+var flashVis=0;
 class Setarea extends Component {
     constructor(props){
         super(props);
@@ -17,11 +18,12 @@ class Setarea extends Component {
     }
     componentWillMount=()=>{
         this.setState({
-            cid:this.props.query.id
+            cid:this.props.query.id,
+            eid:this.props.query.eid,
         });
     }
-    componentDidMount() { 
-    //摄像头详情 
+    componentDidMount() {
+    //摄像头详情
         post({url:'/api/camera/getone',data:{code:this.state.cid}},(res)=>{
             if(res){
                 let field=res.data.field,areaone=[],areatwo=[];
@@ -36,17 +38,17 @@ class Setarea extends Component {
                     },()=>{
                         this.boundarydraw()
                     });
-                
+
             }
-        })  
-    
+        })
+
     }
-    boundarydraw(){                  
+    boundarydraw(){
         let ele = document.getElementById("time_graph_canvas")
         let area = ele.getContext("2d");
         area.clearRect(0,0,704,576);
         if(this.state.areaone.length){
-                let areaone=this.state.areaone[0];          
+                let areaone=this.state.areaone[0];
                 area.strokeStyle=blue;
                 area.lineWidth=3;
                 area.beginPath();
@@ -58,7 +60,7 @@ class Setarea extends Component {
                 area.stroke();
                 area.closePath();
                 if(this.state.areatwo.length){
-                    let areatwo=this.state.areatwo[0]; 
+                    let areatwo=this.state.areatwo[0];
                     area.strokeStyle=red;
                     area.beginPath();
                     area.moveTo(areatwo[0][0],areatwo[0][1]);
@@ -70,7 +72,7 @@ class Setarea extends Component {
                     area.closePath();
                 }
         }else if(this.state.areatwo.length){
-            let areatwo=this.state.areatwo[0]; 
+            let areatwo=this.state.areatwo[0];
             area.strokeStyle=red;
             area.lineWidth=3;
             area.beginPath();
@@ -82,10 +84,10 @@ class Setarea extends Component {
             area.stroke();
             area.closePath();
         }
-               
+
     }
 
-    
+
     draw = (field) => { //绘制区域
         let item=this.state.present;
         let ele = document.getElementById("time_graph_canvas");
@@ -99,12 +101,12 @@ class Setarea extends Component {
                area.lineTo(item[i][0],item[i][1]);
                if(i===3){
                area.lineTo(item[0][0],item[0][1]);
-               } 
+               }
                area.stroke();
             }
         })
     }
-    
+
     clickgetcorrd =(e)=>{ //点击
         if(!this.state.areaone.length||!this.state.areatwo.length){
             if(this.state.present.length===4){
@@ -120,9 +122,9 @@ class Setarea extends Component {
                     present:precorrd
                 });
             }
-            
+
         }
-        
+
     }
     deleteOk=()=>{
         let ele = document.getElementById("time_graph_canvas");
@@ -164,13 +166,13 @@ class Setarea extends Component {
             }else{
                 this.boundarydraw();
                 this.draw();
-                area.strokeStyle='#ff0'; 
+                area.strokeStyle='#ff0';
                 area.lineWidth=3;
                 area.beginPath();
                 area.moveTo(item[item.length-1][0],item[item.length-1][1]);
                 area.lineTo(getcord[0],getcord[1]);
                 area.stroke();
-                area.closePath(); 
+                area.closePath();
             }
 
         }
@@ -185,9 +187,9 @@ class Setarea extends Component {
                             areaone:''
                         },()=>{
 
-                          this.boundarydraw()  
+                          this.boundarydraw()
                         });
-                        
+
                     }
                 })
             }else{
@@ -198,13 +200,13 @@ class Setarea extends Component {
                                 areaone:[this.state.present],
                                 present:[]
                             },()=>{
-                              this.boundarydraw()  
+                              this.boundarydraw()
                             });
-                            
+
                         }
                     })
                 }
-                
+
             }
         }else{
             if(this.state.areatwo.length){
@@ -213,9 +215,9 @@ class Setarea extends Component {
                         this.setState({
                             areatwo:'',
                         },()=>{
-                          this.boundarydraw()  
+                          this.boundarydraw()
                         });
-                        
+
                     }
                 })
             }else{
@@ -226,9 +228,9 @@ class Setarea extends Component {
                                 areatwo:[this.state.present],
                                 present:[]
                             },()=>{
-                              this.boundarydraw()  
+                              this.boundarydraw()
                             });
-                            
+
                         }
                     })
                 }
@@ -236,39 +238,69 @@ class Setarea extends Component {
         }
 
     }
-
+    /*获取底图*/
+    changeBase=()=>{
+        post({url:"/api/equipment/get_basemap",data:{eid:this.state.eid}},(res)=>{
+            if(res.success){
+                this.hanleresult(res.data);
+            }
+        })
+    }
+    /*获取底图结果*/
+    hanleresult=(code)=>{
+        post({url:"/api/smptask/getone",data:{code:code,apptype:1}},(res)=>{
+            if(res.success){
+                if(res.data.taskstatus==1){
+                    flashVis=0;
+                    let task=JSON.parse(res.data.taskresult);
+                    this.setState({
+                        src:task.path,
+                        nowTime:Date.parse(new Date())
+                    })
+                }else if(res.data.taskstatus==0){
+                    flashVis++;
+                    if(flashVis>150){
+                        message.warning("请求超时!");
+                        return false;
+                    }else{
+                        this.hanleresult(code);
+                    }
+                }
+            }
+        })
+    }
     render() {
         return (
            <div className="Setarea">
-                <div className="Setarea_cont">
-                    <Row>
-                        <Col xl={{ span:24}} xxl={{ span: 24 }}>
-                            <div className="photo" id="canvasphoto">
-                                <canvas id="time_graph_canvas" width="704px" height="576px" style={{backgroundImage:'url('+this.state.src+')',backgroundSize:'100% 100%'}} onClick={this.clickgetcorrd} onMouseMove={this.drawmove} />
-                                <div className="optbtn">
-                                    <Row>
-                                        <Button type="primary" className="queryBtn" onClick={()=>this.submitok(1)}>{this.state.areaone.length?'删除防区一':'新增防区一'}</Button>
-                                    </Row>
-                                    <br /><br />
-                                    <Row>
-                                        <Button type="primary" className="deleteBtn" onClick={()=>this.submitok()}>{this.state.areatwo.length?'删除防区二':'新增防区二'}</Button>
-                                    </Row>
-                                </div>
-                            </div>   
-                        </Col>
-                        </Row>
-                    <Row className="areaexplain">
-                        <Col xl={{ span: 24}} xxl={{ span: 24}}>
-                        <p>围界设定方法：<br />请在左侧图片处鼠标单击绘制防区，防区均为四边形，
-                                        每个设备最多可设置两处防区。防区绘制完成后请点击“新增”按钮生效。</p>
-                        </Col>
-                    </Row>
+                <div className="photo" id="canvasphoto">
+                    <canvas id="time_graph_canvas" width="704px" height="576px"
+                            style={{
+                                backgroundImage: "url(" + `${this.state.src+"?t="+this.state.nowTime}` + ")",
+                                backgroundSize:'100% 100%'
+                            }}
+                            onClick={this.clickgetcorrd} onMouseMove={this.drawmove}
+                    />
+                    <div className="zsetarea">
+                        <div className="optbtn">
+                            <div>
+                                <Button type="primary" className="queryBtn seBtn " onClick={()=>this.submitok(1)}>{this.state.areaone.length?'删除防区一':'新增防区一'}</Button>
+                                <Button type="primary" className="deleteBtn seBtn" onClick={()=>this.submitok()}>{this.state.areatwo.length?'删除防区二':'新增防区二'}</Button>
+                            </div>
+                            <div>
+                                <Button className="base" onClick={this.changeBase}>更换底图</Button>
+                            </div>
+                        </div>
+                        <div className="areaexplain">
+                            <span className="circum"><span className='ference'/><span className="zmethod">围界设定方法</span>：</span>
+                            <span>请在左侧图片处鼠标单击绘制防区，防区均为四边形， 每个设备最多可设置两处防区。防区绘制完成后请点击“新增”按钮生效。</span>
+                        </div>
+                    </div>
                 </div>
                 <Modal title="提示信息" visible={this.state.deleteshow} onOk={this.deleteCancel}
                        onCancel={this.deleteCancel} cancelText='取消'  okText='确定'>
                     <p>您还有未提交的防区，请先点击新增按钮进行提交</p>
                 </Modal>
-           </div> 
+           </div>
         )
     }
 
