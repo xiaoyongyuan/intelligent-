@@ -1329,7 +1329,7 @@ border-radius:4px;
     text-align: center;
     font-size: 24px;
     color: #0E1C43;
-    padding: 20px 0;
+    padding: 13px 0;
 
 }
 .home_tole h5::before{
@@ -1340,8 +1340,12 @@ border-radius:4px;
     height: 1px;
     left: 5%;
     background-color: #1E73FF;
-    top: 75px;
+    top: 64px;
 }
+.home_tole p:last-child{
+    margin-bottom: 24px;
+}
+
 /* 134 65 */
 .home_tole p{
     padding-left: 50px;

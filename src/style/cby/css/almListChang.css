@@ -38,6 +38,9 @@
 .ant-card-bordered {
     border: none!important;
 }
+.sbml{
+  margin-left: 100px;
+}
 
 .clearfix:after {
     content: ".";

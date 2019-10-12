@@ -7,12 +7,9 @@ import { qrcode } from "../../axios/tools";
 import QRCode from "qrcode.react";
 import "../../style/jhy/css/login.css";
 import "../../style/jhy/icon/iconfont.css";
-import logopic from "../../style/jhy/imgs/logo.png";
-import layerpic from "../../style/jhy/imgs/layer.png";
-import layerpic2 from "../../style/jhy/imgs/layer2.png";
-import layerpic3 from "../../style/jhy/imgs/layer3.png";
-import snapline from "../../style/jhy/imgs/snapline.png";
-import formborder from "../../style/jhy/imgs/formborder.png";
+import erweima from "../../style/cby/img/login/erweima.png";
+import userlogin from "../../style/cby/img/login/userlogin.png";
+
 
 var count = 0;
 let qrcodeSet = undefined; //控制二维码请求结果定时器
@@ -24,7 +21,8 @@ class Login extends React.Component {
       typeState: 0, //控制扫码登录和密码登录
       qrcodeStatus: 0, //控制二维码失效页面
       qrcode: "",
-      loginTitle: "用户登录"
+      loginTitle: "用户登录" ,
+      paseeey: ["password", "eye-invisible", "#313A62", "0.3"]
     };
   }
   componentWillMount() {
@@ -108,6 +106,12 @@ class Login extends React.Component {
         qrcodeStatus: 0
       });
     }
+    this.props.form.setFieldsValue({
+      account : "" ,
+     password : ""
+
+    })
+
   };
   //二维码登录
   loginLast = () => {
@@ -138,58 +142,69 @@ class Login extends React.Component {
       }
     });
   };
+
+  eyepas = e =>{
+    let arr1 = ["text", "eye", "#1E73FF", "1"]
+    let arr2 = ["password" , "eye-invisible", "#313A62", "0.3"]
+    // paseeey: ["password", "eye", "#1E73FF", "1"]
+    if (this.state.paseeey[0] == "password"){
+      this.setState({
+        paseeey: arr1
+      });
+    }else{
+      this.setState({
+        paseeey: arr2
+      });
+    }
+  }
+  
   render() {
+    let tetarr = [["瞬间响应，快人一步", "AI视频联网报警应急系统"],
+    ["多样报警处理，全局联动！", "通用型，无人值守智能安防平台"],
+    ["用户隐私，警用级加密！", "无忧隐私保护计划"]
+    ]
     const { getFieldDecorator } = this.props.form;
     return (
       <div
         className="loginnew"
-        style={{
-            background:"#313653"
-          // background: "#fff"
-        }}
       >
+
+        <div className="tetsssBox">
+            {tetarr.map((a, b) => (
+              <div className={`tetsss  tetsss${b} active`} key={"tetsss" + b}
+                style={{ animation: `flash${b} linear 6s infinite` }}
+
+              >
+                <p>{a[0]}</p>
+                <p>{a[1]}</p>
+              </div>
+              )
+            )}
+        </div>
         <div className="topbar">
           <div className="logo">
-            <img src={logopic} alt="" />
-            系统tttttt
+            {/* <img src={logopic} alt="" /> */}
+            傲智 <span className="fontAr">AI</span> 视频警戒系统
           </div>
         </div>
         <div className="logcont ">
-          <div className="wrapper clearfix">
-            {/* <div className="acrossturn clearfix">
-              <div className="layerpic3">
-                <img src={layerpic3} />
-              </div>
-              <div className="layerpic2">
-                <img src={layerpic2} />
-              </div>
-              <div className="layerpic">
-                <img src={layerpic} />
-              </div>
-              <div className="turntitle">
-                <p>智能视频</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;联网预警</p>
-              </div>
-            </div> */}
-            {/* <div className="snapline">
-              <img src={snapline} />
-            </div> */}
+          <div className="clearfix">
             <div
-              // style={{
-              //   background: `url('${formborder}')  no-repeat center/100% 100%`
-              // }}
               className="loginform clearfix"
             >
-              <div className="login-top">
+              <div className="login-top clearfix">
                 {/* //用户登录 */}
-                <div className="login-title">{this.state.loginTitle}</div>
+                <div className="login-title fl">{this.state.loginTitle}</div>
                 <div
                   className={
-                    "pwdBtn iconfont login-qrcode" +
-                    (this.state.typeState ? " icon-diannao " : " icon-erweima")
+                    "rg " 
+                    // "rg pwdBtn iconfont login-qrcode" +
+                    // (this.state.typeState ? " icon-diannao " : " icon-erweima")
                   }
+                  
                   onClick={this.handlerImg}
-                />
+                > <img src={this.state.typeState ? userlogin : erweima} alt=""/>
+                   </div> 
               </div>  
               <div className="qrcode">
                 <div
@@ -248,23 +263,33 @@ class Login extends React.Component {
                           <Icon
                             type="user"
                             style={{
-                              color: "#5cadb9",
+                              color: "#1E73FF",
                               fontSize: 26,
                               marginRight: "10px"
                             }}
                           />
                         }
+                        autocomplete="off"
                         className="usersInput"
                         placeholder="请输入用户名"
+                        style={{ fontSize: "20px", color: "#313A62"}}
                       />
                     )}
                   </Form.Item>
-                  <Form.Item style={{ marginTop: "36px" }}>
+                  <Form.Item style={{ marginTop: "40px" }}>
                     {getFieldDecorator("password", {
                       rules: [
                         {
                           required: true,
                           message: "请输入密码!"
+                        },
+                        {
+                          max: 15,
+                          message: "密码最大长度不得超过15！"
+                        },
+                        {
+                          min: 6,
+                          message: "密码最少长度不得低于6！"
                         }
                       ]
                     })(
@@ -272,31 +297,35 @@ class Login extends React.Component {
                         prefix={
                           <Icon
                             type="lock"
-                            style={{ color: "#5cadb9", fontSize: 26 }}
-                          />
-                        }
-                        min="6" 
-                        max="15"
-                        type="password"
-                        className="usersInput"
-                        placeholder="请输入密码"
-                        style={{ fontSize: "26px" }}
-                      />
-                    )}
+                            style={{ color: "#1E73FF", fontSize: 26 }}
+                            
+  />
+}
+suffix={
+  <Icon type={this.state.paseeey[1]} style={{ color: this.state.paseeey[2], opacity: this.state.paseeey[3] }} onClick= {this.eyepas} />
+}
+// #1E73FF  #313A62 .3
+type={this.state.paseeey[0]}
+className="usersInput"
+placeholder="请输入密码"
+                        style={{ fontSize: "20px", color:"#313A62" }}
+                  />
+                )}
                   </Form.Item>
                   <Form.Item
                     style={{
                       textAlign: "center",
-                      marginTop: "30px"
+                      marginTop: "60px",
                     }}
                   >
                     <Button
                       type="primary"
                       htmlType="submit"
-                      className="lgbutton"
-                      style={{ width: "150px", height: "50px" }}
-                    >
-                      登录
+                      style={{ width: "100%", height: "50px", background: "#1E73FF" ,
+                        color: "#fff", fontSize: "20px" ,
+                      borderRadius:"4px" }}
+                                      >
+                                        登录
                     </Button>
                   </Form.Item>
                 </Form>
