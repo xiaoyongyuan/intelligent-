@@ -24,6 +24,8 @@
 }
 .header{
     position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 .overView .pfixed{
     width:100%;
@@ -732,6 +734,7 @@
 .leftIcon .header__trigger{
     color: #1E7DFF;
 }
+
 /*头部右边*/
 .ztitle{
     padding: 0 20px;
@@ -771,5 +774,20 @@
 }
 .zback .zbackfont{
     padding: 0 5px;
+}
+.zaccount{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.zaccountFront{
+    display: inline-block;
+    width: 6px;
+    height: 30px;
+    background-color:#1E73FF ;
+}
+.acountFont{
+    padding-left: 8px;
+    font-size:22px ;
 }
 
