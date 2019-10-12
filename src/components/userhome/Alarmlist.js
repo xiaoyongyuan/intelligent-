@@ -133,8 +133,6 @@ class Alarmlist extends React.Component {
     };
     //报警信息列表
     handleAlerm = () => {
-
-
         const data = {
             bdate: this.state.bdate,
             edate: this.state.edate,
@@ -349,38 +347,32 @@ class Alarmlist extends React.Component {
                 {/* <LocaleProvider locale={zh_CN}> */}
             <div className="Ala_list_tit_sc">
               <Row style={{ marginTop: "40px", backgroundColor:"#fff",padding:"25px 15px"  }}>
-                        <Form onSubmit={this.handleSubmit} layout="inline" className="formIndex">
-                  {/* <Col xl={11} xxl={8} span={11}> */}
-                            <Col span={10}>
-                                <Form.Item label="日期" >
-                                    {getFieldDecorator('date')(
-                                        <RangePicker
-                                            onChange={this.onChange}
-                                            showTime={{ format: 'HH:00:00' }}
-                                            format="YYYY-MM-DD HH:00:00"
-                                            placeholder={['开始时间', '结束时间']}
-                                            disabledDate={this.disabledDate}
-                                        />
-                                    )}
-                                </Form.Item>
-                            </Col>
-                  {/* <Col xl={5} xxl={4} offset={2}> */}
-                  <Col span={5}> 
-                                <Form.Item label="设备" >
-                                    {getFieldDecorator('cid', {
-                                        initialValue: "",
-                                    })(
-                                        <Select style={{ width: 120 }}>
-                                            <Option value="" >所有</Option>
-                                            {
-                                                this.state.equipment.map((v, i) => (
-                                                    <Option value={v.code} key={v.code}>{v.name}</Option>
-                                                ))
-                                            }
-                                        </Select>
-                                    )}
-                                </Form.Item>
-                            </Col>
+                   <Form onSubmit={this.handleSubmit} layout="inline" className="formIndex">
+                            <Form.Item label="日期" >
+                                {getFieldDecorator('date')(
+                                    <RangePicker
+                                        onChange={this.onChange}
+                                        showTime={{ format: 'HH:00:00' }}
+                                        format="YYYY-MM-DD HH:00:00"
+                                        placeholder={['开始时间', '结束时间']}
+                                        disabledDate={this.disabledDate}
+                                    />
+                                )}
+                            </Form.Item>
+                            <Form.Item label="设备"  style={{padding:"0 30px"}}>
+                                {getFieldDecorator('cid', {
+                                    initialValue: "",
+                                })(
+                                    <Select style={{ width: 120 }}>
+                                        <Option value="" >所有</Option>
+                                        {
+                                            this.state.equipment.map((v, i) => (
+                                                <Option value={v.code} key={v.code}>{v.name}</Option>
+                                            ))
+                                        }
+                                    </Select>
+                                )}
+                            </Form.Item>
                             {/* <Col xl={4} xxl={3} className="switch_lr">
                                 <Form.Item label="只看收藏" >
                                     {getFieldDecorator('ifdanger')(
@@ -388,14 +380,14 @@ class Alarmlist extends React.Component {
                                     )}
                                 </Form.Item>
                             </Col> */}
-                  <Col xl={2} xxl={2} lg={6} push={7} className="mt">
-                                <Button type="primary" htmlType="submit" className="queryBtn">查询</Button>
-                            </Col>
+                           <Form.Item  style={{paddingLeft:"20px"}}>
+                               <Button type="primary" htmlType="submit" className="queryBtn">查询</Button>
+                           </Form.Item>
                             {/* <Col xl={2} xxl={2} lg={6} className="lr">
                                 <Button onClick={this.handleProcessing} className="processingBtn" disabled={this.state.activecompcode ? true : false}>一键处理</Button>
                             </Col> */}
                         </Form>
-                    </Row>
+              </Row>
             </div>
                 {/* </LocaleProvider> */}
                 <Spin size="large" spinning={this.state.loadding} tip="加载中..." className="loadding" />
@@ -406,12 +398,10 @@ class Alarmlist extends React.Component {
 
             <Row style={{ marginTop: "20px", display: this.state.type === 0 ? "none" : "block", }} gutter={20}>
                     {
-                // <Row>
                         this.state.policeList.map((v, i) => (
-                          // <Col xm={11} sm={11} md={11} lg={11} xl={11} xxl={7} key={v.code} style={{ margin: "0px 10px", display: this.state.displaysearch === true ? " block" : "none" }}>
-                             <Col span={4}  key={v.code} style={{ display: this.state.displaysearch === true ? " block" : "none" }}> 
+                             <Col xl={6} xxl={4}  key={v.code} style={{ display: this.state.displaysearch === true ? " block" : "none" }} >
                             <Card
-                              // hoverable
+                                className="listmargintop"
                               cover={<div className="pliceImgyal" onClick={() => this.alarmImg(v.atype, v.code)}>
                                 <img src={this.atypeimg(v.atype, v.pic_min)} alt="" />
                               </div>}
@@ -425,9 +415,9 @@ class Alarmlist extends React.Component {
                                 <h5 style={{ color: "#FF7D46" }}>{this.handleState(v.status)}</h5>
                               </div>
                             </Card>,
-                                                          
-                                                          
-{/*                                                           
+
+
+{/*
                                 <div className="listmargintop">
                                     <div className={this.redgreenblue(v.status)} >
                                         <Row>
