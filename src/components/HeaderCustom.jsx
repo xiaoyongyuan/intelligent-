@@ -258,7 +258,7 @@ class HeaderCustom extends Component {
                     <HeartIcon onClick={this.screenFull} className="ztitle zicon" />
                     <div className="ztitleUser ztitle">
                         <span className="zuser zpadd"/>
-                        <span className="zpadd ztitleFont">
+                        <span className="zpadd ztitleFont fontAr">
                             {auth&&auth.data&&auth.data.account?auth.data.account:"无"}
                             </span>
                     </div>

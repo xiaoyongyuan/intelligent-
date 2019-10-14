@@ -144,7 +144,7 @@ class Setarea extends Component {
                 dataIndex: 'starttime',
                 key: 'createon',
                 render: (text, record,index) => (
-                    <span>
+                    <span className="fontAr">
                         {record.starttime}<span>:00:00</span>----{record.endtime}<span>:00:00</span>
                     </span>
                 ),
