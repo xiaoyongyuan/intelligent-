@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-image: url(../../cby/img/login/bgbgbg.png);
+  background-image: url(../../cby/img/login/bgbg2.png);
   background-size: 100% 100%;
   box-sizing: border-box;
   position: relative;
@@ -395,6 +395,26 @@ textarea:-ms-input-placeholder {
   /* 99% {
     opacity: 0;
   } */
+}
+.posi1{
+    position: absolute;
+    top: 28%;
+    left: 51%;
+}
+.posi2{
+    position: absolute;
+    top: 46.76%;
+    left: 38%;
+}
+.posi3{
+    position: absolute;
+    top: 64%;
+    left: 32.5%;
+}
+.posi4{
+    position: absolute;
+    top: 76.6%;
+    left: 56.7%;
 }
 input:-webkit-autofill,
 select:-webkit-autofill {

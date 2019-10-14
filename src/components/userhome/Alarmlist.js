@@ -410,7 +410,7 @@ class Alarmlist extends React.Component {
                               <div className = "al_chang_box">
                                 <p className="al_chang_p clearfix" title={v.name}><span>设备名称：</span><span>{v.name}</span> </p>
                                 <p className="al_chang_p clearfix"><span>入侵类型：</span><span>{v.alarmtype}</span> </p>
-                                <p className="al_chang_p clearfix"><span className="clearfix"> <b className="fl">时</b><b className="rg">间：</b>  </span><span>{v.atime}</span> </p>
+                                        <p className="al_chang_p clearfix text_oneLine"><span className="clearfix"> <b className="fl">时</b><b className="rg">间：</b>  </span><span>{v.atime}</span> </p>
                                 <p className="al_chang_p clearfix" style={{ visibility: v.atype == 12 ? "hidden" : "visible" }}><span>报警对象：</span> <span>{v.tags === "" ? "无" : v.tags}</span></p>
                                 <h5 style={{ color: "#FF7D46" }}>{this.handleState(v.status)}</h5>
                               </div>
