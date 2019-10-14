@@ -163,8 +163,8 @@
 .flexleft .mergeImage .mergeItem {
     width: 65px;
     overflow-x: auto;
-    margin-left: 5px;
     cursor: pointer;
+    padding: 3px;
 }
 
 .flexright {

@@ -312,7 +312,7 @@ class Alarmdetails extends React.Component {
       }
       return a;
     }
-    event.nativeEvent.target.style.border = "1px solid #1078f3";
+    event.nativeEvent.target.style.border = "1px solid #3792FF";
     siblings(event).forEach(it => {
       it.style.border = "none";
     });
