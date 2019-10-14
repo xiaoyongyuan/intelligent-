@@ -141,9 +141,10 @@ class Alarmlist extends React.Component {
             status: this.state.status,
             pageindex: this.state.page,
             pagesize: 18,
-            passivecode: this.state.activecompcode
+            passivecode: this.state.activecompcode,
+            webmark:1
         };
-        post({ url: '/api/alarm/getlist', data: data }, (res) => {
+        post({ url: '/apiV1/alarminfo/getlist_alarm', data: data }, (res) => {
             if (res.success) {
                 this.setState({
                     displaysearch: true,
@@ -290,11 +291,23 @@ class Alarmlist extends React.Component {
         if (code === 0) {
             return "未处理";
         } else if (code === 1) {
-            return "确认";
+            return "挂起";
         } else if (code === 2) {
-            return "忽略";
-        } else if (code === 3) {
+            return "报警未结束";
+        } else if (code === -1) {
+            return "待处理";
+        }else if (code === 5) {
+            return "误报";
+        }else if (code === -1) {
+            return "待处理";
+        }else if (code === 4) {
             return "虚警";
+        }else if (code === 3) {
+            return "报警已结束";
+        }else if (code === -3) {
+            return "过期";
+        }else{
+            return "未处理";
         }
     };
     sanjiaose = (status) => {
@@ -412,7 +425,7 @@ class Alarmlist extends React.Component {
                                 <p className="al_chang_p clearfix"><span>入侵类型：</span><span>{v.alarmtype}</span> </p>
                                         <p className="al_chang_p clearfix text_oneLine"><span className="clearfix"> <b className="fl">时</b><b className="rg">间：</b>  </span><span>{v.atime}</span> </p>
                                 <p className="al_chang_p clearfix" style={{ visibility: v.atype == 12 ? "hidden" : "visible" }}><span>报警对象：</span> <span>{v.tags === "" ? "无" : v.tags}</span></p>
-                                <h5 style={{ color: "#FF7D46" }}>{this.handleState(v.status)}</h5>
+                                <h5 style={{ color: "#FF7D46" }}>{this.handleState(v.hstatus)}</h5>
                               </div>
                             </Card>,
 

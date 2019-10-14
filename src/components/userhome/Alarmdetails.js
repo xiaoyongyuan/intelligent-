@@ -48,9 +48,10 @@ class Alarmdetails extends React.Component {
     });
     post(
       {
-        url: "/api/alarmgroup/getone",
+        url: "/apiV1/alarminfo/getone_alarm",
         data: Object.assign(this.state.faths, {
-          passivecode: this.state.activecompcode
+            passivecode: this.state.activecompcode,
+            webmark:1
         })
       },
       res => {
@@ -311,7 +312,7 @@ class Alarmdetails extends React.Component {
       }
       return a;
     }
-    event.nativeEvent.target.style.border = "1px solid #1078f3";
+    event.nativeEvent.target.style.border = "1px solid #3792FF";
     siblings(event).forEach(it => {
       it.style.border = "none";
     });
@@ -463,7 +464,7 @@ class Alarmdetails extends React.Component {
                   报警时间：<span id="alarmTime">{this.state.data.atime}</span>
                 </label>
               </p>
-              <p
+             {/* <p
                 style={{
                   display: this.state.alarmType === 12 ? "none" : "block"
                 }}
@@ -472,8 +473,8 @@ class Alarmdetails extends React.Component {
                 <span style={{ color: this.state.color }}>
                   {this.state.typetext}
                 </span>
-              </p>
-              {!this.state.activecompcode ? (
+              </p>*/}
+              {/*{!this.state.activecompcode ? (
                 <p
                   style={{
                     display: this.state.alarmType === 12 ? "none" : "block"
@@ -525,7 +526,7 @@ class Alarmdetails extends React.Component {
                 </p>
               ) : (
                 ""
-              )}
+              )}*/}
               <div style={{ marginTop: "5px" }}>
                 <Button.Group>
                   <Button
