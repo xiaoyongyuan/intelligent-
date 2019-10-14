@@ -105,11 +105,11 @@ class Userhome extends React.Component{
                                 }
                                 className = "home_tole hom_chil" >
                                   <h5>{this.state.data.cname}</h5>
-                                   <p> <span> 云服务到期日期:</span> <span>{this.state.data.cloudvaliddate?this.state.data.cloudvaliddate:'无期限'}</span></p>
-                                <p> <span> 设备总数: </span> <span className="fontAr">{this.state.camera.length ? this.state.camera.length : 0}</span >个 </p>
-                                   <p> <span> 所属团队: </span> <span>{this.state.data.pname?this.state.data.pname:"未绑定"}</span > </p>
-                                <p> <span> 用户数: </span> <span className="fontAr"> {this.state.usercount?this.state.usercount:0}</span > </p>
-                                <p> <span> 管理员: </span> <span className="fontAr">{this.state.data.adminname?this.state.data.adminname:"********"}</span > </p>
+                                   <div> <span> 云服务到期日期:</span> <span>{this.state.data.cloudvaliddate?this.state.data.cloudvaliddate:'无期限'}</span></div>
+                                <div> <span> 设备总数: </span> <span className="fontAr">{this.state.camera.length ? this.state.camera.length : 0}</span >个 </div>
+                                   <div> <span> 所属团队: </span> <span>{this.state.data.pname?this.state.data.pname:"未绑定"}</span > </div>
+                                <div> <span> 用户数: </span> <span className="fontAr"> {this.state.usercount?this.state.usercount:0}</span > </div>
+                                <div> <span> 管理员: </span> <span className="fontAr">{this.state.data.adminname?this.state.data.adminname:"********"}</span > </div>
                                 </Col>
                                 
                     < Col span={14}

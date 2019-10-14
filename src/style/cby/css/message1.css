@@ -1,12 +1,20 @@
+.ant-tabs-nav{
+  font-weight:bold;
+  font-size:20px;
+}
+
 .ant-tabs-nav .ant-tabs-tab {
     width: 160px;
     height: 100%;
     text-align: center;
     margin: 0;
     /* padding: 0; */
-    padding: 12px 0;
+    padding: 10px 16px 10px 0;
     background: url(../img/message/noactiv_ta.png) no-repeat !important;
     background-size: cover;
+    opacity: .7;
+    /* font-weight:bold; */
+    /* font-size:20px; */
 }
 
 .ant-tabs-ink-bar{
@@ -66,3 +74,26 @@
 /* .ant-tabs-tabpane{
 
 } */
+
+
+.pm_msti{
+  margin-left: 40px;
+  font-weight: 400;
+}
+.pm_msti div:nth-child(1){
+  font-size: 20px;
+}
+.pm_msti div:nth-child(2){
+  font-size: 14px;
+  opacity: .7;
+}
+.crzh_msti{
+  margin-right: 100px;
+  opacity: .7;
+  line-height: 40px;
+}
+
+.ant-modal-close {
+  top: -7px;
+  right: -7px;
+}
