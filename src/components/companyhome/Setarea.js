@@ -240,9 +240,9 @@ class Setarea extends Component {
     }
     /*获取底图*/
     changeBase=()=>{
-        console.log(this.state.eid,"eid")
         post({url:"/api/equipment/get_basemap",data:{eid:this.state.eid}},(res)=>{
             if(res.success){
+                flashVis=0;
                 this.hanleresult(res.data);
             }
         })

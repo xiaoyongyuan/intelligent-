@@ -1405,7 +1405,11 @@ border-radius:4px;
 }
 
 .span_xx{
-    position: relative
+    position: relative;
+    color: #0E1C43;
+}
+.time_xx{
+    color: rgba(14, 28, 67,0.7)
 }
 .span_xx::before{
     content: "";

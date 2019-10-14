@@ -159,7 +159,7 @@ class Equipment extends React.Component{
                                                           <a href={"#/app/companyhome/settime?id="+el.code} className="actionsBbottom colCen">
                                                               {this.statework(i)}
                                                           </a>,
-                                                          <a href={"#/app/userhome/Userdeveice?id="+el.code} className="colCen actionsBbottom ">
+                                                          <a href={"#/app/userhome/Userdeveice?id="+el.code+"&eid="+el.eid} className="colCen actionsBbottom ">
                                                              <span className="sheding"><span className="zsetup"/><span className="zsetup1">设定</span></span>
                                                           </a>
                                                       ]}
