@@ -165,8 +165,8 @@ class Equipment extends React.Component{
                                             <Row className="zpaddRow">
                                                 <Col span={12}>
                                                     <div className="equipmentRight ">
-                                                        <p className="coverflow" title={el.name}>{el.name}</p>
-                                                        <p className="coverflow fontAr" title={el.eid}>{el.eid}</p>
+                                                        <div className="coverflow" title={el.name}>{el.name}</div>
+                                                        <div className="coverflow fontAr" title={el.eid}>{el.eid}</div>
                                                     </div>
                                                 </Col>
                                                 <Col span={12}>
