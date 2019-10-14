@@ -8,6 +8,10 @@ import QRCode from "qrcode.react";
 import "../../style/jhy/css/login.css";
 import "../../style/jhy/icon/iconfont.css";
 import erweima from "../../style/cby/img/login/erweima.png";
+import post1 from "../../style/cby/img/login/posit1.png";
+import post2 from "../../style/cby/img/login/posit2.png";
+import post3 from "../../style/cby/img/login/posit3.png";
+import post4 from "../../style/cby/img/login/posit4.png";
 import userlogin from "../../style/cby/img/login/userlogin.png";
 
 
@@ -168,7 +172,10 @@ class Login extends React.Component {
       <div
         className="loginnew"
       >
-
+        <img src={post1} alt="" className="posi1" />
+        <img src={post2} alt="" className="posi2" />
+        <img src={post3} alt="" className="posi3" />
+        <img src={post4} alt="" className="posi4"/>
         <div className="tetsssBox">
             {tetarr.map((a, b) => (
               <div className={`tetsss  tetsss${b} active`} key={"tetsss" + b}

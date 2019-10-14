@@ -1329,7 +1329,7 @@ border-radius:4px;
     text-align: center;
     font-size: 24px;
     color: #0E1C43;
-    padding: 13px 0;
+    padding: 20px 0;
 
 }
 .home_tole h5::before{
@@ -1341,10 +1341,10 @@ border-radius:4px;
     left: 5%;
     background-color: #1E73FF;
     opacity: .3;
-    top: 64px;
+    top: 80px;
 }
 .home_tole p:last-child{
-    margin-bottom: 24px;
+    margin-bottom: 58px !important; 
 }
 
 /* 134 65 */
@@ -1366,7 +1366,9 @@ border-radius:4px;
     font-size:20px;
     color:#0E1C43;
 }
-
+.ant-layout p {
+    margin: 23px 0 0 0 !important;
+}
 /* .home_tori{
     margin-left: 20px;
 } */
@@ -1375,7 +1377,7 @@ border-radius:4px;
 }
 
 .list_hom{
-    padding: 14px 45px;
+    padding: 25px 45px;
     /* background-color: red; */
     font-size: 20px;
     color: #0E1C43;

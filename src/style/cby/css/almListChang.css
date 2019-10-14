@@ -45,6 +45,13 @@
   margin-right: 100px;
 }
 
+.text_oneLine{
+  word-break:keep-all;    
+  white-space:nowrap;    
+  overflow:hidden;        
+  text-overflow:ellipsis;  
+}
+
 .clearfix:after {
     content: ".";
     display: block;
