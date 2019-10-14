@@ -8,7 +8,7 @@ import routes from '../routes/config';
 import SiderMenu from './SiderMenu';
 import logoicon from '../style/imgs/logoicon.png';
 import logofont from '../style/imgs/logofont.png';
-
+import "../style/ztt/css/sider.css";
 const { Sider } = Layout;
 class SiderCustom extends Component {
     static getDerivedStateFromProps (props, state) {
@@ -86,12 +86,13 @@ class SiderCustom extends Component {
                 breakpoint="lg"
                 collapsed={this.props.collapsed}
                 style={{ overflowY: 'auto' }}
+                className="sider"
             >
                 <div
                     style={{
                         color: "#fff",
                         lineHeight: "65px",
-                        fontSize: "18px",
+                        fontSize: "20px",
                         textAlign: "center"
                     }}
                 >

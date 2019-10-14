@@ -224,8 +224,6 @@ class HeaderCustom extends Component {
     render() {
         const HeartIcon = props => <Icon component={HeartSvg} {...props} />;
         const { responsive, path, auth } = this.props;
-        console.log(auth,"auth")
-        const _this=this;
         return (
             <div>
             <Modal

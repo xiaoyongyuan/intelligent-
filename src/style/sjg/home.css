@@ -388,8 +388,8 @@
     padding-right: 10px;
 }*/
 .zoffLine{
-    width: 64px;
-    height: 29px;
+    width: 80px;
+    height: 36px;
     background: url("../../../src/style/ztt/img/offline.png") no-repeat;
     background-size: 100% 100%;
     position: absolute;

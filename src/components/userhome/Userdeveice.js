@@ -293,7 +293,7 @@ class Userdeveice extends React.Component{
                                         防区设置：
                                     </Col>
                                     <Col span={12} offset={1} className="t_l">
-                                        <a  href={"#/app/companyhome/setarea?id="+_this.props.query.id} className="underline fontAr">
+                                        <a  href={"#/app/companyhome/setarea?id="+_this.props.query.id+"&eid="+_this.props.query.eid} className="underline fontAr">
                                             {this.field()}个
                                         </a>
                                     </Col>

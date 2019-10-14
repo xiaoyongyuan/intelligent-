@@ -1,0 +1,7 @@
+.zvideo{
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}

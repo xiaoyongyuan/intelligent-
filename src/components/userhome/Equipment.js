@@ -105,19 +105,20 @@ class Equipment extends React.Component{
       }
     };
     isonline=(i)=>{ //是否在线
-
-      if(this.state.camera[i]&&this.state.camera[i].heart){
+      if(this.state.camera[i] && this.state.camera[i].heart){
         let hearttime= this.state.camera[i].heart.time;
         let lasttime= this.state.camera[i].lasttime;
-
+         /* if (datas - new Date(hearttime).getTime() > 60000 && datas - new Date(lasttime).getTime() > 60000){
+              return(<div className="zoffLine"></div>)
+          }else{
+              return(<div className="zonline"></div>)
+          }*/
         if (!this.momenttime(lasttime) && !this.momenttime(hearttime)) {
           return(<div className="zoffLine"></div>)
-        }else return(<div className="zonline"></div>)
-
+        }else return(<div className="zonline"></div>);
       }else{
         return(<div className="zoffLine"></div>)
       }
-
    }
 
     render(){
@@ -136,8 +137,9 @@ class Equipment extends React.Component{
                                     <Col key={i} xxl={{ span: 5 }} xl={{ span: 8 }}
                                         className="cardPdd ">
                                         <a href={"#/app/live/index?id=" + el.eid}
-                                            style={{ display: this.state.liveIcon ? "block" : "none" }}>
-                                            <Icon type="play-circle" style={{ color: "#fff", fontSize: "35px", position: " absolute", left: "60%", top: "30%", zIndex: 10 }} /></a>
+                                            style={{ display: this.state.liveIcon ? "block" : "none" }}
+                                        >
+                                            <Icon type="play-circle" style={{ color: "#fff", fontSize: "40px", position: " absolute", left: "56%", top: "33%", zIndex: 10 }} /></a>
                                         <Card className="boxShow"
                                               cover={<img alt="example" src={this.state.camera[i].picpath?this.state.camera[i].picpath:nopic}  />}
                                               actions={
