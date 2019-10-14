@@ -5,10 +5,12 @@ import "../../style/cby/css/message1.css";
 import replay_move from "../../style/ztt/img/message/replay_move.png";
 import colck from "../../style/cby/img/message/colck.png";
 import rep from "../../style/cby/img/message/rep.png";
+import move_time from "../../style/cby/img/message/move_time.png";
+
 import activ_ta from "../../style/cby/img/message/activ_ta.png";
 import noactiv_ta from "../../style/cby/img/message/noactiv_ta.png";
 import ot from "../../style/ztt/img/message/ot.png";
-import move_time from "../../style/ztt/img/message/move_time.png";
+// import move_time from "../../style/ztt/img/message/move_time.png";
 import user_move from "../../style/ztt/img/message/user_move.png";
 import untying from "../../style/ztt/img/message/untying.png";
 import binding from "../../style/ztt/img/message/binding.png";
@@ -240,7 +242,9 @@ class Messages extends Component {
         return (
            <div className="Messages">
                 <div className="messages-top">
-                    <Tabs defaultActiveKey="1" onChange={this.callbackTab}>
+                    <Tabs defaultActiveKey="1" 
+                    onChange={this.callbackTab}
+                    >
                         <TabPane tab="全部" key="1" >
                            <Spin size="large" spinning={this.state.loading}>
                                 <Collapse 
@@ -253,20 +257,22 @@ class Messages extends Component {
                                            showArrow = {false}
                                            className="Panel_cla"
                                            header={
-                                               <div className="messTime">
-                                                   <div className="messAll">
+                                               <div className="messTime clearfix">
+                                                   {/* <div className=" fl"> */}
+                                                   <div className="fl">
                                                        <Badge dot style={{display:v.status===1?"none":"block"}}>
                                                            <div className="mesICon"><img src={this.hanldImgIcon(v.atype)} alt="" /></div>
                                                        </Badge>
-                                                       <div className="messFont">
-                                                           <span>{this.messAtype(v.atype)}</span>
-                                                           {/* <span className="font">{v.atime}</span> */}
-                                                           <span>{v.memo}</span>
-                                                       </div>
                                                    </div>
+                                                    <div className="fl pm_msti">
+                                                       <div>{this.messAtype(v.atype)}</div>
+                                                       <div className="fontAr">{v.atime}</div>
+                                                           {/* <span>{v.memo}</span> */}
+                                                    </div>
+                                                   {/* </div> */}
                                                    {/* {v.memo} */}
-                                                   <div className="messData">{v.atime}</div>
-                                                   {/* <div className="messData_mid rg">{v.memo}</div> */}
+                                                   {/* <div className="messData">{v.atime}</div> */}
+                                                   <div className="crzh_msti rg">{v.memo}</div>
                                                </div>}
                                                   key={v.code}
                                            >
@@ -285,18 +291,20 @@ class Messages extends Component {
                                    {this.state.listsMess.map((v)=>(
                                        <Panel 
                                            className="Panel_cla"
+                                           showArrow={false}
                                        header={
-                                           <div className="messTime">
-                                               <div className="messAll">
+                                           <div className="messTime clearfix">
+                                               <div className=" fl">
                                                    <Badge dot style={{display:v.status===1?"none":"block"}}>
                                                        <div className="mesICon"><img src={this.hanldImgIcon(v.atype)} alt="" /></div>
                                                    </Badge>
-                                                   <div className="messFont">
-                                                       <span>{this.messAtype(v.atype)}</span>
-                                                       <span>{v.memo}</span>
-                                                   </div>
                                                </div>
-                                               <div className="messData">{v.atime}</div>
+                                               <div className=" pm_msti fl">
+                                                   <div>{this.messAtype(v.atype)}</div>
+                                                   <div className="fontAr"> {v.atime}</div>
+                                                   </div>
+                                               
+                                               <div className="crzh_msti rg"> {v.memo}</div>
                                            </div>}
                                               key={v.code}
                                        >
@@ -314,19 +322,21 @@ class Messages extends Component {
                                <Collapse onChange={this.callbackCollapse} accordion>
                                    {this.state.listsMess.map((v)=>(
                                        <Panel 
+                                           
                                            className="Panel_cla"
                                        header={
-                                           <div className="messTime">
-                                               <div className="messAll">
+                                           <div className="messTime clearfix">
+                                               <div className="fl ">
                                                    <Badge dot style={{display:v.status===1?"none":"block"}}>
                                                        <div className="mesICon"><img src={colck} alt="" /></div>
                                                    </Badge>
-                                                   <div className="messFont">
-                                                       <span>整点打卡</span>
-                                                       <span>{v.memo}</span>
-                                                   </div>
                                                </div>
-                                               <div className="messData">{v.atime}</div>
+                                               <div className=" pm_msti fl">
+                                                   <div>整点打卡</div>
+                                                   <div className="fontAr"> {v.atime}</div>
+                                                   </div>
+                                               
+                                               <div className="crzh_msti rg">{v.memo}</div>
                                            </div>}
                                               key={v.code}
                                        >
@@ -344,19 +354,21 @@ class Messages extends Component {
                                <Collapse onChange={this.callbackCollapse} accordion>
                                    {this.state.listsMess.map((v)=>(
                                        <Panel 
+                                           showArrow={false}
                                            className="Panel_cla"
                                        header={
-                                           <div className="messTime">
-                                               <div className="messAll">
+                                           <div className="messTime clearfix ">
+                                               <div className="fl ">
                                                    <Badge dot style={{display:v.status===1?"none":"block"}}>
                                                        <div className="mesICon"><img src={rep} alt="" /></div>
                                                    </Badge>
-                                                   <div className="messFont">
-                                                       <span>值守报表</span>
-                                                       <span>{v.memo}</span>
-                                                   </div>
                                                </div>
-                                               <div className="messData">{v.atime}</div>
+                                               <div className="pm_msti fl">
+                                                   <div>值守报表</div>
+                                                   <div className="fontAr"> {v.atime}</div>
+                                                   </div>
+                                               
+                                               <div className=" rg crzh_msti">{v.memo}</div>
                                            </div>}
                                               key={v.code}
                                        >
@@ -374,19 +386,21 @@ class Messages extends Component {
                                <Collapse onChange={this.callbackCollapse} accordion>
                                    {this.state.listsMess.map((v)=>(
                                        <Panel 
+                                           showArrow={false}
                                            className="Panel_cla"
                                        header={
-                                           <div className="messTime">
-                                               <div className="messAll">
+                                           <div className="messTime  clearfix">
+                                               <div className="fl">
                                                    <Badge dot style={{display:v.status===1?"none":"block"}}>
                                                        <div className="mesICon"><img src={this.hanldImgIcon(v.atype)} alt="" /></div>
                                                    </Badge>
-                                                   <div className="messFont">
-                                                       <span>{this.messAtype(v.atype)}</span>
-                                                       <span>{v.memo}</span>
-                                                   </div>
                                                </div>
-                                               <div className="messData">{v.atime}</div>
+                                                   <div className="pm_msti fl">
+                                                   <div>{this.messAtype(v.atype)}</div>
+                                                   <div className="fontAr"> {v.atime}</div>
+                                                   </div>
+                                               
+                                               <div className="crzh_msti rg">{v.memo}</div>
                                            </div>}
                                               key={v.code}
                                        >
