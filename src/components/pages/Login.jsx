@@ -176,10 +176,10 @@ class Login extends React.Component {
       <div
         className="loginnew"
       >
-        <img src={post1} alt="" className="posi1" />
+        {/* <img src={post1} alt="" className="posi1" />
         <img src={post2} alt="" className="posi2" />
         <img src={post3} alt="" className="posi3" />
-        <img src={post4} alt="" className="posi4"/>
+        <img src={post4} alt="" className="posi4"/> */}
         <div className="tetsssBox">
           <div className="tetsbbo">
             {tetarr.map((a, b) => (
@@ -329,17 +329,17 @@ placeholder="请输入密码"
                   <Form.Item
                     style={{
                       textAlign: "center",
-                      marginTop: "60px",
+                      marginTop: "100px",
                     }}
                   >
                     <Button
                       type="primary"
                       htmlType="submit"
                       style={{ width: "100%", height: "50px", background: "#1E73FF" ,
-                        color: "#fff", fontSize: "20px" ,
-                      borderRadius:"4px" }}
-                                      >
-                                        登录
+                        color: "#fff", fontSize: "20px", boxShadow:"0px 2px 10px rgba(30,115,255,0.2)",
+                  borderRadius:"4px" }}
+                                  >
+                                    登录
                     </Button>
                   </Form.Item>
                 </Form>

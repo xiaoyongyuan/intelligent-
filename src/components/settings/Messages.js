@@ -5,6 +5,8 @@ import "../../style/cby/css/message1.css";
 import replay_move from "../../style/ztt/img/message/replay_move.png";
 import colck from "../../style/cby/img/message/colck.png";
 import nullsj from "../../style/cby/img/message/nullsj.png";
+import activ_ta from "../../style/cby/img/message/activ_ta.png";
+import noactiv_ta from "../../style/cby/img/message/noactiv_ta.png";
 import rep from "../../style/cby/img/message/rep.png";
 import move_time from "../../style/cby/img/message/move_time.png";
 import ot from "../../style/ztt/img/message/ot.png";
@@ -31,6 +33,7 @@ class Messages extends Component {
     }
     componentDidMount() {
        this.getListMess();
+        // this.zhedixiaog()
     }
     //全部
     getListMess=()=>{
@@ -228,7 +231,15 @@ class Messages extends Component {
         )
     };
     zhedixiaog = () =>{
-
+        let ffgy = document.getElementsByClassName("ant-tabs-tab")
+        let  ffgyar =  Array.prototype.slice.call(ffgy)
+        ffgyar.forEach(a => {
+            let inte = a.innerText
+            console.log(inte)
+            let ddiv = <div className="ddivclajs">{inte} </div>
+            let iimg = <img src={noactiv_ta} className="immgclas"/>
+        });
+        console.log(ffgyar)
     }
 
     render() {

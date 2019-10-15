@@ -5,8 +5,8 @@
 
 .Messages .ant-tabs-nav .ant-tabs-tab {
     width: 160px;
-    /* height: 50px; */
-    height: 100%;
+    height: 50px;
+    /* height: 100%; */
     color: #313A62;
     text-align: center;
     margin: 0;
@@ -15,11 +15,24 @@
     background: url(../img/message/noactiv_ta.png) no-repeat;
     background-size: cover;
     opacity: .7;
+    position: relative;
     /* font-weight:bold; */
     /* font-size:20px; */
 }
+/* .Messages .ant-tabs-nav .ant-tabs-tab::before {
+  content: url(../img/message/noactiv_ta.png);
+  display: block;
+    width: 160px;
+    height: 50px;
+    box-shadow:5px 2px 6px #000 ;
+    position: absolute;
+    height: 100%;
+    text-align: center;
+} */
+
 .Messages .ant-tabs-nav .ant-tabs-tab:hover {
-    width: 178px;
+  /* box-shadow:0px 3px 6px rgba(0,0,0,0.16); */
+    /* width: 178px; */
     color: #313A62 !important;
      opacity: 1;
     /* height: 68px; */
@@ -31,14 +44,16 @@
 }
 .Messages .ant-tabs-nav .ant-tabs-tab-active {
     /* background-image: url(../img/message/activ_ta.png) !important; */
-    background: url(../img/message/activ_ta.png) no-repeat  !important;
+    background: url(../img/message/activ_ta.png) no-repeat;
     background-size: cover;   
     color: #313A62 !important;
     font-weight:bold;
      opacity: 1;
     /* background-color: #000 !important; */
 }
-
+.Messages .ant-tabs-nav .ant-tabs-tab-active {
+  width: 178px;
+}
 .clearfix:after {
     content: ".";
     display: block;
@@ -64,8 +79,14 @@
 
 .Messages .ant-tabs-bar {
     margin: 0;
+    margin-left: 8px;
+}
+
+.Messages .ant-collapse{
+  background-color: #F1F1FA;
 }
 .Messages .Panel_cla{
+  margin: 0 8px;
   border: none;
   border-bottom:none !important ;
 }
@@ -73,6 +94,20 @@
   border: none;
   border-bottom:none !important ;
 }
+.Messages .Panel_cla:hover{
+  box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+  /* width: 1400px !important; */
+  /* height: 100px; */
+  /* padding: 0 20px; */
+  margin:0  1px;
+  /* background: red !important; */
+}
+/* .Messages .messTime:hover{
+  box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+  width: 1400px !important;
+  background: red !important;
+} */
+
 .Messages .Panel_cla:nth-child(2n){
   background: #F5F5FA;
 }
@@ -108,4 +143,19 @@
 .Messages .ant-modal-close {
   top: -7px;
   right: -7px;
+}
+
+.immgclas{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.ddivclajs{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
 }
