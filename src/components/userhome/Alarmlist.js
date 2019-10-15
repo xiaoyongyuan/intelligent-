@@ -1,10 +1,11 @@
 import React from 'react';
-import { DatePicker, Row, Col, Select, Button, Modal, Pagination, Form, message, Card, Spin, Switch, Icon } from "antd";
+import locale from 'antd/es/date-picker/locale/zh_CN';
+import { DatePicker, Row, Col, Select, Button, Modal, LocaleProvider, Pagination, Form, message, Card, Spin, Switch, Icon } from "antd";
 import "../../style/ztt/css/police.css";
 import "../../style/publicStyle/publicStyle.css";
 import "../../style/cby/css/almListChang.css";
 
-import zh_CN from 'antd/lib/locale-provider/zh_CN';
+// import zh_CN from 'antd/lib/locale-provider/zh_CN';
 import 'moment/locale/zh-cn';
 import { post } from "../../axios/tools";
 import { connect } from 'react-redux';
@@ -183,6 +184,7 @@ class Alarmlist extends React.Component {
     handleEquipment = () => {
         post({ url: "/api/camera/get_cameralist", data: { passivecode: this.state.activecompcode } }, (res) => {
             if (res.success) {
+                console.log(res.data)
                 this.setState({
                     equipment: res.data,
                 })
@@ -364,6 +366,7 @@ class Alarmlist extends React.Component {
                             <Form.Item label="日期" >
                                 {getFieldDecorator('date')(
                                     <RangePicker
+                                        locale={locale}
                                         onChange={this.onChange}
                                         showTime={{ format: 'HH:00:00' }}
                                         format="YYYY-MM-DD HH:00:00"

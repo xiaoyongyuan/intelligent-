@@ -4,11 +4,9 @@ import "../../style/ztt/css/message.css";
 import "../../style/cby/css/message1.css";
 import replay_move from "../../style/ztt/img/message/replay_move.png";
 import colck from "../../style/cby/img/message/colck.png";
+import nullsj from "../../style/cby/img/message/nullsj.png";
 import rep from "../../style/cby/img/message/rep.png";
 import move_time from "../../style/cby/img/message/move_time.png";
-
-import activ_ta from "../../style/cby/img/message/activ_ta.png";
-import noactiv_ta from "../../style/cby/img/message/noactiv_ta.png";
 import ot from "../../style/ztt/img/message/ot.png";
 // import move_time from "../../style/ztt/img/message/move_time.png";
 import user_move from "../../style/ztt/img/message/user_move.png";
@@ -203,6 +201,7 @@ class Messages extends Component {
     pagination=()=>{
         return(
             <Pagination  defaultCurrent={1}
+                        // showQuickJumper 
                          current={this.state.page}
                          total={this.state.totalcount}
                          defaultPageSize={10}
@@ -225,7 +224,7 @@ class Messages extends Component {
     //无数据nodata图片
     handleNodata=()=>{
         return(
-            <div className="nodatas" style={{display:this.state.listsMess.length?"none":"block"}}><img src={nodata} /></div>
+            <div className="nodatas" style={{ display: this.state.listsMess.length ? "none" : "block" }}><img src={nullsj} /></div>
         )
     };
     zhedixiaog = () =>{
@@ -250,7 +249,6 @@ class Messages extends Component {
                                 <Collapse 
                                 onChange={this.callbackCollapse} 
                                 accordion 
- 
                                     >
                                    {this.state.listsMess.map((v,i)=>(
                                            <Panel 
@@ -282,7 +280,8 @@ class Messages extends Component {
                                    }
                                </Collapse>
                                {this.handleNodata()}
-                               {this.pagination()}
+                                <div className="Panel_cla">{this.pagination()}</div>
+                               
                            </Spin>
                        </TabPane>
                        <TabPane tab="异动" key="2">
@@ -290,6 +289,7 @@ class Messages extends Component {
                                <Collapse onChange={this.callbackCollapse} accordion>
                                    {this.state.listsMess.map((v)=>(
                                        <Panel 
+                                           
                                            className="Panel_cla"
                                            showArrow={false}
                                        header={
@@ -322,7 +322,6 @@ class Messages extends Component {
                                <Collapse onChange={this.callbackCollapse} accordion>
                                    {this.state.listsMess.map((v)=>(
                                        <Panel 
-                                           
                                            className="Panel_cla"
                                        header={
                                            <div className="messTime clearfix">

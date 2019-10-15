@@ -120,9 +120,9 @@ class Userhome extends React.Component{
                          this.state.alarmdata.map((item,j)=>{
                                 return (
                                   <div className="list_hom clearfix">
-                                    <span className="span_xx">{this.state.alarmdata[j].name}</span>
+                                        <span className="span_xx">{item.name}</span>
                                     <span>{this.atype(j)}</span>
-                                    <span className="fontAr time_xx">{this.state.alarmdata[j].atime}</span>
+                                        <span className="fontAr time_xx">{item.atime}</span>
 
                                     {/* <span>16:58:35 {this.state.alarmdata[j].atime}</span> */}
                                   </div>

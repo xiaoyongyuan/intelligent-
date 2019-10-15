@@ -1335,9 +1335,10 @@ border-radius:4px;
 }
 .home_tole h5{
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     color: #0E1C43;
     padding: 20px 0;
+    height: 80px;
 
 }
 .home_tole h5::before{
@@ -1351,29 +1352,26 @@ border-radius:4px;
     opacity: .3;
     top: 80px;
 }
-.home_tole p:last-child{
-    margin-bottom: 58px !important;
-}
+
 
 /* 134 65 */
 .home_tole div{
     padding-left: 50px;
-    font-size:18px;
+    font-size:16px;
     font-weight:400;
-    margin: 23px 0 0 0;
+    margin: 27px 0 0 0;
 
 }
 .home_tole div span:nth-child(1){
     display: inline-block;
     text-align: right;
-    width: 160px;
+    width: 160px; 
     color:#0E1C43;
     opacity:0.7;
 }
 .home_tole div span:nth-child(2) {
     display: inline-block;
     margin-left: 65px;
-    font-size:20px;
     color:#0E1C43;
 }
 
@@ -1381,15 +1379,15 @@ border-radius:4px;
     margin-left: 20px;
 } */
 .home_tori {
-    padding: 1px;
     height: 400px;
+    font-size:16px;
 }
 
 .list_hom{
-    padding: 25px 45px;
-    /* background-color: red; */
-    font-size: 20px;
+    padding: 28px 45px;
+    /* height: 80px; */
     color: #0E1C43;
+    /* line-height: 80px; */
 }
 .list_hom:nth-child(even){
     background-color: #F5F5FA;
@@ -1403,11 +1401,12 @@ border-radius:4px;
 }
 .list_hom span:nth-child(2) {
     float: left;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 .list_hom span:nth-child(3) {
     float: right;
     margin-right: 20px;
+    opacity: .7;
 }
 
 .span_xx{
@@ -1424,7 +1423,7 @@ border-radius:4px;
     width: 6px;
     height: 24px;
     background-color: #1E73FF;
-    left: -20px;
+    left: -25px;
     top: 2px
 }
 @media screen and (max-width: 1400px) {

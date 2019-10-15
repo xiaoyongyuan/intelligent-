@@ -97,7 +97,6 @@
 .codewrap {
   /* 二维码外框 */
   margin-top: 53px;
-  border: 1px solid #28aec3;
   padding: 10px;
 }
 
@@ -155,7 +154,7 @@
 .lgform .ant-input-affix-wrapper .ant-input:not(:first-child) {
   height: 50px !important;
   color: #313A62 !important;
-  padding-left: 44px;
+  padding-left: 50px;
   font-size: 18px;
   /* border: 3px solid red !important; */
   /* border-bottom: 1px solid #c0c3cf !important; */
@@ -276,15 +275,25 @@ textarea:-ms-input-placeholder {
 }
 .tetsssBox{
   position: absolute;
-  top: 30%;
-  left: 15%;
-  width: 100%;
+  top: 31%;
+  left: 17%;
+  width: 600px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.tetsbbo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12000px;
+  height: 120px;
+  animation: lelb  12s infinite ;
 }
 
 .tetsss{
   position: absolute;
-  left: 0;
-  opacity: 0;
+  top: 0;
 }
 
 .tetsss p{
@@ -298,103 +307,76 @@ textarea:-ms-input-placeholder {
 .tetsss p:nth-child(2){
   font-size: 24px;
 }
+
+
+
+@keyframes lelb{
+  0%{ left: 0;}
+  25%{left: -600px;}
+  50%{left: -1200px;}
+  75%{left: -1800px;}
+  100%{left: -2400px;}
+}
+
+
 @keyframes flash0 {
-  0% {
-    opacity: 0;
-  }
-  11% {
-    opacity: 1;
-  }
-  22% {
-    opacity: 0;
-  }
-  33% {
-    opacity: 0;
-  }
-  44% {
-    opacity: 0;
-  }
-  55% {
-    opacity: 0;
-  }
-  66% {
-    opacity: 0;
-  }
-  77% {
-    opacity: 0;
-  }
-  88% {
-    opacity: 0;
-  }
-  /* 99% {
-    opacity: 0;
-  } */
+  0%{opacity: 0;}
+  9%{opacity: 1;}
+  18%{opacity: 0;}
+  /* 27%{opacity: 0;}
+  36%{opacity: 0;}
+  45% {opacity: 0;}
+  54% {opacity: 0;}
+  63% {opacity: 0;}
+  72% {opacity: 0;}
+  81% {opacity: 0;}
+  90% {opacity: 0;} */
+  100% {opacity: 0;}
 }
 
 @keyframes flash1 {
-  0% {
-    opacity: 0;
-  }
-  11% {
-    opacity: 0;
-  }
-  22% {
-    opacity: 0;
-  }
-  33% {
-    opacity: 0;
-  }
-  44% {
-    opacity: 1;
-  }
-  55% {
-    opacity: 0;
-  }
-  66% {
-    opacity: 0;
-  }
-  77% {
-    opacity: 0;
-  }
-  88% {
-    opacity: 0;
-  }
-  /* 99% {
-    opacity: 0;
-  } */
+ 0%{opacity: 0;}
+  9%{opacity: 0;}
+  18%{opacity: 0;}
+  27%{opacity: 0;}
+  36%{opacity: 1;}
+  45% {opacity: 0;}
+  /* 54% {opacity: 0;}
+  63% {opacity: 0;}
+  72% {opacity: 0;}
+  81% {opacity: 0;}
+  90% {opacity: 0;} */
+  100% {opacity: 0;}
 }
 
 @keyframes flash2 {
-  0% {
-    opacity: 0;
-  }
-  11% {
-    opacity: 0;
-  }
-  22% {
-    opacity: 0;
-  }
-  33% {
-    opacity: 0;
-  }
-  44% {
-    opacity: 0;
-  }
-  55% {
-    opacity: 0;
-  }
-  66% {
-    opacity: 0;
-  }
-  77% {
-    opacity: 1;
-  }
-  88% {
-    opacity: 0;
-  }
-  /* 99% {
-    opacity: 0;
-  } */
+  0%{opacity: 0;}
+  /* 9%{opacity: 0;}
+  18%{opacity: 0;}
+  27%{opacity: 0;}
+  36%{opacity: 0;}
+  45% {opacity: 0;} */
+  54% {opacity: 0;}
+  63% {opacity: 1;}
+  72% {opacity: 0;}
+  /* 81% {opacity: 0;}
+  90% {opacity: 0;} */
+  100% {opacity: 0;}
+}
+
+@keyframes flash3 {
+  0%{opacity: 0;}
+  /* 9%{opacity: 0;}
+  18%{opacity: 0;}
+  27%{opacity: 0;}
+  36%{opacity: 0;}
+  45% {opacity: 0;}
+  54% {opacity: 0;}
+  63% {opacity: 0;}
+  72% {opacity: 0;} */
+  81% {opacity: 0;}
+  90% {opacity: 1;}
+  100% {opacity: 0;}
 }
 .posi1{
     position: absolute;
