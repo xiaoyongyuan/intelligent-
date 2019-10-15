@@ -4,6 +4,7 @@ import "../../style/ztt/css/message.css";
 import "../../style/cby/css/message1.css";
 import replay_move from "../../style/ztt/img/message/replay_move.png";
 import colck from "../../style/cby/img/message/colck.png";
+import nullsj from "../../style/cby/img/message/nullsj.png";
 import rep from "../../style/cby/img/message/rep.png";
 import move_time from "../../style/cby/img/message/move_time.png";
 import ot from "../../style/ztt/img/message/ot.png";
@@ -223,7 +224,7 @@ class Messages extends Component {
     //无数据nodata图片
     handleNodata=()=>{
         return(
-            <div className="nodatas" style={{display:this.state.listsMess.length?"none":"block"}}><img src={nodata} /></div>
+            <div className="nodatas" style={{ display: this.state.listsMess.length ? "none" : "block" }}><img src={nullsj} /></div>
         )
     };
     zhedixiaog = () =>{
@@ -288,7 +289,7 @@ class Messages extends Component {
                                <Collapse onChange={this.callbackCollapse} accordion>
                                    {this.state.listsMess.map((v)=>(
                                        <Panel 
-                                           disabled
+                                           
                                            className="Panel_cla"
                                            showArrow={false}
                                        header={

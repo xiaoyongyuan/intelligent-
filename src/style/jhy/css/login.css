@@ -97,7 +97,6 @@
 .codewrap {
   /* 二维码外框 */
   margin-top: 53px;
-  border: 1px solid #28aec3;
   padding: 10px;
 }
 
@@ -155,7 +154,7 @@
 .lgform .ant-input-affix-wrapper .ant-input:not(:first-child) {
   height: 50px !important;
   color: #313A62 !important;
-  padding-left: 44px;
+  padding-left: 50px;
   font-size: 18px;
   /* border: 3px solid red !important; */
   /* border-bottom: 1px solid #c0c3cf !important; */
@@ -278,13 +277,23 @@ textarea:-ms-input-placeholder {
   position: absolute;
   top: 31%;
   left: 17%;
-  width: 100%;
+  width: 600px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.tetsbbo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12000px;
+  height: 120px;
+  animation: lelb  12s infinite ;
 }
 
 .tetsss{
   position: absolute;
-  left: 0;
-  opacity: 0;
+  top: 0;
 }
 
 .tetsss p{
@@ -298,6 +307,18 @@ textarea:-ms-input-placeholder {
 .tetsss p:nth-child(2){
   font-size: 24px;
 }
+
+
+
+@keyframes lelb{
+  0%{ left: 0;}
+  25%{left: -600px;}
+  50%{left: -1200px;}
+  75%{left: -1800px;}
+  100%{left: -2400px;}
+}
+
+
 @keyframes flash0 {
   0%{opacity: 0;}
   9%{opacity: 1;}

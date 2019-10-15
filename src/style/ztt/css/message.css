@@ -5,9 +5,9 @@
 /*.Messages .ant-tabs-tab,.ant-tabs-tabpane{
     color: #fff;
 }*/
-.Messages .ant-tabs-tab:hover{
+/* .Messages .ant-tabs-tab:hover{
     color: #5E98F7!important;
-}
+} */
 .Messages .messages-top{
    /*border: 1px solid #3d4569;*/
    border-radius: 4px;
@@ -96,9 +96,12 @@
 .Messages .nodatas{
     width: 100%;
     text-align: center;
+    padding-top: 100px;
+    background-color: #fff;
+    height: 77vh;
 }
-.Messages .nodatas img{
+/* .Messages .nodatas img{
     width: 14%;
-}
+} */
 
 

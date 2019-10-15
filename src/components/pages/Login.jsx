@@ -12,6 +12,8 @@ import post1 from "../../style/cby/img/login/posit1.png";
 import post2 from "../../style/cby/img/login/posit2.png";
 import post3 from "../../style/cby/img/login/posit3.png";
 import post4 from "../../style/cby/img/login/posit4.png";
+import passworlogo from "../../style/cby/img/login/passworlogo.png";
+import userlogo from "../../style/cby/img/login/userlogo.png";
 import userlogin from "../../style/cby/img/login/userlogin.png";
 
 
@@ -166,7 +168,8 @@ class Login extends React.Component {
     let tetarr = [["瞬间响应，快人一步", "AI视频联网报警应急系统"],
       ["警情预判，零误报！", "7X24小时人机结合"],
     ["多样报警处理，全局联动！", "通用型，无人值守智能安防平台"],
-    ["用户隐私，警用级加密！", "无忧隐私保护计划"]
+    ["用户隐私，警用级加密！", "无忧隐私保护计划"],
+      ["瞬间响应，快人一步", "AI视频联网报警应急系统"]
     ]
     const { getFieldDecorator } = this.props.form;
     return (
@@ -178,15 +181,17 @@ class Login extends React.Component {
         <img src={post3} alt="" className="posi3" />
         <img src={post4} alt="" className="posi4"/>
         <div className="tetsssBox">
+          <div className="tetsbbo">
             {tetarr.map((a, b) => (
-              <div className={`tetsss  tetsss${b} active`} key={"tetsss" + b}
-                style={{ animation: `flash${b} linear 8s infinite ` }}
+              <div className={`tetsss `} key={"tetsss" + b}
+                style={{ left:`${600*b}px` }}
               >
                 <p>{a[0]}</p>
                 <p>{a[1]}</p>
               </div>
               )
             )}
+          </div>
         </div>
         <div className="topbar">
           <div className="logo">
@@ -267,21 +272,22 @@ class Login extends React.Component {
                     })(
                       <Input
                         prefix={
-                          <Icon
-                            type="user"
-                            style={{
-                              color: "#1E73FF",
-                              fontSize: 26,
-                              marginRight: "10px"
-                            }}
-                          />
+                          // <Icon
+                          //   type="user"
+                          //   style={{
+                          //     color: "#1E73FF",
+                          //     fontSize: 26,
+                          //     marginRight: "10px"
+                          //   }}
+                          // />
+                          <img src={userlogo} alt=""/>
                         }
                         autocomplete="off"
                         className="usersInput"
                         placeholder="请输入用户名"
-                        style={{ fontSize: "20px", color: "#313A62"}}
-                      />
-                    )}
+                        style={{ fontSize: "20px", color: "#313A62", fontFamily: "Ariai"}}
+                  />
+                )}
                   </Form.Item>
                   <Form.Item style={{ marginTop: "40px" }}>
                     {getFieldDecorator("password", {
@@ -302,11 +308,12 @@ class Login extends React.Component {
                     })(
                       <Input
                         prefix={
-                          <Icon
-                            type="lock"
-                            style={{ color: "#1E73FF", fontSize: 26 }}
+  //                         <Icon
+  //                           type="lock"
+  //                           style={{ color: "#1E73FF", fontSize: 26 }}
                             
-  />
+  // />
+                          <img src={passworlogo} alt="" />
 }
 suffix={
   <Icon type={this.state.paseeey[1]} style={{ color: this.state.paseeey[2], opacity: this.state.paseeey[3] }} onClick= {this.eyepas} />
@@ -315,7 +322,7 @@ suffix={
 type={this.state.paseeey[0]}
 className="usersInput"
 placeholder="请输入密码"
-                        style={{ fontSize: "20px", color:"#313A62" }}
+                        style={{ fontSize: "20px", color: "#313A62", fontFamily: "Ariai" }}
                   />
                 )}
                   </Form.Item>
