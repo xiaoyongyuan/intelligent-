@@ -21,6 +21,9 @@
 .seBtn{
   border-radius: 4px!important;
 }
+.senter{
+  margin-left: 40px;
+}
 .optbtn{
   display: flex;
   justify-content: space-between;
@@ -44,5 +47,30 @@
   width: 6px;
   height: 20px;
   background-color: #1E73FF;
+}
+.zsectorO{
+  position: relative;
+}
+.zclose{
+  position: absolute;
+  top: 75%;
+  left: 13%;
+  z-index: 99;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../../style/ztt/img/zclose.png") no-repeat;
+  background-size: 100% 100%;
+}
+.zclose1{
+  position: absolute;
+  top: 75%;
+  left: 33%;
+  z-index: 99;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../../style/ztt/img/zclose.png") no-repeat;
+  background-size: 100% 100%;
 }
 
