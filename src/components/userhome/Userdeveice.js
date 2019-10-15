@@ -262,7 +262,7 @@ class Userdeveice extends React.Component{
                                     <Col span={6} className="t_r">
                                         所在位置：
                                     </Col>
-                                    <Col span={10} offset={1} className="t_l">
+                                    <Col span={12} offset={1} className="t_l over" title={this.state.data.location}>
                                         {this.state.data.location}
                                     </Col>
                                     <Col span={2} offset={2}>
@@ -293,7 +293,7 @@ class Userdeveice extends React.Component{
                                         防区设置：
                                     </Col>
                                     <Col span={12} offset={1} className="t_l">
-                                        <a  href={"#/app/companyhome/setarea?id="+_this.props.query.id} className="underline fontAr">
+                                        <a  href={"#/app/companyhome/setarea?id="+_this.props.query.id+"&eid="+_this.props.query.eid} className="underline fontAr">
                                             {this.field()}个
                                         </a>
                                     </Col>
@@ -408,11 +408,11 @@ class Userdeveice extends React.Component{
                             </div>
                         </div>
                     </div>
-                    <Row className="equ_row">
+                   {/* <Row className="equ_row">
                         <Col span={3} offset={20} className="t_l">
                             <Button className="queryBtn lg" onClick={this.updata}> 提交 </Button>
                         </Col>
-                    </Row>
+                    </Row>*/}
                 </div>
                 <Modal
                     title={[

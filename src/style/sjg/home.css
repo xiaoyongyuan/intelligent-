@@ -388,8 +388,8 @@
     padding-right: 10px;
 }*/
 .zoffLine{
-    width: 64px;
-    height: 29px;
+    width: 80px;
+    height: 36px;
     background: url("../../../src/style/ztt/img/offline.png") no-repeat;
     background-size: 100% 100%;
     position: absolute;
@@ -397,8 +397,8 @@
     top:11px;
 }
 .zonline{
-    width: 64px;
-    height: 29px;
+    width: 80px;
+    height: 36px;
     background: url("../../../src/style/ztt/img/online.png") no-repeat;
     background-size: 100% 100%;
     position: absolute;
@@ -504,6 +504,7 @@
     white-space: nowrap;
     font-weight: 550;
     font-size: 15px;
+    padding: 4px 0;
 }
 
 .box-padding {
@@ -1238,7 +1239,7 @@
     color:#8097CC;
 }
 .zfiled{
-    padding: 8px 0;
+    padding: 10px 0;
     display: flex;
 }
 .zfiled .zfileNumer{
@@ -1257,15 +1258,15 @@
 }
 .zfiled  .zeidt{
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 19px;
     background: url("../../../src/style/ztt/img/edit.png") no-repeat;
     background-size: 100% 100%;
 }
 .zdefense{
     display: inline-block;
-    width: 22px;
-    height: 22px;
+    width: 25px;
+    height: 25px;
     background: url("../../../src/style/ztt/img/defencse.png") no-repeat;
     background-size: 100% 100%;
 }
@@ -1281,8 +1282,8 @@
 }
 .zsetup{
     display: inline-block;
-    width: 22px;
-    height: 22px;
+    width: 25px;
+    height: 25px;
     background: url("../../../src/style/ztt/img/setup.png") no-repeat;
     background-size: 100% 100%;
 }
@@ -1344,9 +1345,9 @@ border-radius:4px;
     opacity: .3;
     top: 80px;
 }
-/* .home_tole div:last-child{
-    margin-bottom: 58px ; 
-} */
+.home_tole p:last-child{
+    margin-bottom: 58px !important;
+}
 
 /* 134 65 */
 .home_tole div{
@@ -1404,7 +1405,11 @@ border-radius:4px;
 }
 
 .span_xx{
-    position: relative
+    position: relative;
+    color: #0E1C43;
+}
+.time_xx{
+    color: rgba(14, 28, 67,0.7)
 }
 .span_xx::before{
     content: "";
@@ -1503,6 +1508,11 @@ border-radius:4px;
     position:relative;
     top:-26px;
     left: 0;
+}
+.over{
+    overflow: hidden;/*超出部分隐藏*/
+    text-overflow:ellipsis;/* 超出部分显示省略号 */
+    white-space: nowrap;
 }
 
 

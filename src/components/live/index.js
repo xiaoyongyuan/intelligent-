@@ -4,6 +4,7 @@ import 'video.js/dist/video-js.min.css';
 import {post} from "../../axios/tools";
 import flash from "../../style/ztt/img/flash.png";
 import {message} from 'antd';
+import "../../style/ztt/css/video.css";
 var ActiveXObject=window.ActiveXObject;
 var flashVis=0;//直播开关
 export default class Live extends React.Component {
@@ -126,11 +127,11 @@ export default class Live extends React.Component {
   }
   render() {
     return (
-      <div>    
+      <div className="zvideo">
         <div data-vjs-player>
           <video ref={ node => this.videoNode = node } className="video-js" id="myvideo" poster={flash}></video>
         </div>
-        
+
       </div>
     )
   }

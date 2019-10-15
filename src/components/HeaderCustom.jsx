@@ -224,8 +224,6 @@ class HeaderCustom extends Component {
     render() {
         const HeartIcon = props => <Icon component={HeartSvg} {...props} />;
         const { responsive, path, auth } = this.props;
-        console.log(auth,"auth")
-        const _this=this;
         return (
             <div>
             <Modal
@@ -260,7 +258,7 @@ class HeaderCustom extends Component {
                     <HeartIcon onClick={this.screenFull} className="ztitle zicon" />
                     <div className="ztitleUser ztitle">
                         <span className="zuser zpadd"/>
-                        <span className="zpadd ztitleFont">
+                        <span className="zpadd ztitleFont fontAr">
                             {auth&&auth.data&&auth.data.account?auth.data.account:"无"}
                             </span>
                     </div>

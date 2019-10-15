@@ -26,6 +26,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    box-shadow:0px 2px 20px rgba(30,115,255,0.1);
 }
 .overView .pfixed{
     width:100%;

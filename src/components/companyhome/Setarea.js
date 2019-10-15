@@ -242,6 +242,7 @@ class Setarea extends Component {
     changeBase=()=>{
         post({url:"/api/equipment/get_basemap",data:{eid:this.state.eid}},(res)=>{
             if(res.success){
+                flashVis=0;
                 this.hanleresult(res.data);
             }
         })
