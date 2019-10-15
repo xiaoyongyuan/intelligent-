@@ -35,7 +35,7 @@
 }*/
 
 .boxShow {
-    box-shadow: 0px 0px 30px rgba(34, 34, 34, 0.4);
+    box-shadow:0px 2px 20px rgba(30,115,255,0.1);
 }
 .boxShow .ant-card-cover{
     height: 196px;
@@ -388,8 +388,8 @@
     padding-right: 10px;
 }*/
 .zoffLine{
-    width: 80px;
-    height: 36px;
+    width: 90px;
+    height: 40px;
     background: url("../../../src/style/ztt/img/offline.png") no-repeat;
     background-size: 100% 100%;
     position: absolute;
@@ -397,13 +397,16 @@
     top:11px;
 }
 .zonline{
-    width: 80px;
-    height: 36px;
+    width: 90px;
+    height: 40px;
     background: url("../../../src/style/ztt/img/online.png") no-repeat;
     background-size: 100% 100%;
     position: absolute;
     right: -10px;
     top:11px;
+}
+.zsector{
+    font-size: 14px;
 }
 .bellIcon{
     position: absolute;
@@ -502,8 +505,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-weight: 550;
-    font-size: 15px;
+    font-size: 20px;
     padding: 4px 0;
 }
 
@@ -619,6 +621,8 @@
         color:rgba(49,58,98,1);
         border-radius: 4px;
         outline: none;
+        background:rgba(245,245,250,0.3);
+        border:1px solid rgba(49,58,98,0.3);
     }
 
     .del {
@@ -1037,14 +1041,14 @@
 
 .patrol_item {
     border: 1px solid #4C5784;
-    box-shadow: 0px 0px 30px rgba(34, 34, 34, 0.4);
+    box-shadow:0px 2px 20px rgba(30,115,255,0.1);
 }
 
 .RollcallTask .ant-card {
     color: #fff;
     background: #323A5D;
     border-radius: 2px;
-    box-shadow: 0px 0px 30px rgba(34, 34, 34, 0.4);
+    box-shadow:0px 2px 20px rgba(30,115,255,0.1);
 }
 
 .RollcallTask .ant-card-head-title {
@@ -1247,14 +1251,15 @@
 }
 .zfiled .zfileNumer .zfilec{
     color:#1E73FF;
-    font-weight: 600;
+    font-size: 20px;
 }
 .zfiled .zeditIcon{
     width: 15%;
 }
 .zalarm .zNumber{
     color: #FF7D46;
-    font-weight: 600;
+
+    font-size: 20px;
 }
 .zfiled  .zeidt{
     display: inline-block;
@@ -1279,11 +1284,12 @@
 }
 .zdefense1,.zWithdrawal1,.zsetup1{
     padding-left: 10px;
+    font-size: 16px;
 }
 .zsetup{
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 27px;
+    height: 27px;
     background: url("../../../src/style/ztt/img/setup.png") no-repeat;
     background-size: 100% 100%;
 }
@@ -1320,7 +1326,7 @@
 }
 .hom_chil{
 background-color: #fff;
-box-shadow:0px 2px 20px rgba(30, 115, 255, 0.1);
+    box-shadow:0px 2px 20px rgba(30,115,255,0.1);
 border-radius:4px;
 }
 .home_tole{

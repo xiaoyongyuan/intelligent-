@@ -179,7 +179,7 @@ class Equipment extends React.Component{
                                             </Row>
                                             <div className="zfiled">
                                                 <div className="zfileNumer">
-                                                    <span>防区数量：<span className="zfilec fontAr">{this.field(i)}</span></span>
+                                                    <span className="zsector">防区数量：</span><span className="zfilec fontAr">{this.field(i)}</span>
                                                 </div>
                                                 <div className="zeditIcon">
                                                     <a href={"#/app/companyhome/setarea?id="+el.code+"&eid="+el.eid}>
@@ -188,7 +188,7 @@ class Equipment extends React.Component{
                                                 </div>
                                             </div>
                                             <Row className="zalarm zfiled">
-                                                <Col spam={24}>报警数次：<span className="zNumber fontAr">{this.state.camera[i].alarm}</span></Col>
+                                                <span className="zsector">报警数次：</span><span className="zNumber fontAr">{this.state.camera[i].alarm}</span>
                                             </Row>
                                         </Card>
                                     </Col>

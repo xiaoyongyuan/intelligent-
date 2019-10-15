@@ -284,8 +284,10 @@ class Setarea extends Component {
                     <div className="zsetarea">
                         <div className="optbtn">
                             <div>
-                                <Button type="primary" className="queryBtn seBtn " onClick={()=>this.submitok(1)}>{this.state.areaone.length?'删除防区一':'新增防区一'}</Button>
-                                <Button type="primary" className="deleteBtn seBtn" onClick={()=>this.submitok()}>{this.state.areatwo.length?'删除防区二':'新增防区二'}</Button>
+                                <span className="zclose" onClick={()=>this.submitok(1)} style={{display:this.state.areaone.length?"block":"none"}} />
+                                <Button type="primary" className="queryBtn seBtn" onClick={()=>this.submitok(1)}>{this.state.areaone.length?'删除防区一':'新建防区一'}</Button>
+                                <span className="zclose1" onClick={()=>this.submitok()} style={{display:this.state.areatwo.length?"block":"none"}} />
+                                <Button type="primary" className="deleteBtn seBtn senter" onClick={()=>this.submitok()}>{this.state.areatwo.length?'删除防区二':'新建防区二'}</Button>
                             </div>
                             <div>
                                 <Button className="base" onClick={this.changeBase}>更换底图</Button>
