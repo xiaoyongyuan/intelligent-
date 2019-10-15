@@ -170,15 +170,15 @@
   border: none !important;
   /* border-bottom: 1px solid white !important; */
   box-shadow: none !important;
-} 
+}
 
 
- 
+
 /* usersInput ant-input-affix-wrapper */
 
  .ant-input-affix-wrapper {
   border-bottom: 1px solid #c0c3cf ;
-} 
+}
 
 
  /* input {
@@ -259,7 +259,7 @@ textarea:-ms-input-placeholder {
     left: 56%;
     transform: translateY(47%);
   }
-  
+
 }
 
 .copyright {
@@ -269,7 +269,7 @@ textarea:-ms-input-placeholder {
   font-size: 12px;
   color: #fff;
 }
-/* 
+/*
 .ant-input-affix-wrapper .ant-input:not(:first-child) {
   border: none !important;
 }
@@ -293,8 +293,8 @@ textarea:-ms-input-placeholder {
 .tetsssBox{
   position: absolute;
   top: 31%;
-  left: 15%;
-  width: 600px;
+  left: 12%;
+  width: 580px;
   height: 120px;
   overflow: hidden;
 }
