@@ -2,8 +2,11 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-image: url(../../cby/img/login/bgbg2.png);
-  background-size: 100% 100%;
+  background:#3792FF url(../../cby/img/login/bgbgimp.png)  no-repeat center center ;
+  background-size:auto 100%;
+  /* background-image: url(../../cby/img/login/bgcio.png);
+  background-color: #3792FF;
+  background-size: 100% 100%; */
   box-sizing: border-box;
   position: relative;
 }
@@ -41,7 +44,7 @@
   box-sizing: border-box;
   width: 400px;
   /* min-width: 400px; */
-  height: 415px;
+  height: 460px;
   /* max-height: 490px; */
   display: flex;
   flex-direction: column;
@@ -138,7 +141,7 @@
   width: 80%;
   height: 75%;
   box-sizing: border-box;
-  margin: 30px 0;
+  margin: 0;
   position: relative;
 }
 
@@ -276,7 +279,7 @@ textarea:-ms-input-placeholder {
 .tetsssBox{
   position: absolute;
   top: 31%;
-  left: 17%;
+  left: 15%;
   width: 600px;
   height: 120px;
   overflow: hidden;
@@ -380,23 +383,23 @@ textarea:-ms-input-placeholder {
 }
 .posi1{
     position: absolute;
-    top: 28%;
-    left: 51%;
+    top: 32%;
+    left: 50.7%;
 }
 .posi2{
     position: absolute;
-    top: 46.76%;
-    left: 38%;
+    top: 45.6%;
+    left: 39%;
 }
 .posi3{
     position: absolute;
-    top: 64%;
-    left: 32.5%;
+    top: 69.2%;
+    left: 33.3%;
 }
 .posi4{
     position: absolute;
-    top: 76.6%;
-    left: 56.7%;
+    top: 76.2%;
+    left: 56.56%;
 }
 input:-webkit-autofill,
 select:-webkit-autofill {
