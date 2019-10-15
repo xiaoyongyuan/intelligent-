@@ -41,15 +41,17 @@ class SiderCustom extends Component {
         logourl:this.props.collapsed?logofont:"logoicon",
         collapsed: false,
         mode: 'inline',
-        openKey: '',
-        selectedKey: '',
+        openKey: "",
         firstHide: true, // 点击收缩菜单，第一次隐藏展开子菜单，openMenu时恢复
+        selectedKey:'',
     };
     componentDidMount() {
-        const state = SiderCustom.setMenuOpen(this.props);
-        this.setState(state);
+        const selectedKey = SiderCustom.setMenuOpen(this.props);
+        console.log(selectedKey)
+        this.setState({
+            selectedKey:selectedKey.selectedKey
+        });
     }
-
     menuClick = e => {
         this.setState({
             selectedKey: e.key
@@ -109,9 +111,10 @@ class SiderCustom extends Component {
                     menus={routes.menus}
                     onClick={this.menuClick}
                     mode="inline"
-                    selectedKeys={[this.state.selectedKey]}
+                    selectedKeys={["/app/Userhome/index"]}
                     openKeys={this.state.firstHide ? null : [this.state.openKey]}
                     onOpenChange={this.openMenu}
+                    defaultSelectedKeys={["/app/Userhome/index"]}
                 />
                 <style>
                     {`

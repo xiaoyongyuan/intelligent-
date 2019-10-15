@@ -2,74 +2,6 @@
 .fontAr{
     font-family:Ariai;
 }
-/*加载*/
-/*.ant-spin-dot i{
-    background: #ffffff!important;
-}
-.ant-spin{
-    color: #ffffff!important;
-}
-.alarmDetails .ant-spin-dot i{
-    background: #000!important;
-}
-.alarmDetails .ant-spin{
-    color: #000!important;
-}*/
-/*表格*/
-/*.ant-table-thead > tr > th {
-    background: #394269!important;
-    color: #fff !important;
-}
-.ant-calendar-picker-icon {
-    color: #8592C6!important;
-}*/
-/*日历*/
-/*.ant-calendar-range-picker-separator {
-    background: #F5F5FA!important;
-    color: #454D71!important;
-}*/
-/*下拉框*/
-/*.ant-select-selection {
-    background-color: #fff!important;
-    border: 1px solid #3C466E!important;
-    color: #000!important;
-}*/
-/*
-.Alarmlist .ant-select-selection,.PatrolRecord .ant-select-selection,.RollcallRecord .ant-select-selection{
-    background: #3C466E;
-    border: 1px solid #3C466E;
-    color: #fff;
-}
-*/
-
-/*.ant-select-arrow {
-    color: #8592C6!important;
-}
-.ant-table-thead > tr.ant-table-row-hover > td, .ant-table-tbody > tr.ant-table-row-hover > td, .ant-table-thead > tr:hover > td, .ant-table-tbody > tr:hover > td {
-    !* 表格行的hover效果 *!
-    background: #4F5574 !important;
-}*/
-/*分页*/
-/*.ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link {
-    border: 1px solid #495480!important;
-    background-color: #2B3355!important;
-    color: #ffffff!important;
-}
-.ant-pagination-item-active{
-    border: 1px solid #4286F5!important;
-    background: #4286F5;
-}
-.ant-pagination-item-active:hover{
-    border: 1px solid #4286F5!important;
-    background: #4286F5!important;
-}
-.ant-pagination-item {
-    border: 1px solid #495480;
-    background-color: #2B3355!important;
-}
-.ant-pagination-item a {
-    color: #ffffff!important;
-}*/
 /*查询 修改 新增*/
 .queryBtn{
     background:#1E73FF!important;
@@ -139,29 +71,6 @@
 .ant-table-tbody > tr:nth-child(even){
     background-color: #F5F5FA;
 }
-/*表格无数据样式*/
-/*.ant-table-placeholder{
-    background: #2B3355!important;
-    border-top: 1px solid #4C5784;
-    border-bottom:1px solid #4C5784!important;
-    color:#fff!important;
-}
-.ant-table-bordered.ant-table-empty .ant-table-placeholder {
-    border-left: 1px solid #4C5784!important;
-    border-right: 1px solid #4C5784!important;
-}*/
-/*.ant-table-thead > tr > th {
-    !* 所有表格th的背景和颜色 *!
-    background: #323A5D!important;
-    color: #fff !important;
-}
-.ant-table {
-    !* 所有表格的字体颜色 *!
-    color: #fff!important;
-}*/
-/*.ant-pagination-item-ellipsis{
-    color:#fff !important;
-}*/
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
     background-color: #1E73FF!important;   /* 菜单选中的颜色 */
     color:#fff;
@@ -201,21 +110,12 @@
 .Settime{
     padding: 20px
 }
-/*.Settime .ant-form-item-label label {
-    color: #fff !important;
-}
-.Settime .ant-table-tbody > tr > td {
-    border: 1px solid #4C5784!important;
-}*/
-/*.Settime .ant-time-picker-input {
-    color: #8a97cc!important;
-    background-color: #3c466e!important;
-    border: 0 !important;
-}
-.Settime .ant-time-picker-icon .ant-time-picker-clock-icon {
-    color: #fff !important;
-}*/
 .tc-label label{
     color: #000!important;
 }
-
+.ant-menu-vertical .ant-menu-item:after, .ant-menu-vertical-left .ant-menu-item:after, .ant-menu-vertical-right .ant-menu-item:after, .ant-menu-inline .ant-menu-item:after{
+    border: none!important;
+}
+.ant-menu-vertical .ant-menu-item, .ant-menu-vertical-left .ant-menu-item, .ant-menu-vertical-right .ant-menu-item, .ant-menu-inline .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-vertical-left .ant-menu-submenu-title, .ant-menu-vertical-right .ant-menu-submenu-title, .ant-menu-inline .ant-menu-submenu-title{
+    margin: 0!important;
+}

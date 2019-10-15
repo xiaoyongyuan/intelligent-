@@ -184,7 +184,6 @@ class Alarmlist extends React.Component {
     handleEquipment = () => {
         post({ url: "/api/camera/get_cameralist", data: { passivecode: this.state.activecompcode } }, (res) => {
             if (res.success) {
-                console.log(res.data)
                 this.setState({
                     equipment: res.data,
                 })
@@ -208,7 +207,7 @@ class Alarmlist extends React.Component {
         this.props.form.validateFields((err, values) => {
             if (values.date && values.date.length) {
 
-                if (oldTimeend - oldTimestart <= 604800) {
+                if (oldTimeend - oldTimestart <= 86400) {
                     this.props.form.validateFields((err, values) => {
                         this.setState({
                             bdate: values.date && values.date.length ? values.date[0].format("YYYY-MM-DD HH:00:00") : "",
@@ -226,7 +225,7 @@ class Alarmlist extends React.Component {
                         this.handleAlerm();
                     });
                 } else {
-                    message.error('请选择七天以内的时间');
+                    message.error('请选择一天以内的时间');
                 }
             } else {
                 this.setState({
