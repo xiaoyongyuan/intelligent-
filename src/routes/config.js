@@ -20,7 +20,7 @@ export default {
     },
     //个人用户总览
     {
-      key: "/app/Userhome/index",
+      key: "/app/userhome/index",
       identi: ["user"],
       title: "总览",
       icon: "home",
@@ -29,7 +29,7 @@ export default {
     },
     //设备
     {
-      key: "/app/Userhome/Equipment",
+      key: "/app/userhome/Equipment",
       identi: ["comp", "comptop", "user"],
       title: "设备",
       icon: "video-camera",
@@ -38,7 +38,7 @@ export default {
     },
     //报警
     {
-      key: "/app/Userhome/Alarmlist",
+      key: "/app/userhome/Alarmlist",
       identi: ["comp", "comptop", "user"],
       title: "报警",
       dot: "true",

@@ -47,7 +47,6 @@ class SiderCustom extends Component {
     };
     componentDidMount() {
         const selectedKey = SiderCustom.setMenuOpen(this.props);
-        console.log(selectedKey)
         this.setState({
             selectedKey:selectedKey.selectedKey
         });
@@ -81,7 +80,6 @@ class SiderCustom extends Component {
             if(user.activecount) identify='comptop';
             else identify='comp'
         }
-
         return (
             <Sider
                 trigger={null}
@@ -111,10 +109,9 @@ class SiderCustom extends Component {
                     menus={routes.menus}
                     onClick={this.menuClick}
                     mode="inline"
-                    selectedKeys={["/app/Userhome/index"]}
+                    selectedKeys={[this.state.selectedKey]}
                     openKeys={this.state.firstHide ? null : [this.state.openKey]}
                     onOpenChange={this.openMenu}
-                    defaultSelectedKeys={["/app/Userhome/index"]}
                 />
                 <style>
                     {`
