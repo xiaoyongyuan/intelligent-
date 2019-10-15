@@ -164,6 +164,7 @@ class Login extends React.Component {
   
   render() {
     let tetarr = [["瞬间响应，快人一步", "AI视频联网报警应急系统"],
+      ["警情预判，零误报！", "7X24小时人机结合"],
     ["多样报警处理，全局联动！", "通用型，无人值守智能安防平台"],
     ["用户隐私，警用级加密！", "无忧隐私保护计划"]
     ]
@@ -179,8 +180,7 @@ class Login extends React.Component {
         <div className="tetsssBox">
             {tetarr.map((a, b) => (
               <div className={`tetsss  tetsss${b} active`} key={"tetsss" + b}
-                style={{ animation: `flash${b} linear 6s infinite` }}
-
+                style={{ animation: `flash${b} linear 8s infinite ` }}
               >
                 <p>{a[0]}</p>
                 <p>{a[1]}</p>
