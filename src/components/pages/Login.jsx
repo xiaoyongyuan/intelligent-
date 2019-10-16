@@ -160,12 +160,13 @@ class Login extends React.Component {
   };
 
   render() {
-    let tetarr = [["瞬间响应，快人一步", "AI视频联网报警应急系统"],
-      ["警情预判，零误报！", "7X24小时人机结合"],
+    let tetarr = [["瞬间响应，快人一步", "视频联网报警应急系统"],
+      ["警情预判，零误报！", "小时人机结合"],
     ["多样报警处理，全局联动！", "通用型，无人值守智能安防平台"],
     ["用户隐私，警用级加密！", "无忧隐私保护计划"],
-      ["瞬间响应，快人一步", "AI视频联网报警应急系统"]
-    ];
+      ["瞬间响应，快人一步", "视频联网报警应急系统"]
+    ]
+    let sspa = ["AI", "7X24", 0, 0, "AI"]
     const { getFieldDecorator } = this.props.form;
     return (
       <div
@@ -173,12 +174,13 @@ class Login extends React.Component {
       >
         <div className="tetsssBox">
           <div className="tetsbbo">
+            
             {tetarr.map((a, b) => (
               <div className={`tetsss `} key={"tetsss" + b}
-                style={{ left:`${600*b}px` }}
+                style={{ left:`${610*b}px` }}
               >
                 <p>{a[0]}</p>
-                <p>{a[1]}</p>
+                <p>{sspa[b] ? <span className="fontAr">{sspa[b]}</span> : ""} {a[1]}</p>
               </div>
               )
             )}

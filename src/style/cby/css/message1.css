@@ -143,10 +143,10 @@
   line-height: 40px;
 }
 
-.Messages .ant-modal-close {
+/* .Messages .ant-modal-close {
   top: -7px;
   right: -7px;
-}
+} */
 
 .immgclas{
   width: 100%;
@@ -161,4 +161,9 @@
   position: absolute;
   top:0;
   left: 0;
+}
+
+.imgsanj{
+  margin-right: 25px;
+  line-height: 38px;
 }
