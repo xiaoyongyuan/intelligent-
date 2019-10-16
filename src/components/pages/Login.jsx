@@ -8,10 +8,6 @@ import QRCode from "qrcode.react";
 import "../../style/jhy/css/login.css";
 import "../../style/jhy/icon/iconfont.css";
 import erweima from "../../style/cby/img/login/erweima.png";
-import post1 from "../../style/cby/img/login/posit1.png";
-import post2 from "../../style/cby/img/login/posit2.png";
-import post3 from "../../style/cby/img/login/posit3.png";
-import post4 from "../../style/cby/img/login/posit4.png";
 import passworlogo from "../../style/cby/img/login/passworlogo.png";
 import userlogo from "../../style/cby/img/login/userlogo.png";
 import userlogin from "../../style/cby/img/login/userlogin.png";
@@ -150,9 +146,8 @@ class Login extends React.Component {
   };
 
   eyepas = e =>{
-    let arr1 = ["text", "eye", "#1E73FF", "1"]
-    let arr2 = ["password" , "eye-invisible", "#313A62", "0.3"]
-    // paseeey: ["password", "eye", "#1E73FF", "1"]
+    let arr1 = ["text", "eye", "#1E73FF", "1"];
+    let arr2 = ["password" , "eye-invisible", "#313A62", "0.3"];
     if (this.state.paseeey[0] == "password"){
       this.setState({
         paseeey: arr1
@@ -162,8 +157,8 @@ class Login extends React.Component {
         paseeey: arr2
       });
     }
-  }
-  
+  };
+
   render() {
     let tetarr = [["瞬间响应，快人一步", "视频联网报警应急系统"],
       ["警情预判，零误报！", "小时人机结合"],
@@ -177,10 +172,6 @@ class Login extends React.Component {
       <div
         className="loginnew"
       >
-        {/* <img src={post1} alt="" className="posi1" />
-        <img src={post2} alt="" className="posi2" />
-        <img src={post3} alt="" className="posi3" />
-        <img src={post4} alt="" className="posi4"/> */}
         <div className="tetsssBox">
           <div className="tetsbbo">
             
@@ -197,7 +188,6 @@ class Login extends React.Component {
         </div>
         <div className="topbar">
           <div className="logo">
-            {/* <img src={logopic} alt="" /> */}
             傲智 <span className="fontAr">AI</span> 视频警戒系统
           </div>
         </div>
@@ -207,19 +197,13 @@ class Login extends React.Component {
               className="loginform clearfix"
             >
               <div className="login-top clearfix">
-                {/* //用户登录 */}
                 <div className="login-title fl">{this.state.loginTitle}</div>
                 <div
-                  className={
-                    "rg " 
-                    // "rg pwdBtn iconfont login-qrcode" +
-                    // (this.state.typeState ? " icon-diannao " : " icon-erweima")
-                  }
-                  
+                  className="rg "
                   onClick={this.handlerImg}
                 > <img src={this.state.typeState ? userlogin : erweima} alt=""/>
-                   </div> 
-              </div>  
+                   </div>
+              </div>
               <div className="qrcode">
                 <div
                   className="codewrap"
@@ -274,14 +258,6 @@ class Login extends React.Component {
                     })(
                       <Input
                         prefix={
-                          // <Icon
-                          //   type="user"
-                          //   style={{
-                          //     color: "#1E73FF",
-                          //     fontSize: 26,
-                          //     marginRight: "10px"
-                          //   }}
-                          // />
                           <img src={userlogo} alt=""/>
                         }
                         autocomplete="off"
@@ -309,21 +285,13 @@ class Login extends React.Component {
                       ]
                     })(
                       <Input
-                        prefix={
-  //                         <Icon
-  //                           type="lock"
-  //                           style={{ color: "#1E73FF", fontSize: 26 }}
-                            
-  // />
-                          <img src={passworlogo} alt="" />
-}
-suffix={
-  <Icon type={this.state.paseeey[1]} style={{ color: this.state.paseeey[2], opacity: this.state.paseeey[3] }} onClick= {this.eyepas} />
-}
-// #1E73FF  #313A62 .3
-type={this.state.paseeey[0]}
-className="usersInput"
-placeholder="请输入密码"
+                        prefix={<img src={passworlogo} alt="" />}
+                        suffix={
+                          <Icon type={this.state.paseeey[1]} style={{ color: this.state.paseeey[2], opacity: this.state.paseeey[3] }} onClick= {this.eyepas} />
+                        }
+                        type={this.state.paseeey[0]}
+                        className="usersInput"
+                        placeholder="请输入密码"
                         style={{ fontSize: "20px", color: "#313A62", fontFamily: "Ariai" }}
                   />
                 )}
@@ -337,11 +305,17 @@ placeholder="请输入密码"
                     <Button
                       type="primary"
                       htmlType="submit"
-                      style={{ width: "100%", height: "50px", background: "#1E73FF" ,
-                        color: "#fff", fontSize: "20px", boxShadow:"0px 2px 10px rgba(30,115,255,0.2)",
-                  borderRadius:"4px" }}
-                                  >
-                                    登录
+                      style={{
+                          width: "100%",
+                          height: "50px",
+                          background: "#1E73FF" ,
+                          color: "#fff",
+                          fontSize: "20px",
+                          boxShadow:"0px 2px 10px rgba(30,115,255,0.2)",
+                          borderRadius:"4px"
+                      }}
+                     >
+                       登录
                     </Button>
                   </Form.Item>
                 </Form>
