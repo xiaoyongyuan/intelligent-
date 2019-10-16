@@ -533,7 +533,9 @@
     line-height: 40px;
     color:#313A62 ;
 }
-
+.equBtn{
+    padding-bottom: 26px;
+}
 .underline {
     text-decoration: underline;
     color: #313A62;
@@ -1447,7 +1449,6 @@ border-radius:4px;
     flex-direction: column;
     background-color: #fff;
     box-shadow:0px 2px 20px rgba(30,115,255,0.1);
-    padding-bottom: 20px;
 }
 .equim1{
     width: 100%;

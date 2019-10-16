@@ -419,7 +419,7 @@ class Userdeveice extends React.Component{
                     </div>
                     <Row className="equ_row">
                         <Col span={3} offset={20} className="t_l">
-                            <Button type="primary" className=" lg" onClick={this.updata} disabled={this.state.subBtn?true:false}> 提交 </Button>
+                            <div className="equBtn"><Button type="primary" className=" lg" onClick={this.updata} disabled={this.state.subBtn?true:false}> 提交 </Button></div>
                         </Col>
                     </Row>
                 </div>
