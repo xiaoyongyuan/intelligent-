@@ -5,7 +5,8 @@ import "../../style/cby/css/message1.css";
 import replay_move from "../../style/ztt/img/message/replay_move.png";
 import colck from "../../style/cby/img/message/colck.png";
 import nullsj from "../../style/cby/img/message/nullsj.png";
-import activ_ta from "../../style/cby/img/message/activ_ta.png";
+import upsan from "../../style/cby/img/message/upsan.png";
+import downsan from "../../style/cby/img/message/downsan.png";
 import noactiv_ta from "../../style/cby/img/message/noactiv_ta.png";
 import rep from "../../style/cby/img/message/rep.png";
 import move_time from "../../style/cby/img/message/move_time.png";
@@ -28,7 +29,8 @@ class Messages extends Component {
             visible:false,
             listsMess:[],
             page:1,//当前页数
-            loading:true
+            loading:true ,
+            morenimg: {}
         };
     }
     componentDidMount() {
@@ -68,6 +70,19 @@ class Messages extends Component {
     };
     //折叠面板
     callbackCollapse=(key)=> {
+        if (this.state.morenimg[key]) {
+            let ooobj = {}
+            ooobj[key] = false
+            this.setState({
+                morenimg: ooobj
+            })
+        } else {
+            let ooobj = {}
+            ooobj[key] = true
+            this.setState({
+                morenimg: ooobj
+            })
+        }
         if(key){
             let datas={
                 code:key,
@@ -97,6 +112,9 @@ class Messages extends Component {
     };
     //标签页
     callbackTab=(key)=>{
+        this.setState({
+            morenimg:{}
+        })
         if(key==1){
             this.setState({
                 atypeTab:"",
@@ -143,7 +161,8 @@ class Messages extends Component {
     handlePage=(page)=>{
         this.setState({
             page,
-            loading:true
+            loading:true ,
+            morenimg:{}
         },()=>{
             this.getListMess();
         });
@@ -242,6 +261,8 @@ class Messages extends Component {
         console.log(ffgyar)
     }
 
+
+
     render() {
 
 
@@ -265,8 +286,10 @@ class Messages extends Component {
                                            <Panel 
                                            showArrow = {false}
                                            className="Panel_cla"
+                                           
                                            header={
-                                               <div className="messTime clearfix">
+                                            //    <div className="messTime clearfix" onClick={(e) => { console.log(v.code); this.chuancc(e, i, "all") }}>
+                                               <div className="messTime clearfix" >
                                                    {/* <div className=" fl"> */}
                                                    <div className="fl">
                                                        <Badge dot style={{display:v.status===1?"none":"block"}}>
@@ -282,6 +305,7 @@ class Messages extends Component {
                                                    {/* {v.memo} */}
                                                    {/* <div className="messData">{v.atime}</div> */}
                                                    <div className="crzh_msti rg">{v.memo}</div>
+                                                   {v.atype == 12 ? <div className="imgsanj rg"> <img src={this.state.morenimg[v.code] ? upsan : downsan} /></div> : ""}
                                                </div>}
                                                   key={v.code}
                                            >
@@ -330,12 +354,15 @@ class Messages extends Component {
                        </TabPane>
                        <TabPane tab="整点打卡" key="12">
                            <Spin size="large" spinning={this.state.loading}>
-                               <Collapse onChange={this.callbackCollapse} accordion>
-                                   {this.state.listsMess.map((v)=>(
+                                <Collapse onChange={this.callbackCollapse} accordion >
+                                   {this.state.listsMess.map((v,gg)=>(
                                        <Panel 
+                                           showArrow={false}
                                            className="Panel_cla"
+                                          
                                        header={
-                                           <div className="messTime clearfix">
+                                        //    <div className="messTime clearfix" onClick={(e) => { this.chuancc(e, gg, "one") }}>
+                                           <div className="messTime clearfix" >
                                                <div className="fl ">
                                                    <Badge dot style={{display:v.status===1?"none":"block"}}>
                                                        <div className="mesICon"><img src={colck} alt="" /></div>
@@ -347,6 +374,8 @@ class Messages extends Component {
                                                    </div>
                                                
                                                <div className="crzh_msti rg">{v.memo}</div>
+                                               <div className="imgsanj rg"> <img src={this.state.morenimg[v.code] ? upsan : downsan} /></div>
+                                               {/* activeKey */}
                                            </div>}
                                               key={v.code}
                                        >

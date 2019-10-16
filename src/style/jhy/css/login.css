@@ -31,6 +31,7 @@
   position: absolute;
   top:2% ;
   left: 3%;
+  font-family: "Microsoft YaHei";
 }
 
 .logcont {
@@ -72,11 +73,12 @@
   margin: 10px 0 0 30px;
   padding: 2px 0 0 10px;
   position: relative;
+  font-family: "Microsoft YaHei";
 }
 .login-title::before{
   content: "";
-  display: block;width: 6px;position: absolute;left: -3px;
-  top: 6px;height: 30px;background-color: #1E73FF;
+  display: block;width: 6px;position: absolute;left: -6px;
+  top: 9px;height: 25px;background-color: #1E73FF;
 }
 
 
@@ -158,7 +160,8 @@
   height: 50px !important;
   color: #313A62 !important;
   padding-left: 50px;
-  font-size: 18px;
+  font-size: 20px;
+  font-family: "Ariai";
   /* border: 3px solid red !important; */
   /* border-bottom: 1px solid #c0c3cf !important; */
   border:none !important;
@@ -256,7 +259,7 @@ textarea:-ms-input-placeholder {
     animation: lelb  6s infinite ;
   }
   .loginform {
-    left: 56%;
+    left: 56%; 
     transform: translateY(47%);
   }
   
@@ -269,6 +272,8 @@ textarea:-ms-input-placeholder {
   font-size: 12px;
   color: #fff;
 }
+
+
 /* 
 .ant-input-affix-wrapper .ant-input:not(:first-child) {
   border: none !important;
@@ -305,7 +310,7 @@ textarea:-ms-input-placeholder {
   left: 0;
   width: 12000px;
   height: 120px;
-  animation: lelb  12s infinite ;
+  animation: lelb  15s infinite ;
 }
 
 .tetsss{
@@ -317,6 +322,7 @@ textarea:-ms-input-placeholder {
   margin: 0;
   font-weight: 400;
   color: #FFFFFF;
+  font-family:"Microsoft YaHei" ;
 }
 .tetsss p:nth-child(1){
   font-size: 48px;
@@ -329,10 +335,10 @@ textarea:-ms-input-placeholder {
 
 @keyframes lelb{
   0%{ left: 0;}
-  25%{left: -600px;}
-  50%{left: -1200px;}
-  75%{left: -1800px;}
-  100%{left: -2400px;}
+  15%,25%{left: -600px;}
+  40%,50%{left: -1200px;}
+  65%,75%{left: -1800px;}
+  90%,100%{left: -2400px;}
 }
 
 input:-webkit-autofill,
