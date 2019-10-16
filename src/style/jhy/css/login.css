@@ -295,7 +295,7 @@ textarea:-ms-input-placeholder {
   position: absolute;
   top: 31%;
   left: 12%;
-  width: 580px;
+  width: 590px;
   height: 120px;
   overflow: hidden;
 }
@@ -306,7 +306,7 @@ textarea:-ms-input-placeholder {
   left: 0;
   width: 12000px;
   height: 120px;
-  animation: lelb  15s infinite ;
+  animation: lelb  18s infinite ;
 }
 
 .tetsss{
@@ -331,10 +331,10 @@ textarea:-ms-input-placeholder {
 
 @keyframes lelb{
   0%{ left: 0;}
-  15%,25%{left: -600px;}
-  40%,50%{left: -1200px;}
-  65%,75%{left: -1800px;}
-  90%,100%{left: -2400px;}
+  15%,25%{left: -610px;}
+  40%,50%{left: -1220px;}
+  65%,75%{left: -1830px;}
+  90%,100%{left: -2440px;}
 }
 
 input:-webkit-autofill,

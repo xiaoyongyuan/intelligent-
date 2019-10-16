@@ -177,7 +177,7 @@ class Login extends React.Component {
             
             {tetarr.map((a, b) => (
               <div className={`tetsss `} key={"tetsss" + b}
-                style={{ left:`${600*b}px` }}
+                style={{ left:`${610*b}px` }}
               >
                 <p>{a[0]}</p>
                 <p>{sspa[b] ? <span className="fontAr">{sspa[b]}</span> : ""} {a[1]}</p>
