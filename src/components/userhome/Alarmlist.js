@@ -414,7 +414,7 @@ class Alarmlist extends React.Component {
             <Row style={{ marginTop: "20px", display: this.state.type === 0 ? "none" : "block", }} gutter={20}>
                     {
                         this.state.policeList.map((v, i) => (
-                             <Col xl={6} xxl={4}  key={v.code} style={{ display: this.state.displaysearch === true ? " block" : "none" }} >
+                             <Col xxl={4} xl={6} lg={8} md={10} sm={12} xs={14} key={v.code} style={{ display: this.state.displaysearch === true ? " block" : "none" }} >
                             <Card
                                 className="listmargintop"
                               cover={<div className="pliceImgyal" onClick={() => this.alarmImg(v.atype, v.code)}>
@@ -423,11 +423,11 @@ class Alarmlist extends React.Component {
 
                             >
                               <div className = "al_chang_box">
-                                <p className="al_chang_p clearfix" title={v.name}><span>设备名称：</span><span>{v.name}</span> </p>
-                                <p className="al_chang_p clearfix"><span>入侵类型：</span><span>{v.alarmtype}</span> </p>
-                                        <p className="al_chang_p clearfix text_oneLine"><span className="clearfix"> <b className="fl">时</b><b className="rg">间：</b>  </span><span className="fontAr">{v.atime}</span> </p>
-                                <p className="al_chang_p clearfix" style={{ visibility: v.atype == 12 ? "hidden" : "visible" }}><span>报警对象：</span> <span>{v.tags === "" ? "无" : v.tags}</span></p>
-                                <h5 style={{ color: "#FF7D46" }}>{this.handleState(v.hstatus)}</h5>
+                                <p className="al_chang_p clearfix fontCh" title={v.name}><span>设备名称：</span><span>{v.name}</span> </p>
+                                <p className="al_chang_p clearfix fontCh"><span>入侵类型：</span><span>{v.alarmtype}</span> </p>
+                                        <p className="al_chang_p clearfix text_oneLine"><span className="clearfix fontCh"> <b className="fl">时</b><b className="rg">间：</b>  </span><span className="fontAr">{v.atime}</span> </p>
+                                <p className="al_chang_p clearfix fontCh" style={{ visibility: v.atype == 12 ? "hidden" : "visible" }}><span>报警对象：</span> <span>{v.tags === "" ? "无" : v.tags}</span></p>
+                                <h5 className="fontCh" style={{ color: "#313A62" }}>{this.handleState(v.hstatus)}</h5>
                               </div>
                             </Card>,
 

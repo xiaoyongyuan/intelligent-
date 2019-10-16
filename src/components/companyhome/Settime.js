@@ -198,31 +198,31 @@ class Setarea extends Component {
                                     rules: [{ required: true, message: '请选择开始时间!' }],
                                 })(
                                     <Select className="startTime" placeholder="开始时间">
-                                        <option value="00">00</option>
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03" >03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08">08</option>
-                                        <option value="09">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="14">14</option>
-                                        <option value="15">15</option>
-                                        <option value="16">16</option>
-                                        <option value="17">17</option>
+                                        <option value="00">00:00</option>
+                                        <option value="01">01:00</option>
+                                        <option value="02">02:00</option>
+                                        <option value="03" >03:00</option>
+                                        <option value="04">04:00</option>
+                                        <option value="05">05:00</option>
+                                        <option value="06">06:00</option>
+                                        <option value="07">07:00</option>
+                                        <option value="08">08:00</option>
+                                        <option value="09">09:00</option>
+                                        <option value="10">10:00</option>
+                                        <option value="11">11:00</option>
+                                        <option value="12">12:00</option>
+                                        <option value="13">13:00</option>
+                                        <option value="14">14:00</option>
+                                        <option value="15">15:00</option>
+                                        <option value="16">16:00</option>
+                                        <option value="17">17:00</option>
                                         <option value="18">18</option>
-                                        <option value="19">19</option>
-                                        <option value="20">20</option>
-                                        <option value="21">21</option>
-                                        <option value="22">22</option>
-                                        <option value="23">23</option>
-                                        <option value="24">24</option>
+                                        <option value="19">19:00</option>
+                                        <option value="20">20:00</option>
+                                        <option value="21">21:00</option>
+                                        <option value="22">22:00</option>
+                                        <option value="23">23:00</option>
+                                        <option value="24">24:00</option>
                                     </Select>
 
                                 )}
@@ -232,31 +232,31 @@ class Setarea extends Component {
                                     rules: [{ required: true, message: '请选择结束时间!' }],
                                 })(
                                     <Select className="startTime" placeholder="结束时间">
-                                        <option value="00" >00</option>
-                                        <option value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08">08</option>
-                                        <option value="09">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="14">14</option>
-                                        <option value="15">15</option>
-                                        <option value="16">16</option>
-                                        <option value="17">17</option>
-                                        <option value="18">18</option>
-                                        <option value="19">19</option>
-                                        <option value="20">20</option>
-                                        <option value="21">21</option>
-                                        <option value="22">22</option>
-                                        <option value="23">23</option>
-                                        <option value="24">24</option>
+                                        <option value="00" >00:00</option>
+                                        <option value="01">01:00</option>
+                                        <option value="02">02:00</option>
+                                        <option value="03">03:00</option>
+                                        <option value="04">04:00</option>
+                                        <option value="05">05:00</option>
+                                        <option value="06">06:00</option>
+                                        <option value="07">07:00</option>
+                                        <option value="08">08:00</option>
+                                        <option value="09">09:00</option>
+                                        <option value="10">10:00</option>
+                                        <option value="11">11:00</option>
+                                        <option value="12">12:00</option>
+                                        <option value="13">13:00</option>
+                                        <option value="14">14:00</option>
+                                        <option value="15">15:00</option>
+                                        <option value="16">16:00</option>
+                                        <option value="17">17:00</option>
+                                        <option value="18">18:00</option>
+                                        <option value="19">19:00</option>
+                                        <option value="20">20:00</option>
+                                        <option value="21">21:00</option>
+                                        <option value="22">22:00</option>
+                                        <option value="23">23:00</option>
+                                        <option value="24">24:00</option>
                                     </Select>
                                 )}
 

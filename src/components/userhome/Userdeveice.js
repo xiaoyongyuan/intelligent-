@@ -21,7 +21,7 @@ class Userdeveice extends React.Component{
             camerapasswd:'', //密码
             portvalue:"", //端口号
             ipvalue:"", //设备IP
-
+            subBtn:true,//提交按钮
         };
     }
     componentDidMount() {
@@ -53,21 +53,25 @@ class Userdeveice extends React.Component{
     onChangeip=(e)=> {//ip  input 修改ip
         this.setState({
             ipvalue:e.target.value,
+            subBtn:false
         });
     }
     onChangeport=(e)=> {//ip  input 修改
         this.setState({
             portvalue:e.target.value,
+            subBtn:false
         });
     }
     onChangeuser=(e)=> {//user  input 修改
         this.setState({
             camerauser:e.target.value,
+            subBtn:false
         });
     }
     onChangepwd=(e)=> {//pwd  input 修改
         this.setState({
             camerapasswd:e.target.value,
+            subBtn:false
         });
     }
 
@@ -84,6 +88,11 @@ class Userdeveice extends React.Component{
             message.warn('请填写完整！');
             return;
         }
+            post({url:"/api/camera/camerareset",data:data},(res)=>{
+                if(res.success){
+                    message.success("编辑成功！")
+                }
+            })
     }
 
     field=()=>{ //布防区域的个数
@@ -400,7 +409,7 @@ class Userdeveice extends React.Component{
                                         设备端口：
                                     </Col>
                                     <Col span={12} offset={1} className="t_l">
-                                        <input className="padd_left fontAr" type="text"value={this.state.portvalue} id="port"
+                                        <input className="padd_left fontAr" type="text" value={this.state.portvalue} id="port"
                                                onChange={(e)=>this.onChangeport(e)}
                                         />
                                     </Col>
@@ -408,11 +417,11 @@ class Userdeveice extends React.Component{
                             </div>
                         </div>
                     </div>
-                   {/* <Row className="equ_row">
+                    <Row className="equ_row">
                         <Col span={3} offset={20} className="t_l">
-                            <Button className="queryBtn lg" onClick={this.updata}> 提交 </Button>
+                            <Button type="primary" className=" lg" onClick={this.updata} disabled={this.state.subBtn?true:false}> 提交 </Button>
                         </Col>
-                    </Row>*/}
+                    </Row>
                 </div>
                 <Modal
                     title={[

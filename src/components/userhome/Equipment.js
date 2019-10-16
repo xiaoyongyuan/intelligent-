@@ -134,7 +134,7 @@ class Equipment extends React.Component{
                             {
                                 this.state.camera.map((el,i)=>{
                                 return(
-                                    <Col key={i} xxl={{ span: 5 }} xl={{ span: 8 }}
+                                    <Col key={i} xxl={5} xl={8} lg={9} md={12} sm={15} xs={17}
                                         className="cardPdd ">
                                         <a href={"#/app/live/index?id=" + el.eid}
                                             style={{ display: this.state.liveIcon ? "block" : "none" }}

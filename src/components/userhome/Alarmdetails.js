@@ -461,7 +461,7 @@ class Alarmdetails extends React.Component {
               </p>
               <p>
                 <label>
-                  报警时间：<span id="alarmTime">{this.state.data.atime}</span>
+                  报警时间：<span id="alarmTime" className="fontAr">{this.state.data.atime}</span>
                 </label>
               </p>
              {/* <p

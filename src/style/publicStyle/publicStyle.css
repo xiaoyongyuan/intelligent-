@@ -2,6 +2,9 @@
 .fontAr{
     font-family:Ariai;
 }
+.fontCh{
+    font-family:Microsoft Yahei;
+}
 /*查询 修改 新增*/
 .queryBtn{
     background:#1E73FF!important;
@@ -118,4 +121,7 @@
 }
 .ant-menu-vertical .ant-menu-item, .ant-menu-vertical-left .ant-menu-item, .ant-menu-vertical-right .ant-menu-item, .ant-menu-inline .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-vertical-left .ant-menu-submenu-title, .ant-menu-vertical-right .ant-menu-submenu-title, .ant-menu-inline .ant-menu-submenu-title{
     margin: 0!important;
+}
+.ant-menu-sub .ant-menu-item{
+    padding-left: 80px!important;
 }

@@ -1236,9 +1236,12 @@
     display: inline-block;
     border-radius: 4px;
 }
-/*.startTime .ant-select-selection__placeholder{
-    color: #74EAF6;
-}*/
+.startTime .ant-select-dropdown-menu-item{
+    background-color: red;
+}
+.startTime .ant-select-selection__placeholder{
+    color: rgba(49, 58, 98, 0.7);
+}
 .startTime .ant-select-selection-selected-value{
     color:#8097CC;
 }
