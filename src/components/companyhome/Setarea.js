@@ -39,13 +39,12 @@ class Setarea extends Component {
                     areatwo=field[2]?JSON.parse(field[2]):[];
                 }
                 this.setState({
-                        areaone:areaone,
-                        areatwo:areatwo,
-                        src:res.data.fieldpath,
-                    },()=>{
-                        this.boundarydraw()
-                    });
-
+                    areaone:areaone,
+                    areatwo:areatwo,
+                    src:res.data.fieldpath,
+                },()=>{
+                    this.boundarydraw()
+                });
             }
         })
 
@@ -55,29 +54,29 @@ class Setarea extends Component {
         let area = ele.getContext("2d");
         area.clearRect(0,0,704,576);
         if(this.state.areaone.length){
-                let areaone=this.state.areaone[0];
-                area.strokeStyle=blue;
-                area.lineWidth=3;
+            let areaone=this.state.areaone[0];
+            area.strokeStyle=blue;
+            area.lineWidth=3;
+            area.beginPath();
+            area.moveTo(areaone[0][0],areaone[0][1]);
+            area.lineTo(areaone[1][0],areaone[1][1]);
+            area.lineTo(areaone[2][0],areaone[2][1]);
+            area.lineTo(areaone[3][0],areaone[3][1]);
+            area.lineTo(areaone[0][0],areaone[0][1]);
+            area.stroke();
+            area.closePath();
+            if(this.state.areatwo.length){
+                let areatwo=this.state.areatwo[0];
+                area.strokeStyle=red;
                 area.beginPath();
-                area.moveTo(areaone[0][0],areaone[0][1]);
-                area.lineTo(areaone[1][0],areaone[1][1]);
-                area.lineTo(areaone[2][0],areaone[2][1]);
-                area.lineTo(areaone[3][0],areaone[3][1]);
-                area.lineTo(areaone[0][0],areaone[0][1]);
+                area.moveTo(areatwo[0][0],areatwo[0][1]);
+                area.lineTo(areatwo[1][0],areatwo[1][1]);
+                area.lineTo(areatwo[2][0],areatwo[2][1]);
+                area.lineTo(areatwo[3][0],areatwo[3][1]);
+                area.lineTo(areatwo[0][0],areatwo[0][1]);
                 area.stroke();
                 area.closePath();
-                if(this.state.areatwo.length){
-                    let areatwo=this.state.areatwo[0];
-                    area.strokeStyle=red;
-                    area.beginPath();
-                    area.moveTo(areatwo[0][0],areatwo[0][1]);
-                    area.lineTo(areatwo[1][0],areatwo[1][1]);
-                    area.lineTo(areatwo[2][0],areatwo[2][1]);
-                    area.lineTo(areatwo[3][0],areatwo[3][1]);
-                    area.lineTo(areatwo[0][0],areatwo[0][1]);
-                    area.stroke();
-                    area.closePath();
-                }
+            }
         }else if(this.state.areatwo.length){
             let areatwo=this.state.areatwo[0];
             area.strokeStyle=red;
@@ -91,10 +90,7 @@ class Setarea extends Component {
             area.stroke();
             area.closePath();
         }
-
     }
-
-
     draw = () => { //绘制区域
         let item=this.state.present;
         let ele = document.getElementById("time_graph_canvas");
@@ -112,7 +108,7 @@ class Setarea extends Component {
                area.stroke();
             }
         })
-    }
+    };
 
     clickgetcorrd =(e)=> { //点击
         if (!this.state.areaone.length || !this.state.areatwo.length) {
