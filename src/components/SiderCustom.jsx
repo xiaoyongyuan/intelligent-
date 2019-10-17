@@ -1,7 +1,7 @@
 /**
  * Created by hao.cheng on 2017/4/13.
  */
-import React, { Component } from 'react';
+import React, {Component, Fragment} from 'react';
 import { Layout } from 'antd';
 import { withRouter } from 'react-router-dom';
 import routes from '../routes/config';
@@ -91,16 +91,30 @@ class SiderCustom extends Component {
                 <div
                     style={{
                         color: "#fff",
-                        lineHeight: "65px",
-                        fontSize: "20px",
-                        textAlign: "center"
+                        height:"100px",
+                        fontSize: "18px",
+                        textAlign: "center",
+                        display:"flex",
+                        flexDirection: "column",
+                        alignItems:"center",
+                        paddingTop:"10px",
+                        fontFamily:"Microsoft Yahei"
                     }}
                 >
                     {/* <img src={this.props.collapsed?logoicon:logofont} alt="nodata" /> */}
                     {this.props.collapsed ? (
                         <img src={logoicon} alt="nodata" />
                     ) : (
-                        "AI安全感知预警中心"
+                        <Fragment>
+                            <span>
+                                智感在线AI联网报警
+                            </span>
+                            <span>
+                                用户平台
+                            </span>
+                        </Fragment>
+
+
                     )}
                 </div>
                 <SiderMenu

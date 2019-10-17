@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import {message,Button,Modal } from 'antd';
+import {message,Button,Modal,Icon } from 'antd';
 import '../../style/lff/home.css';
+import "../../style/publicStyle/publicStyle.css";
+import policeImg from "../../style/ztt/img/policeimg.png";
 import {post} from "../../axios/tools";
 const blue='#5063ee';
 const red='#ED2F2F';
@@ -14,6 +16,11 @@ class Setarea extends Component {
             present:[],
             areaone:[], //防区一
             areatwo:[], //防区二
+            baseBtn:false,//控制更新底图
+            repaint:false,//控制防区提交面板显示隐藏
+            defenBtn:false,//判断新建防区按钮是否禁用或使用状态
+            deletedefen:false,//删除防区弹窗
+            deleteshow:false,//新增防区弹窗
         };
     }
     componentWillMount=()=>{
@@ -44,7 +51,7 @@ class Setarea extends Component {
 
     }
     boundarydraw(){
-        let ele = document.getElementById("time_graph_canvas")
+        let ele = document.getElementById("time_graph_canvas");
         let area = ele.getContext("2d");
         area.clearRect(0,0,704,576);
         if(this.state.areaone.length){
@@ -88,7 +95,7 @@ class Setarea extends Component {
     }
 
 
-    draw = (field) => { //绘制区域
+    draw = () => { //绘制区域
         let item=this.state.present;
         let ele = document.getElementById("time_graph_canvas");
         let area = ele.getContext("2d");
@@ -107,41 +114,29 @@ class Setarea extends Component {
         })
     }
 
-    clickgetcorrd =(e)=>{ //点击
-        if(!this.state.areaone.length||!this.state.areatwo.length){
-            if(this.state.present.length===4){
-                this.setState({
-                    deleteshow: true
-                });
-            }else{
-                let getcord=this.getcoord(e); //获取点击的坐标
-                let precorrd=this.state.present;
+    clickgetcorrd =(e)=> { //点击
+        if (!this.state.areaone.length || !this.state.areatwo.length) {
+            if (this.state.present.length != 4) {
+                let getcord = this.getcoord(e); //获取点击的坐标
+                let precorrd = this.state.present;
                 precorrd.push(getcord);
                 this.setState({
-                    clicknum: this.state.clicknum+1,
-                    present:precorrd
+                    clicknum: this.state.clicknum + 1,
+                    present: precorrd
                 });
             }
-
         }
-
     }
-    deleteOk=()=>{
+    //重新绘制
+    hanleRepaint=()=>{
         let ele = document.getElementById("time_graph_canvas");
         let area = ele.getContext("2d");
-        this.boundarydraw();
-
         area.clearRect(0,0,704,576);
         this.setState({
-            deleteshow: false,
             present:[]
         });
-    }
-    deleteCancel=()=>{
-        this.setState({
-            deleteshow: false
-        });
-    }
+        this.boundarydraw();
+    };
     getcoord = (coords) => { //获取坐标
         let ele = document.getElementById("time_graph_canvas");
         let canvsclent = ele.getBoundingClientRect();
@@ -177,76 +172,106 @@ class Setarea extends Component {
 
         }
 
-    }
-    submitok(index){
-        if(index){
-            if(this.state.areaone.length){
-                post({url:'/api/camera/fielddel',data:{key:1,code:this.state.cid}},(res)=>{
-                    if(res){
-                        this.setState({
-                            areaone:''
-                        },()=>{
-
-                          this.boundarydraw()
-                        });
-
-                    }
-                })
-            }else{
-                if(this.state.present.length===4){
-                    post({url:'/api/camera/fieldadd',data:{key:1,field:JSON.stringify([this.state.present]),code:this.state.cid}},(res)=>{
-                        if(res){
-                            this.setState({
-                                areaone:[this.state.present],
-                                present:[]
-                            },()=>{
-                              this.boundarydraw()
-                            });
-
-                        }
-                    })
-                }
-
-            }
+    };
+    //新建防区按钮背景色
+    hanledefenBg=()=>{
+        if(this.state.defenBtn){
+            return "prohibitBtn";
         }else{
-            if(this.state.areatwo.length){
-                post({url:'/api/camera/fielddel',data:{key:2,code:this.state.cid}},(res)=>{
-                    if(res){
+            return "newdefnbtn";
+        }
+    };
+    //删除防区按钮背景色
+    hanledeleteBg=()=>{
+        if(this.state.defenBtn){
+            return "prohibitBtn";
+        }else{
+            return "queryBtn";
+        }
+    };
+    //关闭防区操作显示面板
+    hanleClose=()=>{
+        this.setState({
+            repaint:false,
+            defenBtn:false,
+            baseBtn:false
+        });
+        this.setState({
+            present:[]
+        });
+        this.boundarydraw();
+    };
+    //新建防区
+    hanlAddDef=(index)=>{
+        this.setState({
+            deleteshow:true,
+            textadd:index
+        });
+    };
+    //提示框打开
+    deleteok=()=>{
+        this.setState({
+            deleteshow: false,
+            repaint:true,
+            defenBtn:true,
+            baseBtn:true
+        });
+    };
+    deleteCancel=()=>{
+        this.setState({
+            deleteshow: false,
+            repaint:false,
+            defenBtn:false,
+            baseBtn:false
+        });
+    };
+    submitok=()=>{
+        if(this.state.present.length===4 && this.state.textadd){
+            if(this.state.textadd===1){
+                post({url:'/api/camera/fieldadd',data:{key:this.state.textadd,field:JSON.stringify([this.state.present]),code:this.state.cid}},(res)=>{
+                    if(res.success){
                         this.setState({
-                            areatwo:'',
+                            areaone:[this.state.present],
+                            present:[],
+                            repaint:false,
+                            defenBtn:false,
+                            baseBtn:false
                         },()=>{
-                          this.boundarydraw()
+                            this.boundarydraw()
                         });
 
                     }
                 })
-            }else{
-                if(this.state.present.length===4){
-                    post({url:'/api/camera/fieldadd',data:{key:2,field:JSON.stringify([this.state.present]),code:this.state.cid}},(res)=>{
-                        if(res){
-                            this.setState({
-                                areatwo:[this.state.present],
-                                present:[]
-                            },()=>{
-                              this.boundarydraw()
-                            });
+            }else if(this.state.textadd===2){
+                post({url:'/api/camera/fieldadd',data:{key:this.state.textadd,field:JSON.stringify([this.state.present]),code:this.state.cid}},(res)=>{
+                    if(res.success){
+                        this.setState({
+                            areatwo:[this.state.present],
+                            present:[],
+                            repaint:false,
+                            defenBtn:false,
+                            baseBtn:false
+                        },()=>{
+                            this.boundarydraw()
+                        });
 
-                        }
-                    })
-                }
+                    }
+                })
             }
         }
-
     }
     /*获取底图*/
     changeBase=()=>{
         post({url:"/api/equipment/get_basemap",data:{eid:this.state.eid}},(res)=>{
             if(res.success){
                 flashVis=0;
+                this.setState({
+                    baseBtn:true
+                });
                 this.hanleresult(res.data);
             }
         })
-    }
+    };
     /*获取底图结果*/
     hanleresult=(code)=>{
         post({url:"/api/smptask/getone",data:{code:code,apptype:1}},(res)=>{
@@ -262,6 +287,9 @@ class Setarea extends Component {
                     flashVis++;
                     if(flashVis>150){
                         message.warning("请求超时!");
+                        this.setState({
+                            baseBtn:false
+                        });
                         return false;
                     }else{
                         this.hanleresult(code);
@@ -269,7 +297,56 @@ class Setarea extends Component {
                 }
             }
         })
-    }
+    };
+    //删除防区弹窗打开
+    hanleDeleteDef=(index)=>{
+        this.setState({
+            deletedefen:true,
+            deleIndex:index
+        })
+    };
+    //删除防区弹窗确认
+    deletedefenOk=()=>{
+        if(this.state.deleIndex && this.state.cid){
+            if(this.state.deleIndex===1){
+                post({url:'/api/camera/fielddel',data:{key:this.state.deleIndex,code:this.state.cid}},(res)=>{
+                    if(res.success){
+                        this.setState({
+                            areaone:'',
+                            deletedefen:false
+                        },()=>{
+                            this.boundarydraw()
+                        });
+                    }else{
+                        this.setState({
+                            deletedefen:false
+                        });
+                    }
+                })
+            }else if(this.state.deleIndex===2){
+                post({url:'/api/camera/fielddel',data:{key:this.state.deleIndex,code:this.state.cid}},(res)=>{
+                    if(res.success){
+                        this.setState({
+                            areatwo:'',
+                            deletedefen:false
+                        },()=>{
+                            this.boundarydraw()
+                        });
+                    }else{
+                        this.setState({
+                            deletedefen:false
+                        });
+                    }
+                })
+            }
+        }
+    };
+    //删除防区弹窗取消
+    deletedefenCancel=()=>{
+        this.setState({
+            deletedefen:false
+        })
+    };
     render() {
         return (
            <div className="Setarea">
@@ -281,28 +358,111 @@ class Setarea extends Component {
                             }}
                             onClick={this.clickgetcorrd} onMouseMove={this.drawmove}
                     />
+                    <div className="zdefenseoper" style={{display:this.state.repaint?"flex":"none"}}>
+                        <span className="zrevoke" onClick={this.hanleRepaint}>
+                             <span className="zagain1" />
+                             <span className="zrepaint1">重绘</span>
+                        </span>
+                       <span className="zrevoke" onClick={this.hanleClose}>
+                            <span className="zagain2" />
+                            <span className="zrepaint2">取消</span>
+                       </span>
+                       <span className="zrevoke" onClick={this.submitok}>
+                           <span className="zagain3" />
+                           <span className="zrepaint3">确定</span>
+                       </span>
+                    </div>
                     <div className="zsetarea">
                         <div className="optbtn">
-                            <div>
-                                <span className="zclose" onClick={()=>this.submitok(1)} style={{display:this.state.areaone.length?"block":"none"}} />
-                                <Button type="primary" className="queryBtn seBtn" onClick={()=>this.submitok(1)}>{this.state.areaone.length?'删除防区一':'新建防区一'}</Button>
-                                <span className="zclose1" onClick={()=>this.submitok()} style={{display:this.state.areatwo.length?"block":"none"}} />
-                                <Button type="primary" className="deleteBtn seBtn senter" onClick={()=>this.submitok()}>{this.state.areatwo.length?'删除防区二':'新建防区二'}</Button>
+                            <div className="zoper">
+                                <span className="zoperBtn" style={{display:this.state.areaone.length>0?"none":"block"}}>
+                                     <Button
+                                         className={this.hanledefenBg()}
+                                         onClick={()=>this.hanlAddDef(1)}
+                                         disabled={this.state.defenBtn?true:false}
+                                         icon="plus"
+                                     >
+                                    防区一
+                                </Button>
+                                </span>
+                               <span className="zoperBtn" style={{display:this.state.areatwo.length>0?"none":"block"}}>
+                                    <Button
+                                        className={this.hanledefenBg()}
+                                        onClick={()=>this.hanlAddDef(2)}
+                                        disabled={this.state.defenBtn?true:false}
+                                        icon="plus"
+                                    >
+                                    防区二
+                                </Button>
+                               </span>
+                                <span className="zoperBtn zbtnRes" style={{display:this.state.areaone.length>0?"block":"none"}}>
+                                    <Button
+                                        type="primary"
+                                        className={this.hanledeleteBg()}
+                                        onClick={()=>this.hanleDeleteDef(1)}
+                                        disabled={this.state.defenBtn?true:false}
+                                    >
+                                    <span className="zclose" />
+                                    删除防区一
+                                </Button>
+                                </span>
+                                <span className="zoperBtn zbtnRes" style={{display:this.state.areatwo.length>0?"block":"none"}}>
+                                    <Button
+                                        type="primary"
+                                        className={this.hanledeleteBg()}
+                                        onClick={()=>this.hanleDeleteDef(2)}
+                                        disabled={this.state.defenBtn?true:false}
+                                    >
+                                    <span className="zclose" />
+                                    删除防区二
+                                </Button>
+                                </span>
                             </div>
                             <div>
-                                <Button className="base" onClick={this.changeBase}>更换底图</Button>
+                                <Button className="base" onClick={this.changeBase} disabled={this.state.baseBtn?true:false}>更换底图</Button>
                             </div>
                         </div>
                         <div className="areaexplain">
                             <span className="circum"><span className='ference'/><span className="zmethod">围界设定方法</span>：</span>
-                            <span>请在左侧图片处鼠标单击绘制防区，防区均为四边形， 每个设备最多可设置两处防区。防区绘制完成后请点击“新增”按钮生效。</span>
+                            <span>点击“新建防区”后在上方图片处用鼠标单击绘制防区，防区均为四边形，绘制完成后点击图片右下角的“确定”按钮即可完成防区设置。 每个设备最多可设置两处防区。</span>
                         </div>
                     </div>
                 </div>
-                <Modal title="提示信息" visible={this.state.deleteshow} onOk={this.deleteCancel}
-                       onCancel={this.deleteCancel} cancelText='取消'  okText='确定'>
-                    <p>您还有未提交的防区，请先点击新增按钮进行提交</p>
+                <Modal
+                   visible={this.state.deleteshow}
+                   onOk={this.deleteok}
+                   onCancel={this.deleteCancel}
+                   cancelText='取消'
+                   okText='确定'
+                   width={365}
+                   closable={false}
+                >
+                    <div style={{padding:"10px 0",color:"#999999"}}>
+                        <p style={{textAlign:"center"}}><img src={policeImg} alt="" style={{width:"35px",height:"32px"}} /></p>
+                        <span style={{paddingTop:"10px"}}>如果您是非专业人员对防区进行添加操作可能会因发过去不规范导致：</span>
+                        <p style={{paddingTop:"10px"}}>1、导致虚警增加，增加联网报警客服对您的打扰。</p>
+                        <p>2、导致漏洞增加，联网报警客服无法接受到全面的你报警信息，无法为您提供优质的安全服务。</p>
+                        <p style={{textAlign:"center",color:"#000"}}>请谨慎添加！</p>
+                    </div>
+
                 </Modal>
+               <Modal
+                   visible={this.state.deletedefen}
+                   onOk={this.deletedefenOk}
+                   onCancel={this.deletedefenCancel}
+                   cancelText='取消'
+                   okText='确定'
+                   width={365}
+                   closable={false}
+               >
+                   <div style={{padding:"10px 0",color:"#999999"}}>
+                       <p style={{textAlign:"center"}}><img src={policeImg} alt="" style={{width:"35px",height:"32px"}} /></p>
+                       <p style={{textAlign:"center"}}>您需要删除防区吗？</p>
+                       <p style={{paddingTop:"10px"}}>防区删除可能会导致分析设备无法正常进行区域分析工作，联网报警客服无法正常获取到您准确的防范区域，将会对您造成不你不必要的打扰。</p>
+                       <p style={{textAlign:"center",color:"#000"}}>请谨慎添加！</p>
+                   </div>
+
+               </Modal>
            </div>
         )
     }

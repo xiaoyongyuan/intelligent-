@@ -174,7 +174,7 @@ class Login extends React.Component {
       >
         <div className="tetsssBox">
           <div className="tetsbbo">
-            
+
             {tetarr.map((a, b) => (
               <div className={`tetsss `} key={"tetsss" + b}
                 style={{ left:`${610*b}px` }}
@@ -188,7 +188,7 @@ class Login extends React.Component {
         </div>
         <div className="topbar">
           <div className="logo">
-            傲智 <span className="fontAr">AI</span> 视频警戒系统
+              智感在线 <span className="fontAr">AI</span> 联网报警用户平台
           </div>
         </div>
         <div className="logcont ">

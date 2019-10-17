@@ -18,9 +18,6 @@
   flex-direction: column;
 }
 .areaexplain
-.seBtn{
-  border-radius: 4px!important;
-}
 .senter{
   margin-left: 40px;
 }
@@ -29,6 +26,15 @@
   justify-content: space-between;
   margin-top: 30px;
 }
+.optbtn .zoper{
+  display: flex;
+  flex-direction: row;
+}
+.optbtn .zoper .zoperBtn{
+  display: inline-block;
+  width: 180px;
+}
+
 .base{
   color: rgba(49, 58, 98, 0.7)!important;
 }
@@ -48,29 +54,80 @@
   height: 20px;
   background-color: #1E73FF;
 }
-.zsectorO{
+.zbtnRes{
   position: relative;
 }
-.zclose{
-  position: absolute;
-  top: 75%;
-  left: 13%;
-  z-index: 99;
+.optbtn .zoper .zoperBtn .zclose{
+    position: absolute;
+    top: -42%;
+    left: 88%;
+    z-index: 999;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("../../style/ztt/img/zclose.png") no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.zdefenseoper{
+  width: 100%;
+  height: 53px;
+  box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.zdefenseoper .zrevoke{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 30px;
+  cursor: pointer;
+}
+.zdefenseoper .zrevoke .zrepaint1{
+  color:rgba(89, 221, 239, 0.7) ;
+  font-size: 12px;
+}
+.zdefenseoper .zrevoke .zrepaint2{
+  color:rgba(49, 58, 98, 0.7) ;
+  font-size: 12px;
+}
+.zdefenseoper .zrevoke .zrepaint3{
+  color:rgba(30, 115, 255, 1);
+  font-size: 12px;
+}
+.zdefenseoper .zrevoke .zagain1{
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  background: url("../../style/ztt/img/zclose.png") no-repeat;
+  width: 20px;
+  height: 20px;
+  background: url("../../style/ztt/img/revoke.png") no-repeat;
   background-size: 100% 100%;
 }
-.zclose1{
-  position: absolute;
-  top: 75%;
-  left: 33%;
-  z-index: 99;
+.zdefenseoper .zrevoke .zagain2{
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  background: url("../../style/ztt/img/zclose.png") no-repeat;
+  width: 20px;
+  height: 20px;
+  background: url("../../style/ztt/img/closeDefen.png") no-repeat;
   background-size: 100% 100%;
 }
-
+.zdefenseoper .zrevoke .zagain3{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../../style/ztt/img/defenSure.png") no-repeat;
+  background-size: 100% 100%;
+}
+/*禁用状态*/
+.prohibitBtn{
+  background:#CCCCCC!important;
+  border: 1px solid #CCCCCC!important;
+  color:#ffffff!important;
+  border-radius: 4px;
+}
+/*新建状态*/
+.newdefnbtn{
+  background:#59DDEF!important;
+  border: 1px solid #59DDEF!important;
+  color:#ffffff!important;
+  border-radius: 4px;
+}

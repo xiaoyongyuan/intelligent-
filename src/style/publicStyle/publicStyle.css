@@ -23,6 +23,7 @@
     color:#ffffff!important;
     border-radius: 4px;
 }
+
 /*.deleteBtn:hover{
     background:#d01616!important;
     border: 1px solid #d01616!important;
@@ -91,9 +92,9 @@
 .tc-label label{
     color: #000!important;
 }
-.ant-btn + .ant-btn {
+/*.ant-btn + .ant-btn {
     margin-left: 20px!important;
-}
+}*/
 .warrper .ant-input,.Alarmlist .ant-input,.PatrolHostory .ant-input,.PatrolRecord .ant-input,
 .RollcallHostory .ant-input,.RollcallRecord .ant-input,.RollcallTask .ant-input{
     background: #F5F5FA!important;
